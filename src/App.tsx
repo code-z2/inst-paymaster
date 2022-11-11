@@ -11,12 +11,13 @@ import {
 import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
 import { jsonRpcProvider } from "wagmi/providers/jsonRpc";
 import { publicProvider } from "wagmi/providers/public";
+import SyncWallet from "./pages";
 
 const zkSync: Chain = {
   id: 280,
   name: "zkSync alpha testnet",
   network: "zkSync",
-  iconUrl: "https://example.com/icon.svg",
+  iconUrl: "https://icodrops.com/wp-content/uploads/2020/12/zkSync_logo.jpg",
   iconBackground: "#fff",
   nativeCurrency: {
     decimals: 18,
@@ -64,7 +65,7 @@ function App() {
         }}
       >
         <QueryClientProvider client={queryClient}>
-          <div className="App">Inst-Paymaster</div>
+          <SyncWallet />
         </QueryClientProvider>
       </RainbowKitProvider>
     </WagmiConfig>
