@@ -2,7 +2,19 @@
   "name": "inst-paymaster",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
+  "devDependencies": {
+    "@matterlabs/hardhat-zksync-deploy": "^0.5.2",
+    "@matterlabs/hardhat-zksync-solc": "^0.3.10",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.12.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  },
   "dependencies": {
+    "@matterlabs/zksync-contracts": "^0.4.2",
+    "@openzeppelin/contracts": "^4.8.0",
+    "@openzeppelin/contracts-upgradeable": "^4.8.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
@@ -13,8 +25,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "typescript": "^4.4.2",
-    "web-vitals": "^2.1.0"
+    "web-vitals": "^2.1.0",
+    "zksync-web3": "^0.11.1"
   },
   "scripts": {
     "start": "react-scripts start",
