@@ -6,8 +6,11 @@
   "devDependencies": {
     "@matterlabs/hardhat-zksync-deploy": "^0.5.2",
     "@matterlabs/hardhat-zksync-solc": "^0.3.10",
+    "autoprefixer": "^10.4.13",
     "ethers": "^5.7.2",
     "hardhat": "^2.12.2",
+    "postcss": "^8.4.19",
+    "tailwindcss": "^3.2.3",
     "ts-node": "^10.9.1",
     "typescript": "^4.8.4"
   },
@@ -15,6 +18,7 @@
     "@matterlabs/zksync-contracts": "^0.4.2",
     "@openzeppelin/contracts": "^4.8.0",
     "@openzeppelin/contracts-upgradeable": "^4.8.0",
+    "@rainbow-me/rainbowkit": "^0.7.4",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
@@ -24,8 +28,12 @@
     "@types/react-dom": "^18.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "7.38.0",
+    "react-query": "^3.39.2",
     "react-scripts": "5.0.1",
+    "wagmi": "^0.8.1",
     "web-vitals": "^2.1.0",
+    "web3.storage": "^4.4.0",
     "zksync-web3": "^0.11.1"
   },
   "scripts": {
