@@ -88,6 +88,7 @@ const PaymasterForm: FC<IProps> = ({ route }) => {
                 type="file"
                 ref={hiddenFileInput}
                 onChange={handleChange}
+                required
               />
             </div>
             <Checkbox

@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import {
   Typography,
   Popover,
@@ -12,12 +12,18 @@ import {
   Avatar,
 } from "@material-tailwind/react";
 import { formatAddress } from "../../lib/formatAddress";
+import { Recieve } from "./Recieve";
+import Modal from "../Modal";
+import Transfer from "./Transfer";
 
 interface IProps {
   route: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const Account: FC<IProps> = ({ route }) => {
+  const [recieving, setReceving] = useState(false);
+  const [transfering, setTransfering] = useState(false);
+
   return (
     <Card className="bg-inherit h-full shadow-none text-white text-center mx-auto w-full">
       <div>
@@ -52,7 +58,7 @@ const Account: FC<IProps> = ({ route }) => {
       </div>
 
       <div className="flex min-w-20 justify-around px-8 py-6">
-        <IconButton size="lg">
+        <IconButton size="lg" onClick={() => setTransfering(true)}>
           <svg
             className="w-8 h-8 rotate-90"
             fill="currentColor"
@@ -62,7 +68,7 @@ const Account: FC<IProps> = ({ route }) => {
             <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path>
           </svg>
         </IconButton>
-        <IconButton size="lg">
+        <IconButton size="lg" onClick={() => setReceving(true)}>
           <svg
             className="w-8 h-8"
             fill="currentColor"
@@ -78,11 +84,19 @@ const Account: FC<IProps> = ({ route }) => {
           </svg>
         </IconButton>
       </div>
+      <div>
+        <Modal setOpen={setReceving} open={recieving}>
+          <Recieve address="0x70E2D5aA970d84780D81a2c4164b984Abaa94527" />
+        </Modal>
+        <Modal setOpen={setTransfering} open={transfering}>
+          <Transfer />
+        </Modal>
+      </div>
       <div className="inline-flex gap-3 justify-start w-full">
         <Chip variant="gradient" value="zkSync" />
         <Typography> - Balance</Typography>
       </div>
-      <CardBody className="w-full bg-white rounded-lg mt-4 h-full flex divider overflow-y-auto">
+      <CardBody className="w-full bg-white rounded-lg mt-4 h-full flex divider overflow-y-auto space-y-4">
         <div className="w-full h-fit flex items-center">
           <Avatar src="/ethLogo.jpg" alt="avatar" className="flex-shrink-0" />
           <div className="flex-1 min-w-0 text-left pl-2">

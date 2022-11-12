@@ -3,7 +3,7 @@ import {
   Card,
   CardHeader,
   CardBody,
-  CardFooter,
+  //CardFooter,
   Typography,
 } from "@material-tailwind/react";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
@@ -55,10 +55,12 @@ const SyncWallet = () => {
               <DeployAccount />
             )
           ) : (
-            <Typography className="h-fit">wallet is offline ...</Typography>
+            <Typography className="h-fit m-auto">
+              wallet is offline ...
+            </Typography>
           )}
         </CardBody>
-        <CardFooter className="flex justify-center gap-7 pt-2 pb-3">
+        {/* <CardFooter className="flex justify-center gap-7 pt-2 pb-3">
           <Typography className="inline-flex space-x-2">
             with
             <span>
@@ -83,7 +85,7 @@ const SyncWallet = () => {
               peso
             </a>
           </Typography>
-        </CardFooter>
+        </CardFooter> */}
       </Suspense>
     </Card>
   );
