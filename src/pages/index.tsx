@@ -11,6 +11,7 @@ import Loading from "../components/LoadingUI";
 import { useAccount } from "wagmi";
 import DeployAccount from "../components/DeployUI/Deploy";
 import PaymasterForm from "../components/FormUI/Form";
+import Paymasters from "../components/PaymasterUI/Paymasters";
 
 const SyncWallet = () => {
   const { isConnected } = useAccount();
@@ -26,12 +27,12 @@ const SyncWallet = () => {
         <CardBody className="flex h-full w-full">
           {/* card body logic */}
           {isConnected ? (
-            <PaymasterForm />
+            <Paymasters />
           ) : (
             <Typography className="h-fit">wallet is offline ...</Typography>
           )}
         </CardBody>
-        <CardFooter className="flex justify-center gap-7 pt-2">
+        <CardFooter className="flex justify-center gap-7 pt-2 pb-3">
           <Typography className="inline-flex space-x-2">
             with
             <span>

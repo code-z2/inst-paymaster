@@ -36,7 +36,7 @@ const PaymasterForm = () => {
   };
   return (
     <Card className="shadow-none w-full">
-      <div className="absolute z-10 px-2 pt-1">
+      <div className="absolute z-10 p-2">
         <Typography>
           <svg
             className="w-6 h-6 text-blue-gray-500"
@@ -91,14 +91,14 @@ const PaymasterForm = () => {
               {...register("useCustomToken")}
             />
           </div>
-          <div className="inline-flex justify-between">
+          <div className="flex justify-between gap-2">
             <Input
               placeholder="maxNonce"
               size="md"
               type="number"
               {...register("maxNonce")}
-              style={{
-                maxWidth: "90%",
+              containerProps={{
+                style: { minWidth: 0 },
               }}
             />
             <Input
@@ -106,6 +106,9 @@ const PaymasterForm = () => {
               size="md"
               type="number"
               {...register("amount")}
+              containerProps={{
+                style: { minWidth: 0 },
+              }}
             />
           </div>
           <Input
