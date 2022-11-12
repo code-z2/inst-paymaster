@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import {
   Card,
   CardHeader,
@@ -8,11 +8,15 @@ import {
   Button,
   Input,
   Checkbox,
-  Chip,
+  Tooltip,
 } from "@material-tailwind/react";
 import { useForm } from "react-hook-form";
 
-const PaymasterForm = () => {
+interface IProps {
+  route: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const PaymasterForm: FC<IProps> = ({ route }) => {
   const hiddenFileInput = React.useRef(null);
   const {
     register,
@@ -37,20 +41,22 @@ const PaymasterForm = () => {
   return (
     <Card className="shadow-none w-full">
       <div className="absolute z-10 p-2">
-        <Typography>
-          <svg
-            className="w-6 h-6 text-blue-gray-500"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z"
-              clipRule="evenodd"
-            ></path>
-          </svg>
-        </Typography>
+        <Tooltip content="go back">
+          <Typography as="a" onClick={() => route("paymasters")}>
+            <svg
+              className="w-6 h-6 text-blue-gray-500"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z"
+                clipRule="evenodd"
+              ></path>
+            </svg>
+          </Typography>
+        </Tooltip>
       </div>
       <CardHeader
         floated={false}

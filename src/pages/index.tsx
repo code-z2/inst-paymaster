@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState, useEffect } from "react";
 import {
   Card,
   CardHeader,
@@ -12,11 +12,25 @@ import { useAccount } from "wagmi";
 import DeployAccount from "../components/DeployUI/Deploy";
 import PaymasterForm from "../components/FormUI/Form";
 import Paymasters from "../components/PaymasterUI/Paymasters";
+import Account from "../components/WalletUI/Account";
 
 const SyncWallet = () => {
+  const [currentView, setCurrentView] = useState("account");
+  const [aaSmartAccount, setAASmartAccount] = useState<{}>("notempty");
   const { isConnected } = useAccount();
+
+  useEffect(() => {
+    const wallet = localStorage.getItem("aaSmartAccount");
+    if (wallet) {
+      setAASmartAccount(JSON.parse(wallet));
+    }
+  }, []);
+
   return (
-    <Card color="indigo" className="md:w-96 w-screen md:h-144 h-screen">
+    <Card
+      color="indigo"
+      className="md:w-[26rem] w-screen md:h-[45rem] h-screen"
+    >
       <Suspense fallback={<Loading />}>
         <CardHeader
           floated={false}
@@ -25,9 +39,21 @@ const SyncWallet = () => {
           <ConnectButton chainStatus="icon" />
         </CardHeader>
         <CardBody className="flex h-full w-full">
-          {/* card body logic */}
+          {/* card body logic router={setCurrentView}*/}
           {isConnected ? (
-            <Paymasters />
+            aaSmartAccount ? (
+              (currentView === "account" && (
+                <Account route={setCurrentView} />
+              )) ||
+              (currentView === "paymasters" && (
+                <Paymasters route={setCurrentView} />
+              )) ||
+              (currentView === "newpaymaster" && (
+                <PaymasterForm route={setCurrentView} />
+              ))
+            ) : (
+              <DeployAccount />
+            )
           ) : (
             <Typography className="h-fit">wallet is offline ...</Typography>
           )}

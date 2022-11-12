@@ -3781,6 +3781,18 @@
   resolved "https://registry.yarnpkg.com/@web3-storage/parse-link-header/-/parse-link-header-3.1.0.tgz#4562724987649dd6d3e07c87be1826804d212ef7"
   integrity sha512-K1undnK70vLLauqdE8bq/l98isTF2FDhcP0UPpXVSjkSWe3xhAn5eRXk5jfA1E5ycNm84Ws/rQFUD7ue11nciw==
 
+"@web3uikit/config@*":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@web3uikit/config/-/config-0.1.2.tgz#0f61701c094ce40269c59e61cb19d8326dba76ec"
+  integrity sha512-fOY0jxen7nEfivZc7BKm63WRcNEncidFhk+dIVR/0bj4tt5Xl0xyomPgyQqe38d3/PJ3RvqVTdupWFbWNJULkA==
+
+"@web3uikit/icons@^0.2.12":
+  version "0.2.12"
+  resolved "https://registry.yarnpkg.com/@web3uikit/icons/-/icons-0.2.12.tgz#af1f845d4c7659dd92e9f4452fc7d99de04179f1"
+  integrity sha512-By/86yNF6XgFvNyVIoVYfXLRnYlJ5b8uhQneOwET4RbYAhSkgB3CMtq+Q+FuEPG04IVp5rMAp6rftFHgx1pyHw==
+  dependencies:
+    "@web3uikit/config" "*"
+
 "@webassemblyjs/ast@1.11.1":
   version "1.11.1"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.11.1.tgz#2bfd767eae1a6996f432ff7e8d7fc75679c0b6a7"

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import {
   IconButton,
   Tooltip,
@@ -10,7 +10,11 @@ import {
 } from "@material-tailwind/react";
 import { formatAddress } from "../../lib/formatAddress";
 
-const Paymasters = () => {
+interface IProps {
+  route: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const Paymasters: FC<IProps> = ({ route }) => {
   const paymasters: { [key: string]: string }[] | undefined = [
     {
       logo: "logo",
@@ -24,10 +28,7 @@ const Paymasters = () => {
     return paymasters?.map((el, idx) => {
       return (
         <Card key={idx} className="flex flex-row justify-between">
-          <Avatar
-            src="https://icodrops.com/wp-content/uploads/2020/12/zkSync_logo.jpg"
-            alt="avatar"
-          />
+          <Avatar src="/zkSync_logo.svg" alt="avatar" />
           <div className="w-full px-3 pt-1">
             <Typography variant="h6" className="text-left truncate">
               {el?.name}
@@ -56,7 +57,7 @@ const Paymasters = () => {
     <Card className="w-96 max-h-[100%] bg-inherit shadow-none">
       <div className="absolute z-10 p-2">
         <Tooltip content="go back">
-          <IconButton>
+          <IconButton onClick={() => route("account")}>
             <svg
               className="w-6 h-6"
               fill="currentColor"
@@ -93,7 +94,7 @@ const Paymasters = () => {
       </CardBody>
       <div className="absolute bottom-3 right-3">
         <Tooltip content="Add your own paymaster">
-          <IconButton>
+          <IconButton onClick={() => route("newpaymaster")}>
             <svg
               className="w-6 h-6"
               fill="currentColor"

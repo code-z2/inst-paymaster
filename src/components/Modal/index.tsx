@@ -18,7 +18,7 @@ const Modal: FC<IModalProps> = ({ callback, isOpen = false, children }) => {
 
   return (
     <Fragment>
-      <Dialog open={open} handler={handleOpen}>
+      <Dialog open={open} handler={handleOpen} size="xs">
         <DialogBody divider>{children}</DialogBody>
         <DialogFooter>
           <Button
