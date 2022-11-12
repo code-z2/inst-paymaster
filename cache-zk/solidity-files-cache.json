@@ -1,0 +1,2341 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/contracts/Account.sol": {
+      "lastModificationDate": 1668153023057,
+      "contentHash": "3d88b66d6e84942675b2a9d86c7d683e",
+      "sourceName": "contracts/Account.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [
+        "@matterlabs/zksync-contracts/l2/system-contracts/interfaces/IAccount.sol",
+        "@matterlabs/zksync-contracts/l2/system-contracts/TransactionHelper.sol",
+        "@matterlabs/zksync-contracts/l2/system-contracts/Constants.sol",
+        "@matterlabs/zksync-contracts/l2/system-contracts/SystemContractsCaller.sol",
+        "@openzeppelin/contracts/interfaces/IERC1271.sol",
+        "@openzeppelin/contracts/utils/cryptography/ECDSA.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SAccount"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@openzeppelin/contracts/interfaces/IERC1271.sol": {
+      "lastModificationDate": 1668178257086,
+      "contentHash": "8fe867b95c856b204f954a1910e28a1e",
+      "sourceName": "@openzeppelin/contracts/interfaces/IERC1271.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC1271"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@matterlabs/zksync-contracts/l2/system-contracts/TransactionHelper.sol": {
+      "lastModificationDate": 1668178258086,
+      "contentHash": "7e4a2773eb1618f9cb7f893b30c18d05",
+      "sourceName": "@matterlabs/zksync-contracts/l2/system-contracts/TransactionHelper.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [
+        "./RLPEncoder.sol",
+        "./Constants.sol",
+        "./interfaces/IERC20.sol",
+        "./interfaces/IPaymasterFlow.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "TransactionHelper"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@matterlabs/zksync-contracts/l2/system-contracts/Constants.sol": {
+      "lastModificationDate": 1668178258086,
+      "contentHash": "c78657f6d933128642aee62201a168c8",
+      "sourceName": "@matterlabs/zksync-contracts/l2/system-contracts/Constants.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [
+        "./interfaces/IAccountCodeStorage.sol",
+        "./interfaces/INonceHolder.sol",
+        "./interfaces/IContractDeployer.sol",
+        "./interfaces/IKnownCodesStorage.sol",
+        "./interfaces/IImmutableSimulator.sol",
+        "./interfaces/IEthToken.sol",
+        "./interfaces/IL1Messenger.sol",
+        "./interfaces/ISystemContext.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": []
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@matterlabs/zksync-contracts/l2/system-contracts/SystemContractsCaller.sol": {
+      "lastModificationDate": 1668178258086,
+      "contentHash": "71fd7687420accfb912ed47744c5d2e3",
+      "sourceName": "@matterlabs/zksync-contracts/l2/system-contracts/SystemContractsCaller.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Constants.sol"
+      ],
+      "versionPragmas": [
+        "^0.8"
+      ],
+      "artifacts": [
+        "SystemContractsCaller"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol": {
+      "lastModificationDate": 1668178258254,
+      "contentHash": "fe1190dbb6431c2464246925713f0f7f",
+      "sourceName": "@openzeppelin/contracts/utils/cryptography/ECDSA.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [
+        "../Strings.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ECDSA"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@matterlabs/zksync-contracts/l2/system-contracts/interfaces/IAccount.sol": {
+      "lastModificationDate": 1668178258650,
+      "contentHash": "de53d2562d55374318af7473431d4573",
+      "sourceName": "@matterlabs/zksync-contracts/l2/system-contracts/interfaces/IAccount.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [
+        "../TransactionHelper.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IAccount"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@matterlabs/zksync-contracts/l2/system-contracts/RLPEncoder.sol": {
+      "lastModificationDate": 1668178258086,
+      "contentHash": "0d2bdb9260dcd0df9c7cb1218c587cf1",
+      "sourceName": "@matterlabs/zksync-contracts/l2/system-contracts/RLPEncoder.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "RLPEncoder"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@matterlabs/zksync-contracts/l2/system-contracts/interfaces/IERC20.sol": {
+      "lastModificationDate": 1668178258654,
+      "contentHash": "ad7c2d0af148c8f9f097d65deeb4da6b",
+      "sourceName": "@matterlabs/zksync-contracts/l2/system-contracts/interfaces/IERC20.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@matterlabs/zksync-contracts/l2/system-contracts/interfaces/IPaymasterFlow.sol": {
+      "lastModificationDate": 1668178258658,
+      "contentHash": "8715e769ef643bae7da1be6dc8d042dc",
+      "sourceName": "@matterlabs/zksync-contracts/l2/system-contracts/interfaces/IPaymasterFlow.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IPaymasterFlow"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@matterlabs/zksync-contracts/l2/system-contracts/interfaces/IAccountCodeStorage.sol": {
+      "lastModificationDate": 1668178258654,
+      "contentHash": "86fb8b6a30aae96db34478fc9ab8cf43",
+      "sourceName": "@matterlabs/zksync-contracts/l2/system-contracts/interfaces/IAccountCodeStorage.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IAccountCodeStorage"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@matterlabs/zksync-contracts/l2/system-contracts/interfaces/INonceHolder.sol": {
+      "lastModificationDate": 1668178258658,
+      "contentHash": "604c143e1fb04612bc3cd599abca550e",
+      "sourceName": "@matterlabs/zksync-contracts/l2/system-contracts/interfaces/INonceHolder.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "INonceHolder"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@matterlabs/zksync-contracts/l2/system-contracts/interfaces/IKnownCodesStorage.sol": {
+      "lastModificationDate": 1668178258658,
+      "contentHash": "fdaf5115ba6c6eabf140b7b5ade17e1d",
+      "sourceName": "@matterlabs/zksync-contracts/l2/system-contracts/interfaces/IKnownCodesStorage.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IKnownCodesStorage"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@matterlabs/zksync-contracts/l2/system-contracts/interfaces/IContractDeployer.sol": {
+      "lastModificationDate": 1668178258654,
+      "contentHash": "56947904d877163623026596c0be69bb",
+      "sourceName": "@matterlabs/zksync-contracts/l2/system-contracts/interfaces/IContractDeployer.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IContractDeployer"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@matterlabs/zksync-contracts/l2/system-contracts/interfaces/IEthToken.sol": {
+      "lastModificationDate": 1668178258654,
+      "contentHash": "63de7d9d97657cd4ad3b3c82e11fcb25",
+      "sourceName": "@matterlabs/zksync-contracts/l2/system-contracts/interfaces/IEthToken.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IEthToken"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@matterlabs/zksync-contracts/l2/system-contracts/interfaces/IImmutableSimulator.sol": {
+      "lastModificationDate": 1668178258654,
+      "contentHash": "c53dfddc2d893a94599cc0c8f13a4fa3",
+      "sourceName": "@matterlabs/zksync-contracts/l2/system-contracts/interfaces/IImmutableSimulator.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IImmutableSimulator"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@matterlabs/zksync-contracts/l2/system-contracts/interfaces/ISystemContext.sol": {
+      "lastModificationDate": 1668178258658,
+      "contentHash": "6dc6173c2e0e8530366ebd7f8235e77b",
+      "sourceName": "@matterlabs/zksync-contracts/l2/system-contracts/interfaces/ISystemContext.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ISystemContext"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@matterlabs/zksync-contracts/l2/system-contracts/interfaces/IL1Messenger.sol": {
+      "lastModificationDate": 1668178258654,
+      "contentHash": "a32c8e10a44e66abdde8c6ccbd575673",
+      "sourceName": "@matterlabs/zksync-contracts/l2/system-contracts/interfaces/IL1Messenger.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IL1Messenger"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
+      "lastModificationDate": 1668178257094,
+      "contentHash": "396031251978f8febfd90cb62cb240ec",
+      "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [
+        "./math/Math.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Strings"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@openzeppelin/contracts/utils/math/Math.sol": {
+      "lastModificationDate": 1668178258258,
+      "contentHash": "b9c58920ce74d6dc819161786112e7ee",
+      "sourceName": "@openzeppelin/contracts/utils/math/Math.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Math"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@matterlabs/zksync-contracts/l2/system-contracts/interfaces/IPaymaster.sol": {
+      "lastModificationDate": 1668178258658,
+      "contentHash": "0abac483601d79ae18c8b6b02d1126bd",
+      "sourceName": "@matterlabs/zksync-contracts/l2/system-contracts/interfaces/IPaymaster.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [
+        "../TransactionHelper.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IPaymaster"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/contracts/interface/IPaymaster.sol": {
+      "lastModificationDate": 1668114640734,
+      "contentHash": "579d1127676050dbc15993fcb6d7b413",
+      "sourceName": "contracts/interface/IPaymaster.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [
+        "@matterlabs/zksync-contracts/l2/system-contracts/interfaces/IPaymaster.sol",
+        "@openzeppelin/contracts/utils/introspection/IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ISPaymaster"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+      "lastModificationDate": 1668178258258,
+      "contentHash": "03e6768535ac4da0e9756f1d8a4a018a",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC165"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
+      "lastModificationDate": 1668178258258,
+      "contentHash": "0e7db055ce108f9da7bb6686a00287c0",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC165"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol": {
+      "lastModificationDate": 1668178258262,
+      "contentHash": "190f627b9302b9602d3a313e28205cc5",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/ERC721.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC721.sol",
+        "./IERC721Receiver.sol",
+        "./extensions/IERC721Metadata.sol",
+        "../../utils/Address.sol",
+        "../../utils/Context.sol",
+        "../../utils/Strings.sol",
+        "../../utils/introspection/ERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC721"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@openzeppelin/contracts/utils/Address.sol": {
+      "lastModificationDate": 1668178257090,
+      "contentHash": "f31ad6fc4bbf9c06203987220156a6ba",
+      "sourceName": "@openzeppelin/contracts/utils/Address.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.1"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@openzeppelin/contracts/utils/Context.sol": {
+      "lastModificationDate": 1668178257090,
+      "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
+      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+      "lastModificationDate": 1668178258262,
+      "contentHash": "eb7e61db29f31d88b3c1cef1b063d338",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../utils/introspection/IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC721"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol": {
+      "lastModificationDate": 1668178258262,
+      "contentHash": "c22d4395e33763de693fd440c6fd10e1",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC721Receiver"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
+      "lastModificationDate": 1668178258662,
+      "contentHash": "efbc0d15b80a74e34dbe8da0f3e879bb",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC721Metadata"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@openzeppelin/contracts/interfaces/IERC721.sol": {
+      "lastModificationDate": 1668178257090,
+      "contentHash": "e6da7798a8c22c5043cc42d64a2a8f80",
+      "sourceName": "@openzeppelin/contracts/interfaces/IERC721.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [
+        "../token/ERC721/IERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": []
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/contracts/Paymaster.sol": {
+      "lastModificationDate": 1668171852909,
+      "contentHash": "469a45c4da845fb993550d46d542cd81",
+      "sourceName": "contracts/Paymaster.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [
+        "@matterlabs/zksync-contracts/l2/system-contracts/interfaces/IPaymaster.sol",
+        "@matterlabs/zksync-contracts/l2/system-contracts/interfaces/IPaymasterFlow.sol",
+        "@matterlabs/zksync-contracts/l2/system-contracts/TransactionHelper.sol",
+        "@matterlabs/zksync-contracts/l2/system-contracts/Constants.sol",
+        "@openzeppelin/contracts/interfaces/IERC20.sol",
+        "@openzeppelin/contracts/interfaces/IERC721.sol",
+        "./interface/IPaymaster.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SPaymaster"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@openzeppelin/contracts/interfaces/IERC20.sol": {
+      "lastModificationDate": 1668178257086,
+      "contentHash": "d151fbfe7939989b9acf22797b32058b",
+      "sourceName": "@openzeppelin/contracts/interfaces/IERC20.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [
+        "../token/ERC20/IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": []
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1668178258262,
+      "contentHash": "ad7c2d0af148c8f9f097d65deeb4da6b",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/contracts/factory/PaymasterFactory.sol": {
+      "lastModificationDate": 1668170258736,
+      "contentHash": "6049ad8982473a9042cde6448285f963",
+      "sourceName": "contracts/factory/PaymasterFactory.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [
+        "@matterlabs/zksync-contracts/l2/system-contracts/Constants.sol",
+        "@matterlabs/zksync-contracts/l2/system-contracts/SystemContractsCaller.sol",
+        "./PaymasterFactoryStorage.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SPaymasterFactory"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/contracts/factory/PaymasterFactoryStorage.sol": {
+      "lastModificationDate": 1668168128790,
+      "contentHash": "a614d3cb9b63e3ca41d8b976b4dc9308",
+      "sourceName": "contracts/factory/PaymasterFactoryStorage.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+        "../interface/IPaymaster.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SPaymasterStorage"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/contracts/factory/AccountFactory.sol": {
+      "lastModificationDate": 1668003936052,
+      "contentHash": "31fbd4136b11ef3ea506c3b8f319c19a",
+      "sourceName": "contracts/factory/AccountFactory.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [
+        "@matterlabs/zksync-contracts/l2/system-contracts/Constants.sol",
+        "@matterlabs/zksync-contracts/l2/system-contracts/SystemContractsCaller.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SAccountFactory"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+      "lastModificationDate": 1668178258670,
+      "contentHash": "909ab67fc5c25033fe6cd364f8c056f9",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20Metadata"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
+      "lastModificationDate": 1668178258262,
+      "contentHash": "834a0dde221759af42b030253315b086",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol",
+        "./extensions/IERC20Metadata.sol",
+        "../../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC20"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1668178257082,
+      "contentHash": "e436cea06129be2c73cda4b1acc848b5",
+      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/contracts/tokens/ERC721.sol": {
+      "lastModificationDate": 1668120000697,
+      "contentHash": "5a8dc162fdd7ed9f146b249fcb5a4170",
+      "sourceName": "contracts/tokens/ERC721.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC721/ERC721.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "@openzeppelin/contracts/utils/Counters.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "InstPayToken"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/node_modules/@openzeppelin/contracts/utils/Counters.sol": {
+      "lastModificationDate": 1668178257090,
+      "contentHash": "74654e3ae5d7f39555055dfe244dab7a",
+      "sourceName": "@openzeppelin/contracts/utils/Counters.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Counters"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/contracts/tokens/ERC20.sol": {
+      "lastModificationDate": 1668118901900,
+      "contentHash": "1108572f1830f47cd56b67cb8cc7555a",
+      "sourceName": "contracts/tokens/ERC20.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "MyERC20"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/contracts/interface/IAccount.sol": {
+      "lastModificationDate": 1668002694769,
+      "contentHash": "7f01a368a6b4c77eed7427df6aecd88b",
+      "sourceName": "contracts/interface/IAccount.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [
+        "@matterlabs/zksync-contracts/l2/system-contracts/TransactionHelper.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IAccount"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/contracts/interface/IAccountFactory.sol": {
+      "lastModificationDate": 1668003981914,
+      "contentHash": "a6071621fd79471fd1d11935895d150c",
+      "sourceName": "contracts/interface/IAccountFactory.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ISAccountFactory"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/contracts/interface/IPaymasterFactory.sol": {
+      "lastModificationDate": 1668081831783,
+      "contentHash": "24c5e9589efecb09a5e50002eed46d73",
+      "sourceName": "contracts/interface/IPaymasterFactory.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ISPaymasterFactory"
+      ]
+    },
+    "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/contracts/interface/IPaymasterFactoryStorage.sol": {
+      "lastModificationDate": 1668006469889,
+      "contentHash": "c9859cb0050675fb7008efb997dee9f8",
+      "sourceName": "contracts/interface/IPaymasterFactoryStorage.sol",
+      "solcConfig": {
+        "version": "0.8.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.2.0",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {
+              "dockerImage": "matterlabs/zksolc",
+              "tag": "v1.2.0"
+            },
+            "optimizer": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ISPaymasterStorage"
+      ]
+    }
+  }
+}

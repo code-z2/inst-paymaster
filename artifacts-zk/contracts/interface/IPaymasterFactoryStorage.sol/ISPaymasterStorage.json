@@ -1,0 +1,49 @@
+{
+  "_format": "hh-zksolc-artifact-1",
+  "contractName": "ISPaymasterStorage",
+  "sourceName": "contracts/interface/IPaymasterFactoryStorage.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getAllPaymasters",
+      "outputs": [],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getPaymasterByOwner",
+      "outputs": [],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "paymasterAddr",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "metadata",
+          "type": "bytes"
+        }
+      ],
+      "name": "storePaymaster",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {},
+  "factoryDeps": {}
+}
