@@ -58,14 +58,18 @@ function App() {
   return (
     <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider
+        coolMode
+        modalSize="compact"
         chains={chains}
-        theme={{
-          lightMode: lightTheme(),
-          darkMode: darkTheme(),
-        }}
+        // theme={{
+        //   lightMode: lightTheme(),
+        //   darkMode: darkTheme(),
+        // }}
       >
         <QueryClientProvider client={queryClient}>
-          <SyncWallet />
+          <div className="h-screen flex justify-center items-center">
+            <SyncWallet />
+          </div>
         </QueryClientProvider>
       </RainbowKitProvider>
     </WagmiConfig>
