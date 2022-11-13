@@ -1688,8 +1688,8 @@
       ]
     },
     "/home/peter/Desktop/2022/zkSync-learn/inst-paymaster/contracts/factory/PaymasterFactory.sol": {
-      "lastModificationDate": 1668170258736,
-      "contentHash": "6049ad8982473a9042cde6448285f963",
+      "lastModificationDate": 1668348039462,
+      "contentHash": "256e3d2a82398035e25bfa55d496d451",
       "sourceName": "contracts/factory/PaymasterFactory.sol",
       "solcConfig": {
         "version": "0.8.16",
