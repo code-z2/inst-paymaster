@@ -1,46 +1,106 @@
-# Getting Started with Create React App
+# Institutional Paymaster
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Summary
 
-## Available Scripts
+Institutional paymaster is a possile new approach to handling paymasters for wallets implementing Account Abstraction. It provides a single interface from which protocols, organizations etc can provide gas offsetting capabilities for their end users and specify terms of use. Since it's a single point of entry, users have the opportunity to choose any paymaster they are eligible to use without handling complex interactions.
+It similarly allows organizations to specify qualifications that must be met before they can pay fees without creating complex logic.
 
-In the project directory, you can run:
+## Paymaster
 
-### `yarn start`
+the master logic is straighforward and follows [IPaymaster](https://github.com/matter-labs/v2-testnet-contracts/blob/main/l2/system-contracts/interfaces/IPaymaster.sol), however there are few introductions in ISPaymaster.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- satisfy
+    ![satisfy](./public/12_ContractShow.png)
+satisy is meant make sure tht a paymaster is satisfied with a user before agreeing to offset the gas fees. according to the cust validation checks set during ployment. the paymaster makes sure that a user meets all criterion before be allowed to use ethereum for free.
+- store
+    ![store 1](./public/10_ContractShow.png)
+a storage contract that is meant to hold the address and offchain metadata of all paymasters. basically creating an easy way to access any paymaster
+ the getter functions also define a way to access any paymaster from a front end.
+    ![store 1](./public/11_ContractShow.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Paymaster Factory
 
-### `yarn test`
+A contract that deploys paymasters with custom configurations.
+Contracts deployed by the PaymasterFactory is [ISPaymaster](./contracts/interface/IPaymaster.sol) but follows the [IPaymaster](https://github.com/matter-labs/v2-testnet-contracts/blob/main/l2/system-contracts/interfaces/IPaymaster.sol) interface and supports [IERC165](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol) also.
+Paymasters take configurations as follows:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Max Nonce:
+This allows paymasters to restrict the use of their paymasters to wallets with account nonce < maxNonce. Basically targeting newly created wallets in other to capture users who are new to crypto.
+- UseCustomToken :
+This allows paymasters to charge gas fees in ERC20 or use ERC20 or ERC721 tokens to gate interaction with the paymasters.
+- Amount:
+This is the amount of X token a user is required to hold before allowed to access a paymaster
+- TokenAdress: this can either be ERC20 or ERC721. It allows organizations to provide free gas to users holding a specific ERC721 token or a specific amount of ERC20 token, better still charge users in such token.
+- Validation Address (VA): May be linked to governance addresses or protocol addresses. The validation address VA takes a lot of high level privileges including receiving ERC20 fees.
+At deployment, some of the configurations are stored on IPFS and used in the SyncWallet UI only.
 
-### `yarn build`
+# Sync Wallet
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The sync wallet is a front-end demo on how a single point for accessing paymasters (but not failure) can impact user experience and help drive user onboarding.
+Visit [Sync Wallet](https://instpaymaster.vercel.app) To see a working browser based wallet built to support AA and an interface for accessing multiple paymasters.
+nb: Ethereum jsonRPC injected by coinbase wallet is not used as a provider for now.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### How it works
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+A user can easily create an AA account and start using a paymaster from the list of available paymasters.
 
-### `yarn eject`
+1. EOA is not supported but however, a private key is used as an EIP712 signer
+2. After account is deployed, account is saved to an  encrypted browser storage whhich use a combination of sha256 and AES to encrypt private key. (though may be strongly discourage (but for demo))
+    ![wallet ui](./public/03_PaymastersWallet.png?raw=true "SyncWallet UI")
+3. A user can perform simple operations like token transfers and can also deploy a paymaster.
+    ![wallet ui](./public/00_PaymasterWallet.png?raw=true "SyncWallet UI")
+4. Must provide the necessary constructor arguments in order to deploy a paymaster. Depending on the use case.
+    ![wallet ui](./public/02_PaymastersWallet.png?raw=true "SyncWallet UI")
+5. After a paymaster is deployed, a list of paymasters are pulled from a contract storage, where they can select a paymaster to use and by default all transactions would be processed with the paymaster while the account is still eligible.
+    ![wallet ui](./public/01_PaymastersWallet.png?raw=true "SyncWallet UI")
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The EIP712signing private key is stored on an Encrypted browser storage. Currently a salt is used to decrypt but in the future, Ethereum signatures from a Guardian account or Social security method can be used to decrypt it.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Benefits:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Having a paymaster interface can help expand the kind of Daos that exists.
+- There can be specialized Daos that are primarily focused on gas offsets
+- Custom paymaster arguments gives organisations control of their end target.
+As well as being able to provide smooth service to your community.
+- If you interact with Ethereum for free by holding a token, then it's safe to say that there will be less hard hitting bear markets as you can be incentivised to hold.
+- Wallet integration is easy
+- Might become a prime focus for attackers,
+- My Implemenatation Relies on Private key for EIP712 signing.
+- My implementation Uses ECDSA which is (may) not be the best approach
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Improvements:
+Move to a secured key storage instead of browser storage.
+Allows larger paymaster use case such as
+One time use paymasters: runs only for a duration.
+Cross chain transactions: interact in other chains and settle fees with the chain with which you have enough funds.
+Paymaster extension: allow other paymasters to extend gas offset to sister or brother paymaster while the current paymaster refills Eth.
 
-## Learn More
+Not implemented:
+ Signing transactions with active paymaster.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Setup
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Contracts
+
+```bash
+git clone https:git@github.com
+# set up your .env variable
+# rename .env.example to .env and provide the required keys
+yarn install
+yarn hardhat compile
+yarn hardhat deploy-zksync
+
+```
+
+if you get any error   `cannot not use import outside ....` change module to `module: CommonJs` in ts-config
+
+2. Front-end
+
+```bash
+# assuming you have already cloned this repo
+yarn install
+yarn start
+
+# for prod
+yarn build
+```
