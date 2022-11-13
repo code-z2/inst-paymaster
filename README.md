@@ -83,7 +83,7 @@ Not implemented:
 1. Contracts
 
 ```bash
-git clone https:git@github.com
+git clone https://github.com/peteruche21/inst-paymaster.git
 # set up your .env variable
 # rename .env.example to .env and provide the required keys
 yarn install
