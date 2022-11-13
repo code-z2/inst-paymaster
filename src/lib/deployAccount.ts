@@ -1,24 +1,29 @@
-import { utils, Web3Provider } from "zksync-web3";
+import { utils, Wallet, Provider } from "zksync-web3";
 import * as ethers from "ethers";
 import { contracts } from "./constants";
 import accountABI from "./abis/accountFactoryABI.json";
 
-export default async function deploy(owner: string) {
-  const provider = new Web3Provider(window.ethereum);
-
-  const signer = provider.getSigner();
+export default async function deploy() {
+  const PRIVATE_KEY = process.env.REACT_APP_PRIVATE_KEY;
+  const provider = new Provider("https://zksync2-testnet.zksync.dev");
+  const wallet = new Wallet(PRIVATE_KEY as string).connect(provider);
 
   const aaFactory = new ethers.Contract(
     contracts.SAccountFactoryAddress,
     accountABI,
-    signer
+    wallet
   );
 
-  // For the simplicity of the tutorial, we will use zero hash + owner EOA as salt
-  const zero = ethers.constants.HashZero;
-  const salt = ethers.utils.keccak256(ethers.utils.concat([zero, owner]));
+  // random EIP712 signer
+  const signer = Wallet.createRandom();
 
-  const tx = await aaFactory.deployAccount(salt, owner);
+  // For the simplicity of the tutorial, we will use zero hash + signer as salt
+  const zero = ethers.constants.HashZero;
+  const salt = ethers.utils.keccak256(
+    ethers.utils.concat([zero, signer.address])
+  );
+
+  const tx = await aaFactory.deployAccount(salt, signer.address);
   tx.wait();
 
   // Getting the address of the deployed contract
@@ -28,9 +33,9 @@ export default async function deploy(owner: string) {
     contracts.SAccountFactoryAddress,
     await aaFactory.BytecodeHash(),
     salt,
-    abiCoder.encode(["address"], [owner])
+    abiCoder.encode(["address"], [signer.address])
   );
 
   console.log(`Deployed on address ${sAddress}`);
-  return sAddress;
+  return { EIP712Signer: signer.privateKey, account: sAddress };
 }

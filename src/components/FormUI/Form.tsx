@@ -11,22 +11,51 @@ import {
   Tooltip,
 } from "@material-tailwind/react";
 import { useForm } from "react-hook-form";
+import { store } from "../../lib/IPFS";
+import { IAAAcount } from "../../pages";
+import deploy from "../../lib/deployPaymaster";
 
 interface IProps {
   route: React.Dispatch<React.SetStateAction<string>>;
+  account: IAAAcount;
 }
 
-const PaymasterForm: FC<IProps> = ({ route }) => {
+const PaymasterForm: FC<IProps> = ({ route, account }) => {
   const hiddenFileInput = React.useRef(null);
   const {
     register,
     handleSubmit,
     setValue,
+    reset,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data: any) => {
-    console.log(data);
+  const onSubmit = async (data: any) => {
+    const logoFile = new File(data.logo, `${data.name}`);
+    const logoHash = await store(logoFile);
+    const uploadeableData = {
+      name: data.name,
+      logo: logoHash,
+      validationAddress: data.validationAddress,
+      owner: account.address,
+    };
+    const ipfsFile = new File(
+      [JSON.stringify(uploadeableData)],
+      "payamsterMetadata.json",
+      {
+        type: "application/json",
+      }
+    );
+    const cid = await store(ipfsFile);
+    console.log(cid, logoHash);
+    // next deploy logic
+    const status = await deploy(
+      account.EIP712Signer,
+      account.address,
+      cid,
+      data
+    );
+    status && reset();
   };
 
   const handleClick = (
@@ -119,16 +148,16 @@ const PaymasterForm: FC<IProps> = ({ route }) => {
             />
           </div>
           <Input
-            label="token-address"
+            label="tokenAddress"
             size="lg"
             type="text"
-            {...register("token-address")}
+            {...register("tokenAddress")}
           />
           <Input
-            label="validation-address"
+            label="validationAddress"
             size="lg"
             type="text"
-            {...register("validation-address")}
+            {...register("validationAddress")}
           />
         </CardBody>
         <CardFooter className="pt-0">

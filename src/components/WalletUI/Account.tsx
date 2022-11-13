@@ -16,8 +16,8 @@ import { Recieve } from "./Recieve";
 import Modal from "../Modal";
 import Transfer from "./Transfer";
 import { IAAAcount } from "../../pages";
-import { Web3Provider } from "zksync-web3";
-import { BigNumber } from "ethers";
+import { Provider } from "zksync-web3";
+import { BigNumber, ethers } from "ethers";
 
 interface IProps {
   route: React.Dispatch<React.SetStateAction<string>>;
@@ -28,7 +28,7 @@ const Account: FC<IProps> = ({ route, account }) => {
   const [recieving, setReceving] = useState(false);
   const [transfering, setTransfering] = useState(false);
   const [ethBalance, setETHBalance] = useState<BigNumber>(BigNumber.from(0));
-  const provider = new Web3Provider(window.ethereum);
+  const provider = new Provider("https://zksync2-testnet.zksync.dev");
 
   const setBalance = async () => {
     const balance = await provider.getBalance(account.address);
@@ -124,7 +124,9 @@ const Account: FC<IProps> = ({ route, account }) => {
           </div>
           <div className="text-right ">
             <Typography className="font-medium" color="gray">
-              {parseFloat(ethBalance.toString()).toLocaleString("en-US", {
+              {parseFloat(
+                ethers.utils.formatEther(ethBalance).toString()
+              ).toLocaleString("en-US", {
                 maximumFractionDigits: 4,
               })}{" "}
               zkETH

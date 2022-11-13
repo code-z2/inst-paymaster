@@ -73,4 +73,8 @@ contract SPaymasterFactory {
     ) internal {
         paymasterStorage.storePaymaster(owner, paymasterAddr, metadata);
     }
+
+    function getStorageAddress() public view returns (address) {
+        return address(paymasterStorage);
+    }
 }

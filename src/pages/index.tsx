@@ -13,11 +13,12 @@ import DeployAccount from "../components/DeployUI/Deploy";
 import PaymasterForm from "../components/FormUI/Form";
 import Paymasters from "../components/PaymasterUI/Paymasters";
 import Account from "../components/WalletUI/Account";
+import { browserStorage } from "../lib/storage";
 
 export interface IAAAcount {
   activePaymaster: string;
   address: string;
-  deployer: `0x${string}` | undefined;
+  EIP712Signer: string;
 }
 
 const SyncWallet = () => {
@@ -26,10 +27,14 @@ const SyncWallet = () => {
   const { isConnected } = useAccount();
 
   useEffect(() => {
-    const wallet = localStorage.getItem("aaSmartAccount");
+    const tempAccessKey = process.env.REACT_APP_TEMP_ACCESS;
+    const wallet = browserStorage(tempAccessKey as string).getItem(
+      "aaSmartAccount2"
+    );
     if (wallet) {
-      setAASmartAccount(JSON.parse(wallet));
+      setAASmartAccount(wallet);
     }
+    console.log(wallet);
   }, []);
 
   return (
@@ -55,7 +60,10 @@ const SyncWallet = () => {
                 <Paymasters route={setCurrentView} />
               )) ||
               (currentView === "newpaymaster" && (
-                <PaymasterForm route={setCurrentView} />
+                <PaymasterForm
+                  route={setCurrentView}
+                  account={aaSmartAccount}
+                />
               ))
             ) : (
               <DeployAccount setAASmartAccount={setAASmartAccount} />

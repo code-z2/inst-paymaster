@@ -6,9 +6,9 @@ import {
   Button,
   Alert,
 } from "@material-tailwind/react";
-import { useAccount } from "wagmi";
 import deploy from "../../lib/deployAccount";
 import { IAAAcount } from "../../pages";
+import { browserStorage } from "../../lib/storage";
 
 const DeployAccount = ({
   setAASmartAccount,
@@ -18,23 +18,20 @@ const DeployAccount = ({
   >;
 }) => {
   const [deployError, setDeployError] = useState("");
-  const { address } = useAccount();
 
   const handleAADeploy = async () => {
     if (window.ethereum) {
-      await deploy(address as `0x${string}`)
+      await deploy()
         .then((response) => {
           const localstorageItem = {
-            deployer: address,
-            address: response,
+            EIP712Signer: response.EIP712Signer,
+            address: response.account,
             activePaymaster: "",
           };
-          localStorage.setItem(
-            "aaSmartAccount",
-            JSON.stringify(localstorageItem)
-          );
+          const tempAccessKey = process.env.REACT_APP_TEMP_ACCESS;
+          const browserLocalStorage = browserStorage(tempAccessKey as string);
+          browserLocalStorage.setItem("aaSmartAccount2", localstorageItem);
           setAASmartAccount(localstorageItem);
-          console.log(localstorageItem);
         })
         .catch((err) => setDeployError("Error Deploying SAccount"));
     }
