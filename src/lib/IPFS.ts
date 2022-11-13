@@ -11,5 +11,5 @@ export async function store(file: File) {
 export async function retrieve(cid: string) {
   const res = await client.get(cid);
   const files = await res?.files();
-  return files ? files[0] : null;
+  console.log(files);
 }

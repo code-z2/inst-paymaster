@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
 import {
   IconButton,
   Tooltip,
@@ -9,26 +9,50 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { formatAddress } from "../../lib/formatAddress";
-
+import { paymasters as getPaymasters } from "../../lib/getAllPaymasters";
+import { browserStorage } from "../../lib/storage";
 interface IProps {
   route: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const Paymasters: FC<IProps> = ({ route }) => {
-  const paymasters: { [key: string]: string }[] | undefined = [
-    {
-      logo: "logo",
-      name: "Sync Wallet",
-      address: "0x70E2D5aA970d84780D81a2c4164b984Abaa94527",
-    },
-  ];
+export interface IMetadata {
+  logo: string;
+  name: string;
+  address: string;
+}
 
-  const setGlobalPaymaster = () => true;
+const Paymasters: FC<IProps> = ({ route }) => {
+  const [paymasterList, setPayMasterList] = useState<IMetadata[]>([]);
+  const [activePaymaster, setActivePaymaster] = useState("");
+  const tempAccessKey = process.env.REACT_APP_TEMP_ACCESS;
+
+  const handleSetting = async () => {
+    const list: IMetadata[] | undefined = await getPaymasters();
+    setPayMasterList(list as IMetadata[]);
+    const localstorageItem = browserStorage(tempAccessKey as string).getItem(
+      "aaSmartAccount2"
+    );
+    setActivePaymaster(localstorageItem.activePaymaster);
+  };
+
+  useEffect(() => {
+    handleSetting();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const setGlobalPaymaster = (_paymaster: string) => {
+    const browserLocalStorage = browserStorage(tempAccessKey as string);
+    const localstorageItem = browserLocalStorage.getItem("aaSmartAccount2");
+    localstorageItem.activePaymaster = _paymaster;
+    browserLocalStorage.setItem("aaSmartAccount2", localstorageItem);
+    setActivePaymaster(_paymaster);
+  };
+
   const renderList = (): JSX.Element[] => {
-    return paymasters?.map((el, idx) => {
+    return paymasterList?.map((el, idx) => {
       return (
         <Card key={idx} className="flex flex-row justify-between">
-          <Avatar src="/zkSync_logo.svg" alt="avatar" />
+          <Avatar src={el?.logo} alt="avatar" />
           <div className="w-full px-3 pt-1">
             <Typography variant="h6" className="text-left truncate">
               {el?.name}
@@ -42,12 +66,11 @@ const Paymasters: FC<IProps> = ({ route }) => {
           </div>
           <Typography
             as="button"
-            onClick={setGlobalPaymaster}
+            onClick={() => setGlobalPaymaster(el?.address)}
             color="blue"
             className="pr-3"
           >
-            {/* if global paymaster.address = el.address ? using : use*/}
-            use
+            {activePaymaster === el?.address ? "using" : "use"}
           </Typography>
         </Card>
       );
@@ -84,7 +107,7 @@ const Paymasters: FC<IProps> = ({ route }) => {
         </Typography>
       </CardHeader>
       <CardBody className="space-y-2 overflow-y-auto md:max-h-96 max-h-[78vh] px-0">
-        {paymasters !== undefined ? (
+        {paymasterList?.length > 0 ? (
           renderList()
         ) : (
           <div className="flex h-full m-auto text-white">

@@ -34,7 +34,6 @@ const SyncWallet = () => {
     if (wallet) {
       setAASmartAccount(wallet);
     }
-    console.log(wallet);
   }, []);
 
   return (
