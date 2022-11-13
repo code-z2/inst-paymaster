@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import {
   Typography,
   Popover,
@@ -15,14 +15,32 @@ import { formatAddress } from "../../lib/formatAddress";
 import { Recieve } from "./Recieve";
 import Modal from "../Modal";
 import Transfer from "./Transfer";
+import { IAAAcount } from "../../pages";
+import { Web3Provider } from "zksync-web3";
+import { BigNumber } from "ethers";
 
 interface IProps {
   route: React.Dispatch<React.SetStateAction<string>>;
+  account: IAAAcount;
 }
 
-const Account: FC<IProps> = ({ route }) => {
+const Account: FC<IProps> = ({ route, account }) => {
   const [recieving, setReceving] = useState(false);
   const [transfering, setTransfering] = useState(false);
+  const [ethBalance, setETHBalance] = useState<BigNumber>(BigNumber.from(0));
+  const provider = new Web3Provider(window.ethereum);
+
+  const setBalance = async () => {
+    const balance = await provider.getBalance(account.address);
+    setETHBalance(balance);
+  };
+
+  useEffect(() => {
+    if (account.address) {
+      setBalance();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [account]);
 
   return (
     <Card className="bg-inherit h-full shadow-none text-white text-center mx-auto w-full">
@@ -33,23 +51,23 @@ const Account: FC<IProps> = ({ route }) => {
             <Typography
               className="truncate text-sm font-bold flex justify-center"
               as="a"
-              onClick={() =>
-                navigator.clipboard.writeText(
-                  "0x70E2D5aA970d84780D81a2c4164b984Abaa94527"
-                )
-              }
             >
-              {formatAddress("0x70E2D5aA970d84780D81a2c4164b984Abaa94527")}
+              {formatAddress(account.address)}
               <span>
-                <svg
-                  className="w-4 h-4"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  className=""
+                  onClick={() => navigator.clipboard.writeText(account.address)}
                 >
-                  <path d="M7 9a2 2 0 012-2h6a2 2 0 012 2v6a2 2 0 01-2 2H9a2 2 0 01-2-2V9z"></path>
-                  <path d="M5 3a2 2 0 00-2 2v6a2 2 0 002 2V5h8a2 2 0 00-2-2H5z"></path>
-                </svg>
+                  <svg
+                    className="w-4 h-4"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M7 9a2 2 0 012-2h6a2 2 0 012 2v6a2 2 0 01-2 2H9a2 2 0 01-2-2V9z"></path>
+                    <path d="M5 3a2 2 0 00-2 2v6a2 2 0 002 2V5h8a2 2 0 00-2-2H5z"></path>
+                  </svg>
+                </button>
               </span>
             </Typography>
           </PopoverHandler>
@@ -106,7 +124,10 @@ const Account: FC<IProps> = ({ route }) => {
           </div>
           <div className="text-right ">
             <Typography className="font-medium" color="gray">
-              0.311 zkETH
+              {parseFloat(ethBalance.toString()).toLocaleString("en-US", {
+                maximumFractionDigits: 4,
+              })}{" "}
+              zkETH
             </Typography>
           </div>
         </div>

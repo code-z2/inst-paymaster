@@ -6,9 +6,40 @@ import {
   Button,
   Alert,
 } from "@material-tailwind/react";
+import { useAccount } from "wagmi";
+import deploy from "../../lib/deployAccount";
+import { IAAAcount } from "../../pages";
 
-const DeployAccount = () => {
-  const [deployError, setDeployError] = useState();
+const DeployAccount = ({
+  setAASmartAccount,
+}: {
+  setAASmartAccount: React.Dispatch<
+    React.SetStateAction<IAAAcount | undefined>
+  >;
+}) => {
+  const [deployError, setDeployError] = useState("");
+  const { address } = useAccount();
+
+  const handleAADeploy = async () => {
+    if (window.ethereum) {
+      await deploy(address as `0x${string}`)
+        .then((response) => {
+          const localstorageItem = {
+            deployer: address,
+            address: response,
+            activePaymaster: "",
+          };
+          localStorage.setItem(
+            "aaSmartAccount",
+            JSON.stringify(localstorageItem)
+          );
+          setAASmartAccount(localstorageItem);
+          console.log(localstorageItem);
+        })
+        .catch((err) => setDeployError("Error Deploying SAccount"));
+    }
+  };
+
   const DeployStatusElement = (status: string): JSX.Element => {
     if (status === "error")
       return (
@@ -27,13 +58,19 @@ const DeployAccount = () => {
       </Alert>
     );
   };
+
   return (
     <div className="text-center m-auto">
       {deployError && DeployStatusElement(deployError)}
       you have not deployed any smart-contract wallet. Click the buttons below
       to deploy one or recover an existing wallet
       <div className="flex justify-between p-4">
-        <Button variant="gradient" className="px-3" color="teal">
+        <Button
+          variant="gradient"
+          className="px-3"
+          color="teal"
+          onClick={() => handleAADeploy()}
+        >
           Deploy Wallet
         </Button>
         <Popover>

@@ -14,9 +14,15 @@ import PaymasterForm from "../components/FormUI/Form";
 import Paymasters from "../components/PaymasterUI/Paymasters";
 import Account from "../components/WalletUI/Account";
 
+export interface IAAAcount {
+  activePaymaster: string;
+  address: string;
+  deployer: `0x${string}` | undefined;
+}
+
 const SyncWallet = () => {
   const [currentView, setCurrentView] = useState("account");
-  const [aaSmartAccount, setAASmartAccount] = useState<{}>("notempty");
+  const [aaSmartAccount, setAASmartAccount] = useState<IAAAcount>();
   const { isConnected } = useAccount();
 
   useEffect(() => {
@@ -43,7 +49,7 @@ const SyncWallet = () => {
           {isConnected ? (
             aaSmartAccount ? (
               (currentView === "account" && (
-                <Account route={setCurrentView} />
+                <Account route={setCurrentView} account={aaSmartAccount} />
               )) ||
               (currentView === "paymasters" && (
                 <Paymasters route={setCurrentView} />
@@ -52,7 +58,7 @@ const SyncWallet = () => {
                 <PaymasterForm route={setCurrentView} />
               ))
             ) : (
-              <DeployAccount />
+              <DeployAccount setAASmartAccount={setAASmartAccount} />
             )
           ) : (
             <Typography className="h-fit m-auto">

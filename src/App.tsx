@@ -5,8 +5,6 @@ import {
   getDefaultWallets,
   RainbowKitProvider,
   Chain,
-  lightTheme,
-  darkTheme,
 } from "@rainbow-me/rainbowkit";
 import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
 import { jsonRpcProvider } from "wagmi/providers/jsonRpc";
@@ -34,7 +32,7 @@ const zkSync: Chain = {
 };
 
 const { chains, provider } = configureChains(
-  [chain.goerli, zkSync],
+  [zkSync, chain.goerli],
   [
     jsonRpcProvider({ rpc: (chain) => ({ http: chain.rpcUrls.default }) }),
     publicProvider(),
@@ -57,15 +55,7 @@ const queryClient = new QueryClient();
 function App() {
   return (
     <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider
-        coolMode
-        modalSize="compact"
-        chains={chains}
-        // theme={{
-        //   lightMode: lightTheme(),
-        //   darkMode: darkTheme(),
-        // }}
-      >
+      <RainbowKitProvider coolMode modalSize="compact" chains={chains}>
         <QueryClientProvider client={queryClient}>
           <div className="h-screen flex justify-center items-center">
             <SyncWallet />

@@ -18,7 +18,7 @@ const Modal: FC<IModalProps> = ({ setOpen, open, children }) => {
         open={open}
         handler={setOpen}
         size="xl"
-        className="bg-indigo-900 min-w-[25%] md:max-w-[35%] lg:max-w-[20rem]"
+        className="bg-indigo-800 min-w-[25%] md:max-w-[35%] lg:max-w-[20rem]"
       >
         <DialogFooter>
           <IconButton
