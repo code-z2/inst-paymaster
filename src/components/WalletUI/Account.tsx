@@ -107,7 +107,7 @@ const Account: FC<IProps> = ({ route, account }) => {
           <Recieve address="0x70E2D5aA970d84780D81a2c4164b984Abaa94527" />
         </Modal>
         <Modal setOpen={setTransfering} open={transfering}>
-          <Transfer />
+          <Transfer account={account} />
         </Modal>
       </div>
       <div className="inline-flex gap-3 justify-start w-full">

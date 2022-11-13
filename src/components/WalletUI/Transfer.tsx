@@ -10,16 +10,27 @@ import {
 } from "@material-tailwind/react";
 import { useForm } from "react-hook-form";
 import { Eth } from "@web3uikit/icons";
+import { IAAAcount } from "../../pages";
+import send from "../../lib/transfer";
 
-const Transfer = () => {
+const Transfer = ({ account }: { account: IAAAcount }) => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data: any) => {
+  const onSubmit = async (data: any) => {
     console.log(data);
+    const success = await send(
+      account.EIP712Signer,
+      account.address,
+      data.To,
+      data.Amount
+    );
+    reset();
+    console.log(success);
   };
   return (
     <Card className="m-auto">
@@ -39,7 +50,7 @@ const Transfer = () => {
             placeholder="0x...."
             size="lg"
             type="text"
-            {...register("name", {
+            {...register("To", {
               required: true,
             })}
           />
@@ -48,7 +59,7 @@ const Transfer = () => {
             size="lg"
             type="text"
             icon={<Eth />}
-            {...register("token-address", {
+            {...register("Amount", {
               required: true,
             })}
           />

@@ -80,8 +80,8 @@ export default async function deploy(
 
   console.log("step 9 signature appended to transaction");
 
-  // const sentTx = await provider.sendTransaction(utils.serialize(aaTx));
-  // await sentTx.wait();
+  const sentTx = await provider.sendTransaction(utils.serialize(aaTx));
+  await sentTx.wait();
 
   const abiCoder = new ethers.utils.AbiCoder();
 
