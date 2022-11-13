@@ -9,7 +9,10 @@ export async function paymasters(): Promise<IMetadata[] | undefined> {
 
   const metadata = async (cid: string, contract: string) => {
     const data = await fetch(
-      `https://${cid}.ipfs.dweb.link/payamsterMetadata.json`
+      `https://${cid}.ipfs.dweb.link/payamsterMetadata.json`,
+      {
+        method: "GET",
+      }
     );
     //@ts-ignore
     const json = await data.json();
@@ -28,14 +31,13 @@ export async function paymasters(): Promise<IMetadata[] | undefined> {
 
   const paymaster = await paymasterStorage.getAllPaymasters();
 
-  const reducedResult = paymaster.reduce(
-    async (memo: IMetadata[], element: any) => {
-      const elMetadata = ethers.utils.toUtf8String(element.metadata);
-      memo.push(await metadata(elMetadata, element.contract_address));
-      return memo;
-    },
-    []
+  const memo: IMetadata[] = await Promise.all(
+    paymaster.map(async (el: any): Promise<IMetadata> => {
+      return await metadata(
+        ethers.utils.toUtf8String(el.metadata),
+        el.contract_address
+      );
+    })
   );
-
-  return reducedResult;
+  return memo;
 }
