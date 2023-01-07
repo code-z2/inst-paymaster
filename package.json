@@ -1,70 +1,10 @@
 {
-  "name": "inst-paymaster",
-  "version": "0.1.0",
+  "name": "root",
   "private": true,
-  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
-    "@matterlabs/hardhat-zksync-deploy": "^0.5.2",
-    "@matterlabs/hardhat-zksync-solc": "^0.3.10",
-    "autoprefixer": "^10.4.13",
-    "ethers": "^5.7.2",
-    "hardhat": "^2.12.2",
-    "postcss": "^8.4.19",
-    "tailwindcss": "^3.2.3",
-    "ts-node": "^10.9.1",
-    "typescript": "^4.8.4"
-  },
-  "dependencies": {
-    "@material-tailwind/react": "^1.2.4",
-    "@matterlabs/zksync-contracts": "^0.4.2",
-    "@openzeppelin/contracts": "^4.8.0",
-    "@openzeppelin/contracts-upgradeable": "^4.8.0",
-    "@rainbow-me/rainbowkit": "^0.7.4",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^13.0.0",
-    "@testing-library/user-event": "^13.2.1",
-    "@types/crypto-js": "^4.1.1",
-    "@types/jest": "^27.0.1",
-    "@types/node": "^16.7.13",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "@web3uikit/icons": "^0.2.12",
-    "crypto-js": "^4.1.1",
-    "dotenv": "^16.0.3",
-    "react": "experimental",
-    "react-dom": "experimental",
-    "react-hook-form": "7.38.0",
-    "react-qr-code": "^2.0.8",
-    "react-query": "^3.39.2",
-    "react-scripts": "5.0.1",
-    "secure-web-storage": "^1.0.2",
-    "wagmi": "^0.8.1",
-    "web-vitals": "^2.1.0",
-    "web3.storage": "^4.4.0",
-    "zksync-web3": "^0.11.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "lerna": "^6.4.0"
   }
 }
