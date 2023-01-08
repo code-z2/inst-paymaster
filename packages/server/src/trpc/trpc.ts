@@ -10,8 +10,7 @@ export const t = initTRPC.context<Context>().create({
 });
 
 export const router = t.router;
-export const mergerouters = t.mergeRouters;
-
+export const mergeRouters = t.mergeRouters;
 export const publicProcedure = t.procedure;
 
 const authenticated = t.middleware(({ next, ctx }) => {
