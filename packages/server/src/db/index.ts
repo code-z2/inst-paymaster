@@ -1,16 +1,40 @@
-const SDK = require("weavedb-sdk-node");
-import ADMIN_ARWEAVE_WALLET_JSON from "../../weavedb/.wallets";
+const WeaveDB = require("weavedb-sdk-node");
+import {existsSync, readFileSync} from "fs";
+import path from "path";
 require("dotenv").config();
 
-const WEAVEDB_CONTRACT_TX_ID = process.env.WEAVEDB_CONTRACT_TX_ID;
+const WEAVEDB_CONTRACT_TXID = path.resolve(
+    __dirname,
+    "../../weavedb/.wallets/contract-tx.json"
+);
 
-const db = new SDK({
-    arweave_wallet: ADMIN_ARWEAVE_WALLET_JSON,
-});
+const ADMIN_ARWEAVE_WALLET = path.resolve(
+    __dirname,
+    "../../weavedb/.wallets/admin-wallet.json"
+);
 
-db.initialize({
-    contractTxId: WEAVEDB_CONTRACT_TX_ID,
-    wallet: ADMIN_ARWEAVE_WALLET_JSON,
-});
+let db: any;
+if (existsSync(ADMIN_ARWEAVE_WALLET) && existsSync(WEAVEDB_CONTRACT_TXID)) {
+    const wallet = JSON.parse(readFileSync(ADMIN_ARWEAVE_WALLET, "utf8"));
+    const {contractTxId} = JSON.parse(
+        readFileSync(WEAVEDB_CONTRACT_TXID, "utf8")
+    );
 
+    db = new WeaveDB({
+        arweave_wallet: wallet,
+    });
+
+    db.initialize({
+        contractTxId,
+        wallet,
+    });
+} else {
+    console.log(
+        `File ${ADMIN_ARWEAVE_WALLET} does not exist, please check the path and file name.`
+    );
+}
+
+// allow for import keyword
 export default db;
+// allow for require keyword
+module.exports = db;

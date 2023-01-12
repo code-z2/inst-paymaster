@@ -2466,23 +2466,6 @@
   dependencies:
     esquery "^1.0.1"
 
-"@prisma/client@^4.8.1":
-  version "4.8.1"
-  resolved "https://registry.yarnpkg.com/@prisma/client/-/client-4.8.1.tgz#51c16488dfac4e74a275a2753bf20262a65f2a2b"
-  integrity sha512-d4xhZhETmeXK/yZ7K0KcVOzEfI5YKGGEr4F5SBV04/MU4ncN/HcE28sy3e4Yt8UFW0ZuImKFQJE+9rWt9WbGSQ==
-  dependencies:
-    "@prisma/engines-version" "4.8.0-61.d6e67a83f971b175a593ccc12e15c4a757f93ffe"
-
-"@prisma/engines-version@4.8.0-61.d6e67a83f971b175a593ccc12e15c4a757f93ffe":
-  version "4.8.0-61.d6e67a83f971b175a593ccc12e15c4a757f93ffe"
-  resolved "https://registry.yarnpkg.com/@prisma/engines-version/-/engines-version-4.8.0-61.d6e67a83f971b175a593ccc12e15c4a757f93ffe.tgz#30401aba1029e7d32e3cb717e705a7c92ccc211e"
-  integrity sha512-MHSOSexomRMom8QN4t7bu87wPPD+pa+hW9+71JnVcF3DqyyO/ycCLhRL1we3EojRpZxKvuyGho2REQsMCvxcJw==
-
-"@prisma/engines@4.8.1":
-  version "4.8.1"
-  resolved "https://registry.yarnpkg.com/@prisma/engines/-/engines-4.8.1.tgz#8428f7dcd7912c6073024511376595017630dc85"
-  integrity sha512-93tctjNXcIS+i/e552IO6tqw17sX8liivv8WX9lDMCpEEe3ci+nT9F+1oHtAafqruXLepKF80i/D20Mm+ESlOw==
-
 "@scure/base@~1.1.0":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@scure/base/-/base-1.1.1.tgz#ebb651ee52ff84f420097055f4bf46cfba403938"
@@ -3197,7 +3180,7 @@ arweave@1.11.8:
     bignumber.js "^9.0.2"
     util "^0.12.4"
 
-arweave@^1.10.13, arweave@^1.11.4:
+arweave@^1.10.13, arweave@^1.11.4, arweave@^1.12.2:
   version "1.12.2"
   resolved "https://registry.yarnpkg.com/arweave/-/arweave-1.12.2.tgz#e99fb3db0529043ae0c67a89587751f8640058dd"
   integrity sha512-gm82sbUd3AqiRxZ9hWRBnC2mRff+kCuVw1cSdMwhUmVyeSgvDxi5GkdCKHUm1tMvu59f45OcZRiL1yEIvvJY2Q==
@@ -4935,7 +4918,7 @@ fp-ts@^1.0.0:
   resolved "https://registry.yarnpkg.com/fp-ts/-/fp-ts-1.19.5.tgz#3da865e585dfa1fdfd51785417357ac50afc520a"
   integrity sha512-wDNqTimnzs8QqpldiId9OavWK2NptormjXnRJTQecNjzwfyp6P/8s/zG8e4h3ja3oqkKaY72UlTjQYt/1yXf9A==
 
-fpjson-lang@^0.1.1, fpjson-lang@^0.1.3:
+fpjson-lang@^0.1.1:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/fpjson-lang/-/fpjson-lang-0.1.3.tgz#850a3bac1da2b4488118000acf4aab1bb06109e6"
   integrity sha512-GBLFEQmeoTdFLp1yfDhierzozniCClzeuu+Y9Xny+JIf1gOGM8n/gqZqn0sneKikt71K6qxFVZDrpfkPTA53nA==
@@ -7316,13 +7299,6 @@ prettier@^2.7.1:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.2.tgz#c4ea1b5b454d7c4b59966db2e06ed7eec5dfd160"
   integrity sha512-BtRV9BcncDyI2tsuS19zzhzoxD8Dh8LiCx7j7tHzrkz8GFXAexeWFdi22mjE1d16dftH2qNaytVxqiRTGlMfpw==
 
-prisma@^4.8.1:
-  version "4.8.1"
-  resolved "https://registry.yarnpkg.com/prisma/-/prisma-4.8.1.tgz#ef93cd908809b7d02e9f4bead5eea7733ba50c68"
-  integrity sha512-ZMLnSjwulIeYfaU1O6/LF6PEJzxN5par5weykxMykS9Z6ara/j76JH3Yo2AH3bgJbPN4Z6NeCK9s5fDkzf33cg==
-  dependencies:
-    "@prisma/engines" "4.8.1"
-
 proc-log@^2.0.0, proc-log@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/proc-log/-/proc-log-2.0.1.tgz#8f3f69a1f608de27878f91f5c688b225391cb685"
@@ -8817,6 +8793,27 @@ warp-contracts@1.2.36:
     unzipit "^1.4.0"
     vm2 "3.9.11"
 
+warp-contracts@^1.2.45:
+  version "1.2.45"
+  resolved "https://registry.yarnpkg.com/warp-contracts/-/warp-contracts-1.2.45.tgz#837d966d3f143472018353970f2df4543826926d"
+  integrity sha512-wykrhUkKjS5XTve6rWm2ZTEe7iWxzAUb9l67/CCvZsu33qLV0s8rMMmFL+0ZSUzEEnXb5ydaonV2OGU9UiBbbg==
+  dependencies:
+    "@assemblyscript/loader" "^0.19.23"
+    "@idena/vrf-js" "^1.0.1"
+    archiver "^5.3.0"
+    arweave "1.11.8"
+    elliptic "^6.5.4"
+    events "3.3.0"
+    fast-copy "^3.0.0"
+    level "^8.0.0"
+    memory-level "^1.0.0"
+    redstone-isomorphic "1.1.8"
+    redstone-wasm-metering "1.0.3"
+    safe-stable-stringify "2.4.1"
+    stream-buffers "^3.0.2"
+    unzipit "^1.4.0"
+    vm2 "3.9.11"
+
 wcwidth@^1.0.0, wcwidth@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/wcwidth/-/wcwidth-1.0.1.tgz#f0b0dcf915bc5ff1528afadb2c0e17b532da2fe8"
@@ -8829,7 +8826,7 @@ weak-lru-cache@^1.2.2:
   resolved "https://registry.yarnpkg.com/weak-lru-cache/-/weak-lru-cache-1.2.2.tgz#fdbb6741f36bae9540d12f480ce8254060dccd19"
   integrity sha512-DEAoo25RfSYMuTGc9vPJzZcZullwIqRDSI9LOy+fkCJPi6hykCnfKaXTuPBDuXAUcqHXyOgFtHNp/kB2FjYHbw==
 
-weavedb-base@^0.9.6, weavedb-base@^0.9.7:
+weavedb-base@^0.9.6:
   version "0.9.7"
   resolved "https://registry.yarnpkg.com/weavedb-base/-/weavedb-base-0.9.7.tgz#58ca8b2cc302bf536794a0bcdac3a6cdbbeda389"
   integrity sha512-0Gwbv7dkIoAuaLhei7vQ6Kvv8bCx5RkmX+P/BdcgNCMz2aXKhAMBEnyT96TW794ZjsX+FMbvoXoXWDff8PkRPQ==
@@ -8857,21 +8854,6 @@ weavedb-sdk-node@^0.9.15:
     warp-contracts-old "npm:warp-contracts@1.2.26"
     warp-contracts-plugin-subscription "^1.0.5"
     weavedb-base "^0.9.6"
-
-weavedb-sdk@^0.9.15:
-  version "0.9.15"
-  resolved "https://registry.yarnpkg.com/weavedb-sdk/-/weavedb-sdk-0.9.15.tgz#9a7152a74e9e3fc518ff6be5b9a535cf2c8256fe"
-  integrity sha512-InBN8Fz0t4mKERb+6vaPQc6HmMCboZ22U/w+xFrcXgSs54UO8BQNd+RBv0B7tnfl/EoCe5O1mTuRaM5Iqvm7jQ==
-  dependencies:
-    "@metamask/legacy-web3" "^2.0.0"
-    arweave "^1.11.4"
-    fpjson-lang "^0.1.3"
-    json-logic-js "^2.0.2"
-    md5 "^2.3.0"
-    ramda "^0.28.0"
-    warp-contracts "1.2.36"
-    warp-contracts-old "npm:warp-contracts@1.2.26"
-    weavedb-base "^0.9.7"
 
 webcrypto-core@^1.7.4:
   version "1.7.5"
