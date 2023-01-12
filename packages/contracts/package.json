@@ -1,5 +1,5 @@
 {
-    "name": "foundry-starter-kit",
+    "name": "contracts",
     "version": "1.0.0",
     "description": "Minimal Template for Foundry Projects",
     "author": "Patrick Collins",
@@ -15,7 +15,7 @@
         "@matterlabs/hardhat-zksync-verify": "^0.1.1",
         "@nomicfoundation/hardhat-chai-matchers": "^1.0.5",
         "@nomiclabs/hardhat-ethers": "^2.2.1",
-        "@nomiclabs/hardhat-etherscan": "^3.1.4",
+        "@nomiclabs/hardhat-etherscan": "3.1.2",
         "@types/mocha": "^10.0.1",
         "@types/node": "^18.11.18",
         "chai": "^4.3.7",

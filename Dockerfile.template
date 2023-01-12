@@ -1,0 +1,9 @@
+# This is the template dockerfile for each package.
+# If you want to use an custom dockerfile for an package simply put an Dockerfile into the package folder.
+
+# base will be the the image build by the base dockerfile.
+FROM base as build
+
+# Here the dependencies will be installed and the local required packages bootstrapped.
+COPY ./package.json ./
+RUN yarn

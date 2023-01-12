@@ -5,6 +5,10 @@
     "packages/*"
   ],
   "devDependencies": {
-    "lerna": "^6.4.0"
+    "lerna": "^6.4.0",
+    "lerna-dockerize": "^1.0.4"
+  },
+  "scripts": {
+    "lerna-dockerize": "lerna-dockerize"
   }
 }
