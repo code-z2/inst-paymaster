@@ -1,0 +1,7 @@
+@std=packages/contracts/lib/forge-std/src/
+@chainlink/=packages/contracts/lib/chainlink-brownie-contracts/
+@openzeppelin/=packages/contracts/lib/openzeppelin-contracts/
+forge-std/=packages/contracts/lib/forge-std/src/
+ds-test/=packages/contracts/lib/forge-std/lib/ds-test/src/
+erc4626-tests/=packages/contracts/lib/openzeppelin-contracts/lib/erc4626-tests/
+
