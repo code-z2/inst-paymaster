@@ -92,16 +92,43 @@ const LandingPage = () => {
                may incur additional miscellaneous. With paymasters, you can integrate chargebacks as a middleware.
                </p>
             </div> */}
+
         <div className={styles.third_section_first_content}>
-          <h5 className="">Much More Than Transactions</h5>
+          <span>
+            <Image
+              src="/assets/pm-icons/component_exchange.svg"
+              alt="paymasters icon"
+              width={35}
+              className="mb-2"
+              height={30}
+              object-fit="cover"
+              priority
+            />
+          </span>
+          <h5 className="">
+            Much More Than <br />
+            Transactions
+          </h5>
+
           <p className="text-slate-400 text-sm my-6">
-            {" "}
             An aggregation of paymasters for users to have access to Ethereum
             protocols without incurring gas costs or unnecessary onboarding
             cost.
           </p>
         </div>
         <div className={styles.third_section_second_content}>
+          <span>
+            <Image
+              src="/assets/pm-icons/search.svg"
+              alt="paymasters search icon"
+              width={32}
+              className="mb-2"
+              height={30}
+              object-fit="cover"
+              priority
+            />
+          </span>
+
           <h5>More Visible Than Macro</h5>
           <p className="text-slate-400 my-6">
             More visible than macro Explore a wide range of Paymasters, find
@@ -109,6 +136,16 @@ const LandingPage = () => {
           </p>
         </div>
         <div className={styles.third_section_third_content}>
+          <span style={{ marginLeft: "50px" }}>
+            <Image
+              src="/assets/pm-icons/ads_click.svg"
+              alt="paymasters icon"
+              width={32}
+              height={30}
+              object-fit="cover"
+              priority
+            />
+          </span>
           <h5>
             Ux More Superior Than <br /> Superior
           </h5>
@@ -148,7 +185,7 @@ const LandingPage = () => {
             </p>
             <button
               className="px-3 py-1 w-40 hover:bg-purple-900 bg-purple-600 
-            border-solid border-2 border-slate-400 rounded-md"
+              rounded-md"
             >
               Explore SDK
             </button>
@@ -230,6 +267,74 @@ const LandingPage = () => {
           </span>
         </div>
       </section>
+      <section className={styles.fifth_section}>
+        <div className={styles.get_started}>
+          <h5>Get Started, Explore And Create Paymasters </h5>
+          <button
+            className="px-3 py-1
+             mt-6 rounded-md"
+          >
+            Launch App
+          </button>
+        </div>
+        <div className={styles.get_started_image}>
+          <Image
+            src="/assets/pm-images/Frame55.png"
+            alt="paymaster getstarted image"
+            width={974}
+            height={259}
+            object-fit="cover"
+            priority
+          />
+        </div>
+      </section>
+      <section className={styles.subscribe_section}>
+        <div className={styles.subscribe_logo}>
+          <Image
+            src="/assets/pm-images/logo.png"
+            alt="paymaster logo"
+            width={120}
+            height={30}
+            priority
+          />
+        </div>
+        <p className=" mb-4">Subscribe to our news letter</p>
+        <form>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            name="subscribe"
+            className=""
+          />
+          <button className="px-3 py-1  hover:bg-purple-900 bg-purple-600 m-2 rounded-md">
+            Subscribe
+          </button>
+        </form>
+      </section>
+      <div className={styles.bottom}>
+        <hr className="border-1 border-slate-400 " />
+        <p>&copy; 2023 Paymasters. All rights reserved. </p>
+        <ul>
+          <li>
+            <a>Discord</a>{" "}
+          </li>
+          <li>
+            <a>Telegram </a>
+          </li>
+          <li>
+            <a>Twitter </a>
+          </li>
+          <li>
+            <a>Github</a>{" "}
+          </li>
+          <li>
+            <a>Contact</a>{" "}
+          </li>
+          <li>
+            <a>Privacy</a>{" "}
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
