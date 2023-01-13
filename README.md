@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="" height="200">
+    <img src="./packages/docs/images/logo.jpg" height="200" style="border-radius:50%">
 </p>
 <div align="center">
   <h3 align="center">
