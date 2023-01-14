@@ -1,0 +1,30 @@
+/* page content width  */
+.container {
+  width: var(--max-width);
+  margin: 0 auto;
+}
+/* navbar   */
+.paynav {
+  display: grid;
+  margin-top: 2.2rem;
+  grid-template-columns: repeat(12, 2fr);
+}
+
+.paylogo {
+  grid-column: 1/4;
+}
+
+.paynav > ul {
+  grid-column: 11/13;
+  display: grid;
+  grid-template-columns: 50px 100px;
+  column-gap: 1.5rem;
+  list-style-type: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.paynav > ul > li {
+  display: inline;
+  width: 10rem;
+}
