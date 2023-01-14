@@ -1,26 +1,10 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "@next/font/google";
-import styles from "../styles/Home.module.css";
 import LandingPage from "../components/landingpage/landing";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const handleScroll = () => {
-    if (window.scrollY === 0) {
-      document
-        .getElementsByClassName("first_section")[0]
-        .classList.remove("forscroll");
-    } else {
-      document
-        .getElementsByClassName("first_section")[0]
-        .classList.add("forscroll");
-    }
-  };
-
-  // window.addEventListener("scroll", handleScroll);
-
   return (
     <>
       <Head>

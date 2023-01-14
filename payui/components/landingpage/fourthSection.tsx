@@ -1,5 +1,5 @@
-import { Image } from "./index";
-import { styles } from "./index";
+import { Image } from "./";
+import { styles } from "./";
 
 function FourthSection() {
   return (

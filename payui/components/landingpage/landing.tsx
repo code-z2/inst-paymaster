@@ -1,5 +1,4 @@
-import { styles } from "./index";
-import { Image } from "./index";
+import { styles } from "./";
 import Paynav from "./paynav";
 import FirstSection from "./firstSection";
 import SecondSection from "./secondSection";

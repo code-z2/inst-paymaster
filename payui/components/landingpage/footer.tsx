@@ -1,5 +1,4 @@
-import { Image } from "./index";
-import { styles } from "./index";
+import { styles } from "./";
 
 function Footer() {
   return (
