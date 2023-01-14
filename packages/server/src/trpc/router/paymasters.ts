@@ -26,12 +26,18 @@ export const paymastersRouter = router({
             })
         )
         .query(async ({input}) => {
-            const paymasters = await queryAggregatorContract(
-                input.address,
-                input.chain,
-                input.selector
-            );
-
-            return paymasters;
+            try {
+                const paymasters = await queryAggregatorContract(
+                    input.address,
+                    input.chain,
+                    input.selector
+                );
+                return paymasters;
+            } catch (error: any) {
+                return {
+                    ok: false,
+                    error: error?.message ?? "Unknown error",
+                };
+            }
         }),
 });

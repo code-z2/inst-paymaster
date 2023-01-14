@@ -1,0 +1,27 @@
+{
+  "folders": [
+    {
+      "path": ".."
+    },
+    {
+      "name": "server",
+      "path": "server"
+    },
+    {
+      "name": "contracts",
+      "path": "contracts"
+    },
+    {
+      "name": "client",
+      "path": "client"
+    }
+  ],
+  "settings": {
+    "slither.solcPath": "",
+    "slither.hiddenDetectors": [],
+    "jest.disabledWorkspaceFolders": [
+      "contracts",
+      "client"
+    ]
+  }
+}

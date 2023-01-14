@@ -12,7 +12,7 @@ const submit = async (db: any, user: any, input: z.infer<typeof zObject>) =>
     await db.add(
         {
             name: input.name,
-            user_address: input.user_address,
+            user_address: db.signer(),
             contract_address: input.contract_address,
             metadata: input.metadata,
             approved: false,
