@@ -3,7 +3,7 @@ import { styles } from "./";
 function Footer() {
   return (
     <div className={styles.bottom}>
-      <hr className="border-1 border-slate-400 mt-4" />
+      <hr className="" />
       <p>&copy; 2023 Paymasters. All rights reserved. </p>
       <ul>
         <li>
