@@ -7,22 +7,22 @@ function Footer() {
       <p>&copy; 2023 Paymasters. All rights reserved. </p>
       <ul>
         <li>
-          <a>Discord</a>{" "}
+          <a href="#">Discord</a>{" "}
         </li>
         <li>
-          <a>Telegram </a>
+          <a href="#">Telegram </a>
         </li>
         <li>
-          <a>Twitter </a>
+          <a href="#">Twitter </a>
         </li>
         <li>
-          <a>Github</a>{" "}
+          <a href="#">Github</a>{" "}
         </li>
         <li>
-          <a>Contact</a>{" "}
+          <a href="#">Contact</a>{" "}
         </li>
         <li>
-          <a>Privacy</a>{" "}
+          <a href="#">Privacy</a>{" "}
         </li>
       </ul>
     </div>

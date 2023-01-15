@@ -8,15 +8,15 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Institutional-paymaster</title>
+        <title>paymaster</title>
         <meta
           name="description"
-          content="Institutional paymaster is a possile new approach 
+          content="Paymaster is a possile new approach 
         to handling paymasters for wallets implementing Account Abstraction."
         />
         <meta
           name="og:description"
-          content="Institutional paymaster enables users to choose any paymaster 
+          content="Paymaster enables users to choose any paymaster 
          they are eligible to use without handling complex interactions. "
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

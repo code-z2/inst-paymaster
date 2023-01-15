@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 :root {
-  --max-width: 80%;
+  --max-width: 88%;
   --border-radius: 12px;
   --font-mono: "Montserrat";
   --background-theme: #11142b;
@@ -22,6 +22,8 @@
 html,
 body {
   max-width: 100vw;
+  gap: 1.2rem;
+
   overflow-x: hidden;
   color: #ffffff;
   font-family: "Montserrat";

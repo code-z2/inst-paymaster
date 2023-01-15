@@ -10,12 +10,7 @@ function FirstSection() {
           Using paymaster to simplify zk transactions and provide
           <br /> superior ux to dapps
         </p>
-        <button
-          className="px-3 py-1 w-40 hover:bg-purple-900 bg-purple-600 
-        border-solid border-2 border-slate-400 rounded-md"
-        >
-          Coming soon
-        </button>
+        <button className="px-3 py-1 ">Coming soon</button>
       </div>
       <div className={styles.heading_image}>
         <Image

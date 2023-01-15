@@ -6,7 +6,7 @@ import FirstSection from "./firstSection";
 // import FourthSection from "./fourthSection";
 // import FifthSection from "./fifthSection";
 // import Subscribe from "./subscribe";
-// import Footer from "./footer";
+import Footer from "./footer";
 
 const LandingPage = () => {
   return (
@@ -20,8 +20,8 @@ const LandingPage = () => {
       <ThirdSection />
       <FourthSection />
       <FifthSection /> 
-       <Subscribe /> 
-       <Footer /> */}
+       <Subscribe /> */}
+      <Footer />
     </div>
   );
 };
