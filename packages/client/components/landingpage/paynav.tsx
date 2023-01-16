@@ -7,9 +7,10 @@ function Paynav() {
       <a href="/" className={styles.paylogo}>
         <Image
           src="/assets/pm-images/logo.png"
+          blurDataURL="/assets/pm-images/logo.png"
           alt="paymaster logo"
-          width={102}
-          height={20}
+          width={130}
+          height={120}
           priority
         />
       </a>

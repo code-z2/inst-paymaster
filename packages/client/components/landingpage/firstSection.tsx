@@ -16,6 +16,7 @@ function FirstSection() {
         <Image
           src="/assets/pm-images/header_image.png"
           alt="paymaster-planet-logo"
+          blurDataURL="/assets/pm-images/header_image.png"
           width={522}
           height={522}
           priority
