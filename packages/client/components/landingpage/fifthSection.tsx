@@ -17,6 +17,7 @@ function FifthSection() {
       <div className={styles.get_started_image}>
         <Image
           src="/assets/pm-images/Frame55.png"
+          blurDataURL="assets/pm-images/Frame55.png"
           alt="paymaster getstarted image"
           width={974}
           height={259}

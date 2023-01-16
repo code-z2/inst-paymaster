@@ -8,6 +8,7 @@ function Subscribe() {
         <Image
           src="/assets/pm-images/logo.png"
           alt="paymaster logo"
+          blurDataURL="/assets/pm-images/logo.png"
           width={120}
           height={30}
           priority

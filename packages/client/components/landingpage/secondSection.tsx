@@ -19,6 +19,7 @@ function SecondSection() {
         <Image
           src="/assets/pm-images/chain_section3.png"
           alt="paymaster onchain image"
+          blurDataURL="/assets/pm-images/chain_section3.png"
           width={600}
           height={500}
           object-fit="cover"

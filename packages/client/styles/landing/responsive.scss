@@ -15,7 +15,8 @@
     grid-template-rows: repeat(9, 2fr);
   }
   .heading_section {
-    padding: 0.9rem;
+    text-align: center;
+    padding: 0;
     grid-column: 1/12;
     grid-row: 1/6;
   }
@@ -29,8 +30,8 @@
   }
 
   .heading_section > h1 {
-    font-size: 2rem;
-    font-weight: 400;
+    font-size: 1.5rem;
+    font-weight: 600;
   }
 
   .heading_image {
