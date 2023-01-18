@@ -1,9 +1,6 @@
 {
   "folders": [
     {
-      "path": ".."
-    },
-    {
       "name": "server",
       "path": "server"
     },
@@ -19,9 +16,6 @@
   "settings": {
     "slither.solcPath": "",
     "slither.hiddenDetectors": [],
-    "jest.disabledWorkspaceFolders": [
-      "contracts",
-      "client"
-    ]
+    "jest.disabledWorkspaceFolders": ["contracts", "client"]
   }
 }

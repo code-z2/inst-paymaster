@@ -1,4 +1,4 @@
-import {protectedProcedure, router} from "../trpc";
+import {protectedProcedure, publicProcedure, router} from "../trpc";
 import {z} from "zod";
 
 const zObject = z.object({

@@ -2,10 +2,9 @@ import {generateNonce, SiweMessage} from "siwe";
 import {z} from "zod";
 import {router, publicProcedure, protectedProcedure} from "../../trpc";
 
-export const siweRouter = router({
+const siwe = router({
     siweNonce: publicProcedure.query(async ({ctx}) => {
         const currentDate = new Date();
-
         // Setup Session
         ctx.req.session.nonce = generateNonce();
         ctx.req.session.issuedAt = currentDate.toISOString();
@@ -92,4 +91,8 @@ export const siweRouter = router({
         ctx.req.session.destroy();
         return {ok: true};
     }),
+});
+
+export const siweRouter = router({
+    siwe: siwe,
 });

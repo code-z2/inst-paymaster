@@ -16,8 +16,8 @@ const queryAggregatorContract = async (address?: string, chain?: string, selecto
     return all;
 };
 
-export const paymastersRouter = router({
-    paymasters: publicProcedure
+const paymasters = router({
+    all: publicProcedure
         .input(
             z.object({
                 address: z.string().length(42).optional(),
@@ -36,8 +36,12 @@ export const paymastersRouter = router({
             } catch (error: any) {
                 return {
                     ok: false,
-                    error: error?.message ?? "Unknown error",
+                    error: "Unknown error",
                 };
             }
         }),
+});
+
+export const paymastersRouter = router({
+    paymasters: paymasters,
 });
