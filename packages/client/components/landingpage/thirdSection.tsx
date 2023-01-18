@@ -50,6 +50,7 @@ function ThirdSection() {
           <Image
             src="/assets/pm-icons/ads_click.svg"
             alt="paymasters icon"
+            blurDataURL="/assets/pm-icons/ads_click.svg"
             width={32}
             height={30}
             object-fit="cover"
@@ -69,6 +70,7 @@ function ThirdSection() {
         <Image
           src="/assets/pm-images/flower_img.png"
           alt="paymaster flower image"
+          blurDataURL="/assets/pm-images/flower_img.png"
           width={450}
           height={600}
           object-fit="cover"
@@ -81,6 +83,7 @@ function ThirdSection() {
           <Image
             src="/assets/pm-images/code_img.png"
             alt="paymaster code snapshot"
+            blurDataURL="/assets/pm-images/code_img.png"
             width={550}
             height={600}
             object-fit="cover"
