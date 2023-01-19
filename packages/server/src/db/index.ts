@@ -6,7 +6,7 @@ const WEAVEDB_CONTRACT_TXID = path.resolve(__dirname, "../../weavedb/.wallets/co
 
 const ADMIN_ARWEAVE_WALLET = path.resolve(__dirname, "../../weavedb/.wallets/admin-wallet.json");
 
-const db = () => {
+const db = (network?: string) => {
     let _db: any;
 
     if (existsSync(ADMIN_ARWEAVE_WALLET) && existsSync(WEAVEDB_CONTRACT_TXID)) {
@@ -15,6 +15,7 @@ const db = () => {
 
         _db = new WeaveDB({
             arweave_wallet: wallet,
+            network: network,
         });
 
         _db.initialize({

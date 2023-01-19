@@ -9,7 +9,7 @@
     "scripts": {
         "start": "ts-node src/server.ts",
         "weave": "ts-node weavedb/__setup.ts",
-        "test": "jest --testTimeout=10000",
+        "test": "jest --testTimeout=10000 --detectOpenHandles",
         "dev": "ts-node-dev src/server.ts --watch src"
     },
     "devDependencies": {
@@ -30,10 +30,12 @@
     "dependencies": {
         "@trpc/server": "^10.8.1",
         "@types/cors": "^2.8.13",
+        "arlocal": "^1.1.60",
         "arweave": "^1.12.2",
         "cors": "^2.8.5",
         "dotenv": "^16.0.3",
         "ethers": "^5.7.2",
+        "expect-type": "^0.15.0",
         "express": "^4.18.2",
         "iron-session": "^6.3.1",
         "ramda": "^0.28.0",

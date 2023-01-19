@@ -1,20 +1,24 @@
 import appRouter from "../src/trpc/router";
 import {TRPCError} from "@trpc/server";
-import {IronSession} from "iron-session";
+import {IronSession, WeaveDBUserObject} from "iron-session";
 import {Context, createContext} from "../src/trpc/context";
 import {getMockReq, getMockRes} from "@jest-mock/express";
 import db from "../src/db";
+import ArLocal from "arlocal";
+import {SiweMessage} from "siwe";
+import {Wallet} from "ethers";
+import {expectTypeOf} from "expect-type";
 
 const {applySession} = require("./session.mock.ts");
 
 describe("test routes", () => {
     jest.useFakeTimers();
-    jest.setTimeout(10000);
+    jest.setTimeout(60000);
 
     let ctx: Context;
-    let address = "0x70E2D5aA970d84780D81a2c4164b984Abaa94527";
     let session: IronSession;
     let dbInstance: any;
+    let arlocal: ArLocal;
 
     beforeAll(async () => {
         const _res: {session?: IronSession} = {};
@@ -39,14 +43,39 @@ describe("test routes", () => {
         });
         const {res} = getMockRes();
 
-        dbInstance = db();
+        arlocal = new ArLocal(1820, false);
+        await arlocal.start();
+
+        dbInstance = db("localhost");
 
         ctx = createContext({req, res}, dbInstance);
     });
 
+    afterAll(async () => {
+        await arlocal.stop();
+    });
+
     describe("test sign in with ethereum", () => {
+        const _message = (data: {[key: string]: string}, address: string) => {
+            const message = new SiweMessage({
+                domain: "www.test.com",
+                address,
+                statement: "Sign in with Ethereum to the app.",
+                uri: "https://test.com",
+                version: "1",
+                chainId: 1,
+                expirationTime: data?.expirationTime,
+                issuedAt: data?.issuedAt,
+                nonce: data?.nonce,
+            });
+            return message;
+        };
+
+        let signer: Wallet;
+
         beforeEach(() => {
             session.destroy();
+            signer = Wallet.createRandom();
         });
         test("session is setup with generated nonce to await for verification", async () => {
             const caller = appRouter.createCaller(ctx);
@@ -70,22 +99,27 @@ describe("test routes", () => {
             }
         });
         test("session is updated with user siwe details after connection", async () => {
-            // generate message
-            // generate temp wallet
-            // sign with temp wallet
-            // send to verify route
-            // check that the return value corresponds with expected
-            // check that address in session is same as temp generated wallet
+            const caller = appRouter.createCaller(ctx);
+            const setupSiwe = await caller.siwe.siweNonce();
+            const message = _message(setupSiwe, signer.address);
+            const hash = message.prepareMessage();
+            const signature = await signer.signMessage(hash);
+            const response = await caller.siwe.siweVerify({message, signature});
+            expect(response).toMatchObject({ok: true});
+            expect(session.siwe?.address).toBe(signer.address);
         });
         test("session is updated with user weavedb identity after connection", async () => {
-            // generate message
-            // generate temp wallet
-            // sign with temp wallet
-            // send to verify route
-            // check that the return value corresponds with expected
-            // check that address in session is same as temp generated wallet
-            // check that address and session wallet address is same as linked address
-            // check that weavdbuser is instance of weavedbuser type
+            const caller = appRouter.createCaller(ctx);
+            const setupSiwe = await caller.siwe.siweNonce();
+            const message = _message(setupSiwe, signer.address);
+            const hash = message.prepareMessage();
+            const signature = await signer.signMessage(hash);
+            const response = await caller.siwe.siweVerify({message, signature});
+            expect(response).toMatchObject({ok: true});
+
+            expect(session.weavedbUser?.wallet).toBe(signer.address);
+            expect(session.weavedbUser?.wallet).toBe(session.weavedbUser?.identity?.linked_address);
+            expectTypeOf(session.weavedbUser!).toEqualTypeOf<WeaveDBUserObject>();
         });
     });
 

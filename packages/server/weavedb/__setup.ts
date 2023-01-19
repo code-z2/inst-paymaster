@@ -98,11 +98,14 @@ const deployContracts = async () => {
 const init = async () => {
     const success = await deployContracts();
     if (success) {
-        const db = require("../src/db");
+        const _db = require("../src/db");
+        const db = _db();
         await db.setSchema(schema, "paymasters");
         console.log("setSchema complete!");
         await db.setRules(rules(process.env.ADMIN_ETH_ADDRESS as string), "paymasters");
         console.log("setRules complete!");
+        const {identity} = db.createTempAddress("0x70E2D5aA970d84780D81a2c4164b984Abaa94527");
+        console.log(identity);
         return;
     }
 
