@@ -23,7 +23,7 @@ function Paynav() {
         </li>
         <li>
           <button
-            className="px-3 py-1 w-40 hover:bg-purple-600 
+            className="px-2 m-0 py-1 w-40 hover:bg-purple-600 
         border-solid border-2 border-slate-400 rounded-md"
           >
             Coming Soon

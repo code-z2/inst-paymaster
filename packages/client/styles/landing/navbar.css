@@ -5,15 +5,15 @@
 }
 
 .paylogo {
-  @apply flex align-middle;
+  @apply col-start-1 flex align-middle;
 }
 
 .paynav .list-ul {
-  @apply lg:col-start-[-4] w-full grid grid-cols-[1fr_minmax(0,_2fr)] content-center text-lg gap-6 font-medium;
+  @apply col-start-[-1] w-full grid grid-cols-[1fr_minmax(0,_2fr)] content-center text-lg gap-6 font-medium;
 }
 
 .paynav .list-ul .list-li {
-  @apply inline  w-full;
+  @apply inline mx-2  w-full;
 }
 
 .paynav ul li:nth-child(1) {

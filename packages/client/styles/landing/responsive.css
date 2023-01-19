@@ -1,6 +1,6 @@
 /* large screens   */
 @media (max-width: 600px) {
-  .container {
+  /* .container {
     padding: 0;
   }
   .paynav {
@@ -8,7 +8,7 @@
   }
   .paynav > ul {
     grid-column: 6/12;
-  }
+  } */
 
   .first_section {
     grid-template-columns: repeat(12, 2fr);
@@ -187,9 +187,9 @@
 /* medium screens   */
 
 @media (min-width: 601px) and (max-width: 1107px) {
-  .paynav > ul {
+  /* .paynav > ul {
     grid-column: 9/12;
-  }
+  } */
   .first_section {
     grid-template-columns: repeat(12, 2fr);
     grid-template-rows: repeat(9, 2fr);
