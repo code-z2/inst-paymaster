@@ -10,7 +10,7 @@ import Footer from "./footer";
 
 const LandingPage = () => {
   return (
-    <div className={styles.container}>
+    <div className="main-container">
       <Paynav />
       <FirstSection />
 

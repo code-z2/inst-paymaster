@@ -3,8 +3,8 @@ import { styles } from "./";
 
 function Paynav() {
   return (
-    <nav className={styles.paynav}>
-      <a href="/" className={styles.paylogo}>
+    <nav className="paynav">
+      <a href="/" className="paylogo">
         <Image
           src="/assets/pm-images/logo.png"
           blurDataURL="/assets/pm-images/logo.png"
@@ -15,7 +15,7 @@ function Paynav() {
         />
       </a>
 
-      <ul>
+      <ul className="list-ul">
         <li>
           <a href="#" className="mx-1 py-1">
             Docs
@@ -23,7 +23,7 @@ function Paynav() {
         </li>
         <li>
           <button
-            className="px-3 py-1 w-30 hover:bg-purple-600 
+            className="px-3 py-1 w-40 hover:bg-purple-600 
         border-solid border-2 border-slate-400 rounded-md"
           >
             Coming Soon

@@ -23,8 +23,8 @@
   .planet_blur {
     grid-column: 1/12;
     grid-row: 7 / 10;
-    // background: rgba(17, 20, 43, 0.5);
-    // filter: blur(300.67px);
+    /* background: rgba(17, 20, 43, 0.5);
+     filter: blur(300.67px); */
     background: rgba(125, 12, 193, 1);
     filter: blur(200.67px);
   }
@@ -214,8 +214,8 @@
   .planet_blur {
     grid-column: 1/12;
     grid-row: 7 / 10;
-    // background: rgba(17, 20, 43, 0.5);
-    // filter: blur(300.67px);
+    /* background: rgba(17, 20, 43, 0.5);
+     filter: blur(300.67px); */
     background: rgba(125, 12, 193, 1);
     filter: blur(200.67px);
   }
