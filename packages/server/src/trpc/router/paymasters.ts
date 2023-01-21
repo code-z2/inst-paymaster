@@ -36,7 +36,7 @@ const paymasters = router({
             } catch (error: any) {
                 return {
                     ok: false,
-                    error: "Unknown error",
+                    error: error?.message || "Unknown error",
                 };
             }
         }),

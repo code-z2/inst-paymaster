@@ -7,6 +7,8 @@ export const schema = {
         "metadata",
         "approved",
         "created_at",
+        "updated_at",
+        "audited",
     ],
     properties: {
         name: {
@@ -27,8 +29,6 @@ export const schema = {
         created_at: {
             type: "number",
         },
-        // optionals
-
         updated_at: {
             type: "number",
         },
@@ -36,4 +36,4 @@ export const schema = {
             type: "boolean",
         },
     },
-}
+};

@@ -4,7 +4,9 @@ import {rules} from "./rules";
 import {ArWallet, ContractDeploy, WarpFactory} from "warp-contracts";
 require("dotenv").config();
 
-const arweave = require("arweave").init({
+const Arweave = require("arweave");
+
+const arweave = Arweave.init({
     host: "testnet.redstone.tools",
     port: 443,
     protocol: "https",
@@ -13,9 +15,9 @@ const arweave = require("arweave").init({
 const folder = "weavedb/.wallets";
 
 const options = {
-    srcTxId: process.env.SOURCE_TX_ID || "WjNDXc_4uztn570rnzJs6R1f_XyR3culWG3LDk2TJgs",
-    contractTxId_II: process.env.II_SOURCE_TX_ID || "3OnjOPuWzB138LOiNxqq2cKby2yANw6RWcQVEkztXX8",
-    contractTxId_ETH: process.env.ETH_SOURCE_TX_ID || "Awwzwvw7qfc58cKS8cG3NsPdDet957-Bf-S1RcHry0w",
+    srcTxId: "9vwjxsX0856iTRFsEMEXBC7UFJ3Utok_e6dFyB1s4TA",
+    contractTxId_II: "3OnjOPuWzB138LOiNxqq2cKby2yANw6RWcQVEkztXX8",
+    contractTxId_ETH: "Awwzwvw7qfc58cKS8cG3NsPdDet957-Bf-S1RcHry0w",
 };
 
 const initialState = {
@@ -65,7 +67,7 @@ const writeContractTxIdToFile = (res: ContractDeploy) => {
     console.log(`ContractTxId has been written to ${folder}/${file}.`);
 };
 
-const deployContracts = async () => {
+const deployContracts = async (): Promise<{ok: boolean; wallet?: ArWallet}> => {
     const _wallet = await generateWallet();
     const walletAddress = await arweave.wallets.jwkToAddress(_wallet);
     console.log("your arweave wallet address is: ", walletAddress);
@@ -89,23 +91,27 @@ const deployContracts = async () => {
         });
         console.log("weaveDB contracts deployed with \n", res);
         writeContractTxIdToFile(res);
-        return true;
+        return {ok: true, wallet: _wallet};
     } catch (error) {
-        return false;
+        return {ok: false};
     }
 };
 
 const init = async () => {
-    const success = await deployContracts();
-    if (success) {
+    const res = await deployContracts();
+    if (res.ok && res.wallet) {
         const _db = require("../src/db");
-        const db = _db();
-        await db.setSchema(schema, "paymasters");
+        const db = _db(process.env.ETH_PRIVATE_KEY);
+        await db.setSchema(schema, "paymasters", {ar: res.wallet});
         console.log("setSchema complete!");
-        await db.setRules(rules(process.env.ADMIN_ETH_ADDRESS as string), "paymasters");
+        await db.setRules(
+            rules("0x70E2D5aA970d84780D81a2c4164b984Abaa94527".toLowerCase()),
+            "paymasters",
+            {
+                ar: res.wallet,
+            }
+        );
         console.log("setRules complete!");
-        const {identity} = db.createTempAddress("0x70E2D5aA970d84780D81a2c4164b984Abaa94527");
-        console.log(identity);
         return;
     }
 

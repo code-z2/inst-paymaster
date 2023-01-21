@@ -4,7 +4,6 @@ import {IronSession, WeaveDBUserObject} from "iron-session";
 import {Context, createContext} from "../src/trpc/context";
 import {getMockReq, getMockRes} from "@jest-mock/express";
 import db from "../src/db";
-import ArLocal from "arlocal";
 import {SiweMessage} from "siwe";
 import {Wallet} from "ethers";
 import {expectTypeOf} from "expect-type";
@@ -13,12 +12,11 @@ const {applySession} = require("./session.mock.ts");
 
 describe("test routes", () => {
     jest.useFakeTimers();
-    jest.setTimeout(60000);
+    jest.setTimeout(30000);
 
     let ctx: Context;
     let session: IronSession;
     let dbInstance: any;
-    let arlocal: ArLocal;
 
     beforeAll(async () => {
         const _res: {session?: IronSession} = {};
@@ -43,16 +41,9 @@ describe("test routes", () => {
         });
         const {res} = getMockRes();
 
-        arlocal = new ArLocal(1820, false);
-        await arlocal.start();
-
-        dbInstance = db("localhost");
+        dbInstance = db();
 
         ctx = createContext({req, res}, dbInstance);
-    });
-
-    afterAll(async () => {
-        await arlocal.stop();
     });
 
     describe("test sign in with ethereum", () => {
