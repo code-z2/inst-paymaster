@@ -246,7 +246,7 @@
   }
 
   .code_snapshot {
-    @apply col-start-4 col-end-10  row-start-2 row-end-3  mt-20;
+    @apply col-start-3 col-end-11  row-start-2 row-end-3  mt-20;
   }
 
   .code_snapshot img {
