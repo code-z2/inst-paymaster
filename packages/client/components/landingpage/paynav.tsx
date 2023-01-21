@@ -1,5 +1,4 @@
 import { Image } from "./";
-import { styles } from "./";
 
 function Paynav() {
   return (
@@ -9,8 +8,8 @@ function Paynav() {
           src="/assets/pm-images/logo.png"
           blurDataURL="/assets/pm-images/logo.png"
           alt="paymaster logo"
-          width={130}
-          height={120}
+          width={120}
+          height={50}
           priority
         />
       </a>
@@ -23,7 +22,7 @@ function Paynav() {
         </li>
         <li>
           <button
-            className="px-2 m-0 py-1 w-40 hover:bg-purple-600 
+            className="px-1 m-0 py-1 sm:w-full  lg:w-40 hover:bg-purple-600 
         border-solid border-2 border-slate-400 rounded-md"
           >
             Coming Soon

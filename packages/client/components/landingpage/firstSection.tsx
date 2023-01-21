@@ -1,5 +1,5 @@
 import { Image } from "./";
-import { styles } from "./";
+
 
 function FirstSection() {
   return (

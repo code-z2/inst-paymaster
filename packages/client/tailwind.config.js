@@ -9,7 +9,10 @@ module.exports = {
       colors: {
         backgroundTheme: "#11142b",
         secondaryGlow: "#7d0cc1",
-        blurColor: "rgba(125, 12, 193, 1)",
+        jsClientGlow: "#7D0CC1",
+        jsClientDark: "rgba(125, 12, 193, 0.3)",
+        blurColor: "rgba(125, 12, 193, 0.5)",
+        flowerBlur: "rgba(193, 12, 12, 0.5)",
       },
       fontFamily: {
         monserrat: "Montserrat",

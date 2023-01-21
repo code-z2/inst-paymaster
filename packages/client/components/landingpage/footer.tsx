@@ -1,8 +1,6 @@
-import { styles } from "./";
-
 function Footer() {
   return (
-    <div className={styles.bottom}>
+    <div className="bottom pl-2">
       <hr className="" />
       <p>&copy; 2023 Paymasters. All rights reserved. </p>
       <ul>

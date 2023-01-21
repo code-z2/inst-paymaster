@@ -1,10 +1,9 @@
 import { Image } from "./";
-import { styles } from "./";
 
 function FifthSection() {
   return (
-    <section className={styles.fifth_section}>
-      <div className={styles.get_started}>
+    <section className="fifth_section">
+      <div className="get_started">
         <h5>Get Started, Explore And Create Paymasters </h5>
         <button
           className="px-3 py-1
@@ -14,13 +13,13 @@ function FifthSection() {
         </button>
       </div>
 
-      <div className={styles.get_started_image}>
+      <div className="get_started_image">
         <Image
           src="/assets/pm-images/Frame55.png"
           blurDataURL="assets/pm-images/Frame55.png"
           alt="paymaster getstarted image"
           width={974}
-          height={259}
+          height={300}
           object-fit="cover"
           priority
         />

@@ -1,10 +1,9 @@
 import { Image } from "./";
-import { styles } from "./";
 
 function SecondSection() {
   return (
-    <section className="second_section">
-      <div className="chain_section">
+    <section className="second_section ">
+      <div className="chain_section pl-2">
         <h2>On-Chain Rewards Middleware</h2>
         <p className="text-slate-400 my-6">
           Loyalty programs are a way we know to give back to our most loyal
@@ -17,10 +16,10 @@ function SecondSection() {
       </div>
       <div className="chain_image">
         <Image
-          src="/assets/pm-images/chain_section3.png"
+          src="/assets/pm-images/chain_section4.png"
           alt="paymaster onchain image"
-          blurDataURL="/assets/pm-images/chain_section3.png"
-          width={600}
+          blurDataURL="/assets/pm-images/chain_section4.png"
+          width={500}
           height={500}
           object-fit="cover"
           priority
