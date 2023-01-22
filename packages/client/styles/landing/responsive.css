@@ -4,17 +4,20 @@
     @apply col-start-1 col-end-6  pl-2 content-center;
   }
 
+  .paynav .list-ul {
+    @apply col-start-[-1] w-full grid grid-cols-[1fr_2fr] px-1 content-center text-sm gap-2 font-normal;
+  }
+
   .paylogo img {
     @apply max-w-none;
   }
 
   .first_section {
-    @apply h-screen grid grid-cols-12 grid-rows-6 pt-5 gap-1.5 
-    content-center;
+    @apply h-screen grid grid-cols-12 text-center grid-rows-6 pt-5 gap-1.5 content-center;
   }
 
   .heading_section {
-    @apply col-start-1 col-end-12 pl-7 break-words row-start-1 row-end-3 animate-[simplefade_5s];
+    @apply col-start-1 col-end-12 pl-7 break-words  row-start-1 row-end-3 animate-[simplefade_5s];
   }
 
   .heading_section > h1 {
@@ -55,7 +58,7 @@
   /* third section components container   */
 
   .third_section {
-    @apply h-screen grid grid-cols-12 mt-96  grid-rows-[repeat(6,_350px)];
+    @apply h-screen grid grid-cols-12 mt-96 px-2  grid-rows-[repeat(6,_350px)];
   }
 
   .third_section_first_content {
@@ -88,7 +91,7 @@
   }
 
   .code_snapshot {
-    @apply col-start-2 col-end-10  row-start-2 row-end-3  mt-20;
+    @apply col-start-1 col-end-9  row-start-2 row-end-3  mt-20;
   }
 
   .code_snapshot img {
@@ -134,7 +137,7 @@
   }
 
   .fifth_section .get_started_image {
-    @apply col-start-2 col-end-12 row-start-3 row-end-4;
+    @apply col-start-2 col-end-10 row-start-3 row-end-4;
   }
 
   .fifth_section .get_started_image img {
@@ -159,7 +162,7 @@
 
 @media (min-width: 461px) and (max-width: 1107px) {
   .first_section {
-    @apply h-screen grid  grid-cols-12 grid-rows-6 pt-5 gap-1.5 
+    @apply h-screen grid text-center grid-cols-12 grid-rows-6 pt-5 gap-1.5 
     content-center;
   }
 
