@@ -1,0 +1,24 @@
+/* navbar   */
+
+.paynav {
+  @apply grid grid-cols-12  content-center  h-32;
+}
+
+.paylogo {
+  @apply col-start-1 col-end-6 pl-2 content-center;
+}
+
+.paynav .list-ul {
+  @apply col-start-[-1] w-full grid grid-cols-[1fr_2fr] px-1 content-center text-lg gap-2 font-medium;
+}
+
+.paynav .list-ul .list-li {
+  @apply inline   w-full;
+}
+
+.paynav ul li:nth-child(1) {
+  @apply flex align-middle;
+}
+/* .paynav ul li:nth-child(2) {
+  @apply col-start-12;
+}  */

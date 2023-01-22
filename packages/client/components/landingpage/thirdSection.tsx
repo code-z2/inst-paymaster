@@ -1,10 +1,10 @@
+import React from "react";
 import { Image } from "./";
-import { styles } from "./";
 
 function ThirdSection() {
   return (
-    <section className={styles.third_section}>
-      <div className={styles.third_section_first_content}>
+    <section className="third_section">
+      <div className="third_section_first_content">
         <span>
           <Image
             src="/assets/pm-icons/component_exchange.svg"
@@ -26,7 +26,7 @@ function ThirdSection() {
           protocols without incurring gas costs or unnecessary onboarding cost.
         </p>
       </div>
-      <div className={styles.third_section_second_content}>
+      <div className="third_section_second_content">
         <span>
           <Image
             src="/assets/pm-icons/search.svg"
@@ -45,11 +45,12 @@ function ThirdSection() {
           protocols with Paymaster support . Get more value when using dapps.
         </p>
       </div>
-      <div className={styles.third_section_third_content}>
-        <span style={{ marginLeft: "50px" }}>
+      <div className="third_section_third_content">
+        <span>
           <Image
             src="/assets/pm-icons/ads_click.svg"
             alt="paymasters icon"
+            blurDataURL="/assets/pm-icons/ads_click.svg"
             width={32}
             height={30}
             object-fit="cover"
@@ -65,41 +66,45 @@ function ThirdSection() {
           your users.
         </p>
       </div>
-      <div className={styles.third_section_img}>
+      <div className="third_section_img">
         <Image
           src="/assets/pm-images/flower_img.png"
           alt="paymaster flower image"
+          blurDataURL="/assets/pm-images/flower_img.png"
           width={450}
           height={600}
           object-fit="cover"
           priority
         />
       </div>
-      <div className={styles.flower_image}></div>
-      <div className={styles.overlap_flower}>
-        <div className={styles.code_snapshot}>
+      <div className="flower_image_blur"></div>
+      <div className="overlap_flower">
+        <div className="code_snapshot">
           <Image
             src="/assets/pm-images/code_img.png"
             alt="paymaster code snapshot"
+            blurDataURL="/assets/pm-images/code_img.png"
             width={550}
             height={600}
             object-fit="cover"
             priority
           />
         </div>
-        <div className={styles.build_paymaster}>
+
+        <div className="build_paymaster">
           <h2>Build Paymasters</h2>
           <p className="text-slate-400 my-6">
             Integrate our typescript SDK to form paymasters compatible zk
             transaction objects in your dapps. Explore SDK
           </p>
           <button
-            className="px-3 py-1 w-40 hover:bg-purple-900 bg-purple-600 
+            className="px-3 py-2 w-40 hover:bg-purple-900 bg-purple-600 
         rounded-md"
           >
             Explore SDK
           </button>
         </div>
+        <div className="build_blur"></div>
       </div>
     </section>
   );

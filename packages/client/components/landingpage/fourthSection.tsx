@@ -1,12 +1,11 @@
 import { Image } from "./";
-import { styles } from "./";
 
 function FourthSection() {
   return (
-    <section className={styles.fourth_section}>
+    <section className="fourth_section">
       <h4 className="text-center">Our Partners</h4>
-      <div className={styles.partners_logos}>
-        <span className={styles.zksynk}>
+      <div className="partners_logos">
+        <span className="zksynk">
           <Image
             src="/assets/pm-logos/zkSynk.png"
             alt="zkSynk image"
@@ -16,7 +15,7 @@ function FourthSection() {
             priority
           />
         </span>
-        <span className={styles.starknet}>
+        <span className="starknet">
           <Image
             src="/assets/pm-logos/StarkNet.png"
             alt="StarkNet image"
@@ -26,7 +25,7 @@ function FourthSection() {
             priority
           />
         </span>
-        <span className={styles.bravos}>
+        <span className="bravos">
           <Image
             src="/assets/pm-logos/Braavos.png"
             alt="Bravos image"
@@ -36,7 +35,7 @@ function FourthSection() {
             priority
           />
         </span>
-        <span className={styles.argent}>
+        <span className="argent">
           <Image
             src="/assets/pm-logos/Argent.png"
             alt="Argent image"
@@ -46,7 +45,7 @@ function FourthSection() {
             priority
           />
         </span>
-        <span className={styles.chainlink}>
+        <span className="chainlink">
           <Image
             src="/assets/pm-logos/ChainLink.png"
             alt="ChainLink image"
@@ -56,7 +55,7 @@ function FourthSection() {
             priority
           />
         </span>
-        <span className={styles.outlier}>
+        <span className="outlier">
           <Image
             src="/assets/pm-logos/Outlier.png"
             alt="Outlier image"
@@ -66,7 +65,7 @@ function FourthSection() {
             priority
           />
         </span>
-        <span className={styles.dao}>
+        <span className="dao">
           <Image
             src="/assets/pm-logos/developer_dao.png"
             alt="developer_dao image"

@@ -1,8 +1,5 @@
 import Head from "next/head";
-import { Inter } from "@next/font/google";
-import LandingPage from "../components/landingpage/landing";
-
-const inter = Inter({ subsets: ["latin"] });
+import { Landingpage } from "../components";
 
 export default function Home() {
   return (
@@ -40,7 +37,7 @@ export default function Home() {
         />
         <link rel="manifest" href="/site.webmanifest"></link>
       </Head>
-      <LandingPage />
+      <Landingpage />
     </>
   );
 }
