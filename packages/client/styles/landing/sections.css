@@ -224,7 +224,7 @@
 }
 
 .bottom > p {
-  @apply overflow-hidden col-start-1 col-end-4 row-start-3 row-end-4;
+  @apply overflow-hidden col-start-1 col-end-5 row-start-3 row-end-4;
 }
 .bottom ul {
   @apply grid col-start-7 col-end-13 row-start-3 row-end-4 mb-5 grid-cols-[1fr_1fr_1fr_2fr_1fr_1fr] gap-1 list-none;
