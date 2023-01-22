@@ -48,7 +48,7 @@
   }
 
   .chain_image {
-    @apply col-start-2 col-end-12 content-center row-start-6 row-end-7 transition-all ease-in duration-300;
+    @apply col-start-2 col-end-10 content-center row-start-6 row-end-7 transition-all ease-in duration-300;
   }
   .img_blur {
     @apply col-start-1 col-end-12 row-start-5 row-end-7 h-full bg-[theme(colors[blurColor])]
