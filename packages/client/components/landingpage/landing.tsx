@@ -10,6 +10,18 @@ import Footer from "./footer";
 import React from "react";
 
 const LandingPage = () => {
+  // public landing page
+  return (
+    <div className="main-container ">
+      <Paynav />
+      <FirstSection />
+      <Footer />
+    </div>
+  );
+};
+
+export const SecureLandingPage = () => {
+  // Coming soon private landing page
   return (
     <div className="main-container ">
       <Paynav />
