@@ -1,4 +1,5 @@
 /*************small screen***********************/
+
 @media screen and (max-width: 460px) {
   .paylogo {
     @apply col-start-1 col-end-6  pl-2 content-center;
@@ -13,11 +14,11 @@
   }
 
   .first_section {
-    @apply h-screen grid grid-cols-12 text-center grid-rows-6 pt-5 gap-1.5 content-center;
+    @apply h-screen mx-auto grid grid-cols-12 text-center grid-rows-6 pt-5 gap-1.5 content-center;
   }
 
   .heading_section {
-    @apply col-start-1 col-end-12 pl-7 break-words  row-start-1 row-end-3 animate-[simplefade_5s];
+    @apply col-start-1  col-end-12 pl-7 break-words  row-start-1 row-end-3 animate-[simplefade_5s];
   }
 
   .heading_section > h1 {
@@ -25,7 +26,11 @@
   }
 
   .heading_image {
-    @apply col-start-1 col-end-[-1] row-start-5 row-end-6 content-center animate-[simplefade_3s];
+    @apply col-start-2 col-end-10 row-start-5 row-end-6 content-center animate-[simplefade_3s];
+  }
+
+  .heading_image img {
+    @apply max-w-none w-60 h-52;
   }
 
   .planet_blur {
@@ -140,7 +145,7 @@
   }
 
   .fifth_section .get_started_image {
-    @apply col-start-2 col-end-10 row-start-3 px-3 row-end-4;
+    @apply col-start-1 col-end-10 row-start-3 px-3 row-end-4;
   }
 
   .fifth_section .get_started_image img {
@@ -159,6 +164,7 @@
     @apply flex flex-col col-start-5 col-end-8 mb-2 list-none justify-between align-middle my-0 mx-auto;
   }
 }
+
 /*************MEDIUM***********************************************************************************/
 
 /******************************************************************************************************/
@@ -178,7 +184,7 @@
   }
 
   .heading_section {
-    @apply col-start-1 col-end-10 pl-7 break-words row-start-1 row-end-3 animate-[simplefade_5s];
+    @apply col-start-1 col-end-10 pl-7 mx-auto break-words row-start-1 row-end-3 animate-[simplefade_5s];
   }
 
   .heading_section > h1 {
@@ -186,7 +192,7 @@
   }
 
   .heading_image {
-    @apply col-start-1 col-end-[-1] row-start-4 row-end-5 content-center animate-[simplefade_3s];
+    @apply col-start-1 mx-auto col-end-[-1] row-start-4 row-end-5 content-center animate-[simplefade_3s];
   }
 
   .planet_blur {
@@ -219,19 +225,19 @@
   /* third section components container   */
 
   .third_section {
-    @apply h-screen grid grid-cols-12 mt-32 flow-root grid-rows-[repeat(6,_320px)];
+    @apply h-screen grid grid-cols-12 mt-32 mx-auto rounded-md grid-rows-[repeat(6,_320px)];
   }
 
   .third_section_first_content {
-    @apply col-start-2 col-end-10 text-center gap-12 mb-10 row-start-1;
+    @apply col-start-2 col-end-10 text-center px-3 gap-12 mb-10 row-start-1;
   }
 
   .third_section_second_content {
-    @apply col-start-2 col-end-10 text-center gap-12 row-start-2;
+    @apply col-start-2 col-end-10 text-center px-3 gap-12 row-start-2;
   }
 
   .third_section_third_content {
-    @apply col-start-2 col-end-10 text-center gap-12 row-start-3;
+    @apply col-start-2 col-end-10 text-center px-3 gap-12 row-start-3;
   }
   .third_section_img {
     @apply text-center col-start-3 z-0 col-end-12 row-start-4;
@@ -265,7 +271,7 @@
   }
 
   .build_paymaster {
-    @apply col-start-4 col-end-10 mb-10 row-start-3  row-end-5;
+    @apply col-start-4 col-end-11 mb-10 row-start-3  row-end-5;
   }
 
   .js_client_section {
@@ -277,7 +283,7 @@
   }
 
   .fourth_section {
-    @apply px-3 grid grid-cols-12 grid-rows-4 pt-10 mt-96;
+    @apply px-3 grid mx-auto grid-cols-12 grid-rows-4 pt-10 mt-96;
   }
   .partners_logos {
     @apply w-[300px] my-0 col-start-3 col-end-10 mt-20 mx-auto pt-4 row-start-4 gap-10 
@@ -286,7 +292,7 @@
 
   /* fifth section components container   */
   .fifth_section {
-    @apply h-screen grid grid-cols-12 grid-rows-[repeat(4,_2fr)] gap-2 px-2 my-auto;
+    @apply h-screen mx-auto grid grid-cols-12 grid-rows-[repeat(4,_2fr)] gap-2 px-2 my-auto;
   }
 
   .fifth_section .get_started {
@@ -315,5 +321,23 @@
   }
   .bottom ul {
     @apply flex flex-col col-start-5 col-end-8 mb-2 list-none justify-between align-middle my-0 mx-auto;
+  }
+}
+
+/*************Large***********************************************************************************/
+
+/******************************************************************************************************/
+
+@media (min-width: 1108px) and (max-width: 1500px) {
+  .third_section_first_content {
+    @apply col-start-1 col-end-4 text-center row-start-2  row-end-3;
+  }
+
+  .third_section_second_content {
+    @apply col-start-5 col-end-8 text-center row-start-1 row-end-2;
+  }
+
+  .third_section_third_content {
+    @apply col-start-9 col-end-13 row-start-2  row-end-3 text-center;
   }
 }

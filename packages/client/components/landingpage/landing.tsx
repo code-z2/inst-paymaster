@@ -12,7 +12,7 @@ import React from "react";
 const LandingPage = () => {
   // public landing page
   return (
-    <div className="main-container ">
+    <div className="container xl:px-20 lg:px-40 mx-auto min-h-(65vh)">
       <Paynav />
       <FirstSection />
       <Footer />
@@ -23,7 +23,7 @@ const LandingPage = () => {
 export const SecureLandingPage = () => {
   // Coming soon private landing page
   return (
-    <div className="main-container ">
+    <div className="container xl:px-20 lg:px-40 mx-auto  min-h-(65vh)">
       <Paynav />
       <FirstSection />
       <SecondSection />
