@@ -16,7 +16,7 @@ function ThirdSection() {
             priority
           />
         </span>
-        <h5 className="">
+        <h5 className="font-bold text-2xl">
           Much More Than <br />
           Transactions
         </h5>
@@ -39,7 +39,7 @@ function ThirdSection() {
           />
         </span>
 
-        <h5>More Visible Than Macro</h5>
+        <h5 className="font-bold text-2xl">More Visible Than Macro</h5>
         <p className="text-slate-400 my-6">
           More visible than macro Explore a wide range of Paymasters, find
           protocols with Paymaster support . Get more value when using dapps.
@@ -57,7 +57,7 @@ function ThirdSection() {
             priority
           />
         </span>
-        <h5>
+        <h5 className="font-bold text-2xl">
           Ux More Superior Than <br /> Superior
         </h5>
         <p className="text-slate-400 my-6">

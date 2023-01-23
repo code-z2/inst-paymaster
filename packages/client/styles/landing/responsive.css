@@ -21,7 +21,7 @@
   }
 
   .heading_section > h1 {
-    @apply text-2xl font-normal  leading-normal;
+    @apply text-2xl font-semibold  leading-normal;
   }
 
   .heading_image {
@@ -44,11 +44,14 @@
   }
 
   .chain_section > h2 {
-    @apply text-3xl font-medium;
+    @apply text-3xl font-semibold;
   }
 
   .chain_image {
     @apply col-start-2 col-end-10 content-center row-start-6 row-end-7 transition-all ease-in duration-300;
+  }
+  .chain_image img {
+    @apply max-w-[300px];
   }
   .img_blur {
     @apply col-start-1 col-end-12 row-start-5 row-end-7 h-full bg-[theme(colors[blurColor])]
@@ -58,7 +61,7 @@
   /* third section components container   */
 
   .third_section {
-    @apply h-screen grid grid-cols-12 mt-96 px-2  grid-rows-[repeat(6,_350px)];
+    @apply h-screen grid grid-cols-12 mt-96 w-full  grid-rows-[repeat(6,_350px)];
   }
 
   .third_section_first_content {
@@ -116,7 +119,7 @@
   }
 
   .fourth_section > h4 {
-    @apply text-3xl col-start-3 col-end-10 font-medium mb-10 row-start-4 row-end-4;
+    @apply text-3xl col-start-3 col-end-10 font-semibold mb-10 row-start-4 row-end-4;
   }
 
   .partners_logos {
@@ -129,7 +132,7 @@
   }
 
   .fifth_section .get_started {
-    @apply col-start-2 col-end-12 row-start-3 px-3 row-end-3 mt-6 z-20;
+    @apply col-start-3 col-end-9 row-start-3  px-3 row-end-3 mt-6 z-20;
   }
 
   .fifth_section > div > h5 {
@@ -137,11 +140,11 @@
   }
 
   .fifth_section .get_started_image {
-    @apply col-start-2 col-end-10 row-start-3 row-end-4;
+    @apply col-start-2 col-end-10 row-start-3 px-3 row-end-4;
   }
 
   .fifth_section .get_started_image img {
-    @apply max-w-none w-80 h-80;
+    @apply max-w-none w-72 h-80;
   }
 
   .subscribe_section {
