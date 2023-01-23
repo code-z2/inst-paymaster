@@ -1,6 +1,6 @@
 /* first section components container   */
 .first_section {
-  @apply h-screen grid grid-cols-12 grid-rows-3 pt-5 gap-1.5 
+  @apply min-h-[65vh] grid grid-cols-12 grid-rows-3 pt-2 mt-16 gap-1.5 
   content-center;
 }
 
@@ -46,7 +46,7 @@
 /* second section components container   */
 
 .second_section {
-  @apply grid grid-cols-12 gap-5 h-screen;
+  @apply min-h-[60vh] grid grid-cols-12 gap-5;
 }
 
 .chain_section {
@@ -91,7 +91,7 @@
 }
 
 .third_section_third_content {
-  @apply col-start-9 col-end-12 row-start-3 row-end-4 text-center;
+  @apply col-start-9 col-end-13 row-start-3 row-end-4 text-center;
 }
 
 .third_section_first_content span {
@@ -129,8 +129,8 @@
 }
 
 .build_blur {
-  @apply col-start-2 col-end-5 row-start-2 row-end-5 bg-[theme(colors[blurColor])]
-  blur-[300px];
+  @apply col-start-2 col-end-3 row-start-2 row-end-5 bg-[theme(colors[blurColor])]
+  blur-[200px];
 }
 
 .build_paymaster {
@@ -139,7 +139,7 @@
 /* js client section   */
 
 .js_client_section {
-  @apply my-32 grid grid-cols-[12] grid-rows-4 h-screen gap-6;
+  @apply my-32 grid grid-cols-[12] grid-rows-4  gap-6;
 }
 .clients_content {
   @apply row-start-3 flex justify-center px-3;
@@ -167,7 +167,7 @@
 }
 
 .fourth_section > h4 {
-  @apply text-4xl font-medium mb-4;
+  @apply text-4xl font-bold mb-4;
 }
 
 /* fifth section components container   */
