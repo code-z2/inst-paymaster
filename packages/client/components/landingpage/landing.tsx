@@ -12,7 +12,7 @@ import React from "react";
 const LandingPage = () => {
   // public landing page
   return (
-    <div className="container mx-auto px-20">
+    <div className="container xl:px-20 lg:px-40 mx-auto min-h-(65vh)">
       <Paynav />
       <FirstSection />
       <Footer />
