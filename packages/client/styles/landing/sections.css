@@ -46,7 +46,7 @@
 /* second section components container   */
 
 .second_section {
-  @apply min-h-[60vh] grid grid-cols-12 gap-5;
+  @apply min-h-[55vh] grid grid-cols-12 gap-5;
 }
 
 .chain_section {
@@ -62,7 +62,7 @@
 }
 
 .chain_image {
-  @apply col-start-8 col-end-12 content-center transition-all ease-in duration-300;
+  @apply col-start-8 col-end-12 content-center mt-5 transition-all ease-in duration-300;
 }
 .img_blur {
   @apply col-start-6 col-end-13 h-full bg-[theme(colors[blurColor])]
@@ -83,7 +83,7 @@
 }
 
 .third_section_first_content {
-  @apply col-start-1 col-end-4 text-center row-start-3 row-end-4;
+  @apply col-start-1 col-end-4 text-center row-start-3  row-end-4;
 }
 
 .third_section_second_content {
@@ -91,7 +91,7 @@
 }
 
 .third_section_third_content {
-  @apply col-start-9 col-end-13 row-start-3 row-end-4 text-center;
+  @apply col-start-9 col-end-13 row-start-3  row-end-4 text-center;
 }
 
 .third_section_first_content span {
@@ -176,7 +176,7 @@
 }
 
 .fifth_section .get_started {
-  @apply col-start-7 col-end-10 row-start-2 row-end-3 mt-6 z-20;
+  @apply col-start-7 col-end-10 row-start-2 row-end-3 mt-4 z-20;
 }
 
 .get_started > button {
@@ -184,7 +184,7 @@
 }
 
 .fifth_section > div > h5 {
-  @apply text-2xl font-medium;
+  @apply text-xl font-normal;
 }
 
 .fifth_section .get_started_image {

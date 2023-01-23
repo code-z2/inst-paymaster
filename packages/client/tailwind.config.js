@@ -22,7 +22,7 @@ module.exports = {
         btn: "4px 4px 14px rgba(0, 0, 0, 0.15)",
       },
       mainContainer: {
-        maxWidth: "1240px",
+        maxWidth: "88rem",
         center: "0 auto",
       },
     },
