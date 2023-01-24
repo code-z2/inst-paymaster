@@ -9,7 +9,7 @@
     "scripts": {
         "start": "ts-node src/server.ts",
         "weave": "ts-node weavedb/__setup.ts",
-        "test": "jest --testTimeout=10000 --detectOpenHandles",
+        "test": "jest --testTimeout=10000 --detectOpenHandles --runInBand",
         "dev": "ts-node-dev src/server.ts --watch src"
     },
     "devDependencies": {

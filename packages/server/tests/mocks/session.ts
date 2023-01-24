@@ -1,9 +1,18 @@
+import {WeaveDBUserObject} from "iron-session";
+import {SiweMessage} from "siwe";
+
 class MockIronStore {
     private static instance: MockIronStore;
 
     private saved: {[key: string]: string | object | number | undefined};
 
     private unsaved: {[key: string]: string | object | number | undefined};
+
+    siwe: SiweMessage | undefined;
+    nonce: string | undefined;
+    issuedAt: string | undefined;
+    expirationTime: string | undefined;
+    weavedbUser: WeaveDBUserObject | undefined;
 
     private constructor() {
         this.saved = {};
@@ -35,6 +44,15 @@ class MockIronStore {
 
     clear() {
         this.unsaved = {};
+        this.siwe = undefined;
+    }
+
+    destroy() {
+        this.clear();
+    }
+
+    save() {
+        this.seal();
     }
 }
 
@@ -43,21 +61,7 @@ function throwOnNoCookieName() {
 }
 
 const applySession = jest.fn().mockImplementation((req) => {
-    const store = MockIronStore.getOrCreateStore();
-
-    const session = {
-        set: store.set.bind(store),
-        get: store.get.bind(store),
-        unset: store.unset,
-        save() {
-            store.seal();
-        },
-        destroy() {
-            store.clear();
-        },
-    };
-
-    req.session = session;
+    req.session = MockIronStore.getOrCreateStore();
 });
 
 export default {MockIronStore};

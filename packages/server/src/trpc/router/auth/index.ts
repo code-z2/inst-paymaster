@@ -56,7 +56,7 @@ const siwe = router({
                 // adds users siwe details to session
                 req.ctx.req.session.siwe = fields;
                 // persist user weave identity
-                const {identity} = req.ctx.db.createTempAddress(fields.address);
+                const {identity} = await req.ctx.db.createTempAddress(fields.address);
                 // adds users weavedb details to session
                 req.ctx.req.session.weavedbUser = {
                     wallet: fields.address,

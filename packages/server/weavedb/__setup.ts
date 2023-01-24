@@ -2,6 +2,7 @@ import {existsSync, mkdirSync, writeFileSync} from "fs";
 import {schema} from "./schema";
 import {rules} from "./rules";
 import {ArWallet, ContractDeploy, WarpFactory} from "warp-contracts";
+import Wallet from "ethereumjs-wallet";
 require("dotenv").config();
 
 const Arweave = require("arweave");
@@ -100,17 +101,14 @@ const deployContracts = async (): Promise<{ok: boolean; wallet?: ArWallet}> => {
 const init = async () => {
     const res = await deployContracts();
     if (res.ok && res.wallet) {
+        const addr = "0x70E2D5aA970d84780D81a2c4164b984Abaa94527";
         const _db = require("../src/db");
         const db = _db(process.env.ETH_PRIVATE_KEY);
         await db.setSchema(schema, "paymasters", {ar: res.wallet});
         console.log("setSchema complete!");
-        await db.setRules(
-            rules("0x70E2D5aA970d84780D81a2c4164b984Abaa94527".toLowerCase()),
-            "paymasters",
-            {
-                ar: res.wallet,
-            }
-        );
+        await db.setRules(rules(addr.toLowerCase()), "paymasters", {
+            ar: res.wallet,
+        });
         console.log("setRules complete!");
         return;
     }
