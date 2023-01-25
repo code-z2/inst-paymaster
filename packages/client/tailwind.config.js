@@ -25,6 +25,9 @@ module.exports = {
         maxWidth: "88rem",
         center: "0 auto",
       },
+      container: {
+        scalepadding: "28px",
+      },
     },
   },
   plugins: [],

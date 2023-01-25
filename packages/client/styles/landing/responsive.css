@@ -1,3 +1,9 @@
+@media (-webkit-max-device-pixel-ratio: 1.25) {
+  .scaleto100 {
+    transform: scaleX(0.8);
+  }
+}
+
 /*************small screen***********************/
 
 @media screen and (max-width: 460px) {
@@ -6,7 +12,7 @@
   }
 
   .paynav .list-ul {
-    @apply col-start-[-1] w-full grid grid-cols-[1fr_2fr] px-1 content-center text-sm gap-2 font-normal;
+    @apply text-sm gap-2 font-normal;
   }
 
   .paylogo img {
