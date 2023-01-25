@@ -1,4 +1,4 @@
-@media (-webkit-max-device-pixel-ratio: 1.25) {
+@media (-webkit-min-device-pixel-ratio: 1.25) {
   .scaleto100 {
     transform: scaleX(0.8);
   }
