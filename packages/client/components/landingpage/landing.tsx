@@ -23,7 +23,7 @@ const LandingPage = () => {
 export const SecureLandingPage = () => {
   // Coming soon private landing page
   return (
-    <div className="container xl:px-20 lg:px-40 mx-auto  min-h-(65vh)">
+    <div className="container xl:px-40 mx-auto  min-h-(65vh)">
       <Paynav />
       <FirstSection />
       <SecondSection />

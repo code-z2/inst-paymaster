@@ -66,11 +66,11 @@
   /* third section components container   */
 
   .third_section {
-    @apply h-screen grid grid-cols-12 mt-96 w-full  grid-rows-[repeat(6,_350px)];
+    @apply h-screen grid grid-cols-12 mt-96 w-full px-2 grid-rows-[repeat(6,_350px)];
   }
 
   .third_section_first_content {
-    @apply col-start-1 col-end-12 text-center gap-12 mb-10 row-start-1;
+    @apply col-start-1 col-end-12 text-center  gap-12 mb-10 row-start-1;
   }
 
   .third_section_second_content {
@@ -249,7 +249,7 @@
   }
 
   .overlap_flower {
-    @apply grid grid-cols-12 grid-rows-[repeat(6,_2fr)] h-[500px] z-10 my-40 col-start-1 col-end-[-1] row-start-4 w-full
+    @apply grid grid-cols-12 grid-rows-[repeat(6,_2fr)] h-[500px] z-10 my-40 rounded-t-lg col-start-1 col-end-[-1] row-start-4 w-full
     px-0 border-t-2 border-t-slate-700 bg-backgroundTheme;
   }
 

@@ -4,9 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "./landing/navbar.css";
+@import "./navbar.css";
 @import "./landing/sections.css";
 @import "./landing/responsive.css";
+
+@import "./activepaymaster/sections.css";
+@import "./activepaymaster/mobile.css";
 
 * {
   @apply p-0 m-0 box-border outline-0;
