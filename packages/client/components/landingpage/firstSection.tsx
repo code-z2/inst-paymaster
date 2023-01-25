@@ -1,6 +1,5 @@
 import { Image } from "../";
 
-
 function FirstSection() {
   return (
     <section className="first_section">
@@ -17,8 +16,8 @@ function FirstSection() {
           src="/assets/pm-images/header_image.png"
           alt="paymaster-planet-logo"
           blurDataURL="/assets/pm-images/header_image.png"
-          width={522}
-          height={522}
+          width={452}
+          height={422}
           priority
         />
       </div>
