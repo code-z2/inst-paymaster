@@ -5,7 +5,7 @@
 }
 
 .heading_section {
-  @apply col-start-1 col-end-7 pl-7 break-words row-start-1 row-end-3 animate-[simplefade_5s];
+  @apply col-start-1 col-end-6 pl-7 break-words row-start-1 row-end-3 animate-[simplefade_5s];
 }
 
 @keyframes simplefade {
@@ -176,7 +176,7 @@
 }
 
 .fifth_section .get_started {
-  @apply col-start-7 col-end-10 row-start-2 row-end-3 mt-4 z-20;
+  @apply col-start-7 col-end-10 row-start-2 row-end-3 font-light mt-4 z-20;
 }
 
 .get_started > button {
@@ -199,15 +199,15 @@
   @apply col-start-1 row-start-4 row-end-4 col-end-4;
 }
 
-.subscribe_section p {
-  @apply col-start-9 row-start-3 col-end-[13];
-}
+/* .subscribe_section p {
+  @apply col-start-7 row-start-3 bg-red-500 col-end-[12];
+} */
 
 .subscribe_section form {
-  @apply col-start-9 col-end-[13] row-start-4 row-end-4;
+  @apply col-start-[-1] row-start-4 row-end-4;
 }
 .subscribe_section input {
-  @apply w-60  bottom-0 h-11 bg-black rounded-md text-sm;
+  @apply w-64  bottom-0 h-11 bg-black rounded-md text-sm;
 }
 .subscribe_section button {
   @apply h-11;

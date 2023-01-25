@@ -15,13 +15,16 @@ function Subscribe() {
       </div>
       <p className=" mb-1"></p>
       <form>
-        <label>Subscribe to our news letter</label>
+        <label htmlFor="subscribe">Subscribe to our news letter</label>
+        <br />
         <input
           type="email"
+          id="subscribe"
           placeholder="Enter your email"
           name="subscribe"
           className="pl-2"
         />
+
         <button className="px-3 py-1  hover:bg-purple-900 bg-purple-600 m-2 rounded-md">
           Subscribe
         </button>
