@@ -47,7 +47,7 @@ function FirstSection() {
         <input
           type="text"
           placeholder="Search paymasters"
-          className="w-[645px] h-[45px] pl-10 bg-black bg-opacity-20 "
+          className="w-[360px] sm:w-[645px] h-[45px] pl-10 bg-black bg-opacity-20 "
           name="paymastersearch"
           id="search"
         />

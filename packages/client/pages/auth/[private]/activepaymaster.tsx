@@ -1,13 +1,13 @@
 import { NextPage } from "next";
 import { Auth } from "../../../components";
-import { ActivePaymaster } from "../../../components";
+import { PaymastersList } from "../../../components";
 
 interface ID {
   authId?: string;
 }
 
 const PrivateRoute: NextPage<ID> = ({ authId }) => {
-  return <ActivePaymaster />;
+  return <PaymastersList />;
 };
 
 PrivateRoute.getInitialProps = async ({ query }) => {

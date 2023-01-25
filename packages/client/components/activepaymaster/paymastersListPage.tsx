@@ -9,7 +9,7 @@ import {
 
 const ActivePaymaster = () => {
   return (
-    <div className="container xl:px-40 mx-auto  min-h-(65vh)">
+    <div className="container scaleto100 xl:px-20 mx-auto  min-h-(65vh)">
       <ActiveNav />
 
       <div className="container w-[934px] mx-auto my-0">
