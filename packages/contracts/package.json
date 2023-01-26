@@ -43,5 +43,8 @@
         "format": "make format",
         "lint": "make lint",
         "all": "make all"
+    },
+    "dependencies": {
+        "@matterlabs/zksync-contracts": "^0.5.1"
     }
 }
