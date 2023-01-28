@@ -10,7 +10,6 @@ import "@matterlabs/zksync-contracts/l2/system-contracts/Constants.sol";
 abstract contract Base {
     modifier onlyBootloader() {
         require(msg.sender == BOOTLOADER_FORMAL_ADDRESS, "Only bootloader can call this method");
-        // Continure execution if called from the bootloader.
         _;
     }
 
@@ -18,9 +17,7 @@ abstract contract Base {
         bytes32,
         bytes32,
         Transaction calldata _transaction
-    ) external payable virtual onlyBootloader returns (bytes memory context) {
-        // Transaction validation logic goes here
-    }
+    ) external payable virtual returns (bytes memory context);
 
     function postOp(
         bytes calldata _context,
@@ -29,9 +26,7 @@ abstract contract Base {
         bytes32 _suggestedSignedHash,
         ExecutionResult _txResult,
         uint256 _maxRefundedErgs
-    ) external payable onlyBootloader {
-        // This contract does not support any refunding logic
-    }
+    ) external payable onlyBootloader {}
 
-    receive() external payable virtual;
+    receive() external payable virtual {}
 }
