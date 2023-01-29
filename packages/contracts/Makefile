@@ -25,7 +25,7 @@ slither :; slither ./src/Paymaster.sol
 
 myth :; myth analyze ./src --solc-json mythril.config.json --solv 0.8.13 --max-depth 20
 
-format :; prettier --write src/**/*.sol && prettier --write src/*.sol
+format :; yarn prettier --write src/**/*.sol && prettier --write src/*.sol
 
 # solhint should be installed globally
 lint :; solhint src/**/*.sol && solhint src/*.sol

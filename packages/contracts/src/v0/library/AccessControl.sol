@@ -4,19 +4,19 @@ pragma solidity 0.8.13;
 import "@matterlabs/zksync-contracts/l2/system-contracts/Constants.sol";
 
 library AccessControl {
-    function useMaxNonce(uint256 value) internal returns (bool) {
-        bytes memory payload = abi.encodeWithSignature("getMinNonce(address)", msg.sender);
+    function useMaxNonce(uint256 value, address from) internal returns (bool) {
+        bytes memory payload = abi.encodeWithSignature("getMinNonce(address)", from);
         return !_externalCall(payload, address(NONCE_HOLDER_SYSTEM_CONTRACT), value);
     }
 
-    function useERC20Gate(address erc20Contract, uint256 value) internal returns (bool) {
-        bytes memory payload = abi.encodeWithSignature("balanceOf(address)", msg.sender);
+    function useERC20Gate(address erc20Contract, uint256 value, address from) internal returns (bool) {
+        bytes memory payload = abi.encodeWithSignature("balanceOf(address)", from);
         return _externalCall(payload, erc20Contract, value);
     }
 
-    function useNFTGate(address nftContract) internal returns (bool) {
+    function useNFTGate(address nftContract, address from) internal returns (bool) {
         // payload only surport erc721 only
-        bytes memory payload = abi.encodeWithSignature("balanceOf(address)", msg.sender);
+        bytes memory payload = abi.encodeWithSignature("balanceOf(address)", from);
         return _externalCall(payload, nftContract, 1);
     }
 

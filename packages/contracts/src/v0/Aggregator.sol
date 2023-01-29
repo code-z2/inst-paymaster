@@ -10,7 +10,11 @@ contract AggregatorV0 is ISmod {
 
     event NewPaymster(address contractAddress);
 
-    function save(address owner, address paymasterAddr, bytes memory metadata) external onlyPaymasters(paymasterAddr) {
+    function save(
+        address owner,
+        address paymasterAddr,
+        bytes memory metadata
+    ) external onlyPaymasters(paymasterAddr) {
         // updates paymaster owner.
         ownerToPaymasters[owner].push(paymasters.length);
         // updates paymaster storage.

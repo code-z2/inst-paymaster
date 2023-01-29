@@ -5,7 +5,7 @@ import "../interface/IPaymaster.sol";
 
 contract ISmod {
     modifier onlyPaymasters(address paymasterContract) {
-        try IxPaymaster(paymasterContract).satisfy(address(this)) returns (bool success) {
+        try IxPaymaster(paymasterContract).satisfy(address(this)) returns (bool status) {
             require(success || !success, "unknown error!");
             _;
         } catch {
