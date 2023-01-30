@@ -71,9 +71,4 @@ contract PaymasterGasless is Base {
             truthy = truthy && AccessControl.useStrictDestination(txTo, _schema.strictDestinations);
         }
     }
-
-    function _chargeContractForTx(uint256 amount) internal {
-        (bool success, ) = payable(BOOTLOADER_FORMAL_ADDRESS).call{value: amount}("");
-        require(success, "Failed to transfer funds to the bootloader");
-    }
 }

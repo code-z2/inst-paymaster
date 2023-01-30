@@ -1,9 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.13;
 
+import "../Base.sol";
+
 // this contract delegates bootloader calls from the current contract to another contract
 // only if the paymaster does not have enough eth balance.
 // maximum of 3 delegations
-contract PaymasterGaslessDelegationProxy {
+contract PaymasterGaslessDelegationProxy is Base {
 
 }

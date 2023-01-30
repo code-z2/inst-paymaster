@@ -22,9 +22,18 @@ struct AccessControlRules {
     bool useStrictDestination;
 }
 
-struct AprovalBasedFlow {
+struct ApprovalBasedFlow {
     address l2FeeToken;
     uint256 l2FeeAmount;
     bool useOracleQuotes;
     string priceFeed;
+}
+
+struct RebateHandler {
+    address rebateToken;
+    uint256 rebateTrigger;
+    address dispatcher; // can be set to validation address if need be
+    uint8 rebatePercentage;
+    uint256 maxRebateAmount; // set to uint256 max if not checked. advisable not to.
+    uint128 maxNumberOfRebates; // set uint256 max if its unlimited rebates.
 }

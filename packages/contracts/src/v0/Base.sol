@@ -19,6 +19,11 @@ abstract contract Base {
         Transaction calldata _transaction
     ) external payable virtual returns (bytes memory context);
 
+    function _chargeContractForTx(uint256 amount) internal virtual {
+        (bool success, ) = payable(BOOTLOADER_FORMAL_ADDRESS).call{value: amount}("");
+        require(success, "Failed to transfer funds to the bootloader");
+    }
+
     function postOp(
         bytes calldata _context,
         Transaction calldata _transaction,

@@ -7,7 +7,7 @@ import "./utils/Structs.sol";
 
 contract PaymasterERC20 is Base {
     bytes public metadata;
-    AprovalBasedFlow private _flow;
+    ApprovalBasedFlow internal _flow;
     AccessControlSchema private _schema;
     AccessControlRules private _rules;
 
@@ -16,7 +16,7 @@ contract PaymasterERC20 is Base {
         bytes memory bafyhash,
         AccessControlSchema memory schema,
         AccessControlRules memory rules,
-        AprovalBasedFlow memory feeModel
+        ApprovalBasedFlow memory feeModel
     ) {
         metadata = bafyhash;
         _schema = schema;
@@ -50,7 +50,12 @@ contract PaymasterERC20 is Base {
 
             uint256 txCost = _transaction.ergsLimit * _transaction.maxFeePerErg;
 
-            bool success = _chargeERC20FromCaller(caller);
+            bool success = _handleTokenTransfer(
+                caller,
+                _schema.validationAddress,
+                _flow.l2FeeAmount,
+                _flow.l2FeeToken
+            );
             if (success) {
                 _chargeContractForTx(txCost);
             } // else the user pays the bootloader;
@@ -88,25 +93,18 @@ contract PaymasterERC20 is Base {
         }
     }
 
-    function _chargeContractForTx(uint256 amount) internal {
-        (bool success, ) = payable(BOOTLOADER_FORMAL_ADDRESS).call{value: amount}("");
-        require(success, "Failed to transfer funds to the bootloader");
+    function _handleTokenTransfer(
+        address from,
+        address to,
+        uint256 amount,
+        address token
+    ) internal returns (bool success) {
+        require(_checkAllowance(from, token) >= amount, "not enough allowance");
+        success = IERC20(token).transferFrom(from, to, amount);
     }
 
-    function _chargeERC20FromCaller(address txFrom) internal returns (bool success) {
-        require(
-            _checkAllowance(txFrom) >= _flow.l2FeeAmount,
-            "caller did not provide enough allowance"
-        );
-        success = IERC20(_flow.l2FeeToken).transferFrom(
-            txFrom,
-            _schema.validationAddress,
-            _flow.l2FeeAmount
-        );
-    }
-
-    function _checkAllowance(address txFrom) internal view returns (uint256) {
-        uint256 providedAllowance = IERC20(_flow.l2FeeToken).allowance(txFrom, address(this));
+    function _checkAllowance(address txFrom, address token) internal view returns (uint256) {
+        uint256 providedAllowance = IERC20(token).allowance(txFrom, address(this));
         return providedAllowance;
     }
 }
