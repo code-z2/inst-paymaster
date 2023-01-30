@@ -2,7 +2,7 @@ import { Image } from "../";
 
 function FirstSection() {
   return (
-    <div className="relative py-9 border-b-[.2px] border-opacity-10 border-b-slate-200">
+    <div className="relative first-container py-9 border-b-[.2px] border-opacity-10 border-b-slate-200">
       <h5 className="absolute top-[100px] text-lg  font-semibold">
         Active paymaster
       </h5>
@@ -47,7 +47,7 @@ function FirstSection() {
         <input
           type="text"
           placeholder="Search paymasters"
-          className="w-[360px] sm:w-[645px] h-[45px] pl-10 bg-black bg-opacity-20 "
+          className="w-[340px] sm:w-[645px] h-[45px] pl-10 bg-black bg-opacity-20 "
           name="paymastersearch"
           id="search"
         />

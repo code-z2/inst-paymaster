@@ -6,15 +6,15 @@ interface ID {
   authId?: string;
 }
 
-const PrivateRoute: NextPage<ID> = ({ authId }) => {
+const Activepaymaster: NextPage<ID> = ({ authId }) => {
   return <PaymastersList />;
 };
 
-PrivateRoute.getInitialProps = async ({ query }) => {
+Activepaymaster.getInitialProps = async ({ query }) => {
   const id = query.private as string;
   return {
     authId: id,
   };
 };
 
-export default Auth(PrivateRoute);
+export default Auth(Activepaymaster);

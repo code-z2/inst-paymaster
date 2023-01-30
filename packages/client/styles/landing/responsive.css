@@ -1,6 +1,6 @@
 /*************scaling 100 to 125***********************/
 
-@media (-webkit-min-device-pixel-ratio: 1.25) {
+@media (min-width: 1100px) and (-webkit-min-device-pixel-ratio: 1.25) {
   .scaleto100 {
     transform: scaleX(0.8);
   }
@@ -61,7 +61,7 @@
   }
 
   .chain_image {
-    @apply col-start-2 col-end-10 content-center row-start-6 row-end-7 transition-all ease-in duration-300;
+    @apply col-start-1 col-end-9 content-center row-start-6 row-end-7 transition-all ease-in duration-300;
   }
   .chain_image img {
     @apply max-w-[300px];
@@ -103,7 +103,7 @@
   }
 
   .build_paymaster > h2 {
-    @apply text-3xl font-semibold;
+    @apply text-2xl font-bold;
   }
 
   .code_snapshot {
@@ -120,32 +120,32 @@
   }
 
   .build_paymaster {
-    @apply col-start-2 col-end-10 mb-40 row-start-3  row-end-5;
+    @apply col-start-2 col-end-10  row-start-3  row-end-4;
   }
 
   .js_client_section {
-    @apply hidden;
+    @apply invisible;
   }
 
   .fourth_section {
-    @apply px-3 grid grid-cols-12 grid-rows-4 pt-10 mt-[400px];
+    @apply px-3 grid grid-cols-12 grid-rows-2 pt-10;
   }
 
   .fourth_section > h4 {
-    @apply text-3xl col-start-3 col-end-10 font-semibold mb-10 row-start-4 row-end-4;
+    @apply text-2xl col-start-3 items-center col-end-11 font-bold mb-10 row-start-1;
   }
 
   .partners_logos {
-    @apply w-[300px] my-0 col-start-2 mt-20 mx-auto pt-4 row-start-4 gap-10 flex justify-center flex-wrap align-middle;
+    @apply w-[300px] my-0 col-start-2 mt-20 mx-auto pt-4 row-start-1 gap-10 flex justify-center flex-wrap align-middle;
   }
 
   /* fifth section components container   */
   .fifth_section {
-    @apply h-screen grid grid-cols-12 grid-rows-[repeat(4,_2fr)] gap-2 px-2 my-auto;
+    @apply h-screen grid grid-cols-12 grid-rows-[repeat(2,_2fr)] gap-2 px-2 my-auto;
   }
 
   .fifth_section .get_started {
-    @apply col-start-3 col-end-9 row-start-3  px-3 row-end-3 mt-6 z-20;
+    @apply col-start-3 col-end-9 row-start-1  px-3 row-end-2 mt-6 z-20;
   }
 
   .fifth_section > div > h5 {
@@ -153,7 +153,7 @@
   }
 
   .fifth_section .get_started_image {
-    @apply col-start-1 col-end-10 row-start-3 px-3 row-end-4;
+    @apply col-start-1 col-end-10 row-start-1 px-2 row-end-4;
   }
 
   .fifth_section .get_started_image img {
@@ -192,7 +192,7 @@
   }
 
   .heading_section {
-    @apply col-start-1 col-end-10 pl-7 mx-auto break-words row-start-1 row-end-3 animate-[simplefade_5s];
+    @apply col-start-1 text-center col-end-12 pl-7 mx-auto break-words row-start-1 row-end-3 animate-[simplefade_5s];
   }
 
   .heading_section > h1 {
@@ -237,15 +237,15 @@
   }
 
   .third_section_first_content {
-    @apply col-start-2 col-end-10 text-center px-3 gap-12 mb-10 row-start-1;
+    @apply col-start-3 col-end-10  text-center px-3 gap-12 mb-10 row-start-1;
   }
 
   .third_section_second_content {
-    @apply col-start-2 col-end-10 text-center px-3 gap-12 row-start-2;
+    @apply col-start-3 col-end-10 text-center px-3 gap-12 row-start-2;
   }
 
   .third_section_third_content {
-    @apply col-start-2 col-end-10 text-center px-3 gap-12 row-start-3;
+    @apply col-start-3 col-end-10 text-center px-3 gap-12 row-start-3;
   }
   .third_section_img {
     @apply text-center col-start-3 z-0 col-end-12 row-start-4;
@@ -279,7 +279,7 @@
   }
 
   .build_paymaster {
-    @apply col-start-4 col-end-11 mb-10 row-start-3  row-end-5;
+    @apply col-start-3 text-center  col-end-11 mb-10 row-start-3  row-end-5;
   }
 
   .js_client_section {
@@ -312,11 +312,11 @@
   }
 
   .fifth_section .get_started_image {
-    @apply col-start-3 col-end-10 row-start-3 row-end-4;
+    @apply col-start-3 col-end-12 row-start-3 row-end-4;
   }
 
   .fifth_section .get_started_image img {
-    @apply max-w-none w-[400px] h-80;
+    @apply max-w-none w-4/5 h-80;
   }
 
   .subscribe_section {

@@ -24,17 +24,6 @@ body {
   background: theme(colors[backgroundTheme]);
 }
 
-@layer components {
-  .main {
-    max-width: theme(mainContainer[maxWidth]);
-    margin: theme(mainContainer[center]);
-  }
-}
-
-.main-container {
-  @apply main;
-}
-
 a {
   @apply no-underline;
 }

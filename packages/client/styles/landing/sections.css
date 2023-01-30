@@ -18,7 +18,7 @@
   }
   100% {
     opacity: 1;
-    transform: scale(1.1);
+    transform: scale(1.04);
     transition: all 0.2s ease-in 0.5s;
   }
 }
@@ -50,11 +50,7 @@
 }
 
 .chain_section {
-  @apply col-start-1 col-end-6 transition-all ease-in duration-300;
-}
-
-.chain_section:hover {
-  @apply scale-110;
+  @apply col-start-1 col-end-6;
 }
 
 .chain_section > h2 {
@@ -64,6 +60,11 @@
 .chain_image {
   @apply col-start-8 col-end-12 content-center transition-all ease-in duration-300;
 }
+
+.chain_image:hover {
+  @apply scale-110;
+}
+
 .img_blur {
   @apply col-start-6 col-end-13 h-full bg-[theme(colors[blurColor])]
   blur-[200px];

@@ -1,5 +1,7 @@
 import { Image } from "..";
 
+/* Navbar for paymaster's list page */
+
 function Paynav() {
   return (
     <nav className="active-paymaster-nav">
@@ -36,8 +38,8 @@ function Paynav() {
           </div>
         </li>
         <li>
-          <button className="px-1  pm-0 py-1 w-30 sm:w-40  sm:h-9 bg-purple-600 rounded-md">
-            Create Paymaster
+          <button className="p-2  pm-0  w-30 sm:w-40 sm:after:content-['_Paymaster']  sm:h-9 bg-purple-600 rounded-md">
+            Create
           </button>
         </li>
       </ul>
