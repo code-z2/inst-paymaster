@@ -8,7 +8,7 @@ import "./utils/Structs.sol";
 contract PaymasterERC20 is Base {
     bytes public metadata;
     ApprovalBasedFlow internal _flow;
-    AccessControlSchema private _schema;
+    AccessControlSchema internal _schema;
     AccessControlRules private _rules;
 
     // i know, you cant pass structs to constructor. yeah yeah.

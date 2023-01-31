@@ -30,17 +30,21 @@ contract PaymasterGasless is Base {
             _transaction.paymasterInput.length >= 4,
             "The standard paymaster input must be at least 4 bytes long"
         );
+        bytes4 paymasterInputSelector = bytes4(_transaction.paymasterInput[0:4]);
+        if (paymasterInputSelector == IPaymasterFlow.general.selector) {
+            address caller = address(uint160(_transaction.from));
 
-        address caller = address(uint160(_transaction.from));
+            require(
+                _satisfy(caller, address(uint160(_transaction.to))),
+                "user not eligible to use this paymaster"
+            );
 
-        require(
-            _satisfy(caller, address(uint160(_transaction.to))),
-            "user not eligible to use this paymaster"
-        );
+            uint256 txCost = _transaction.ergsLimit * _transaction.maxFeePerErg;
 
-        uint256 txCost = _transaction.ergsLimit * _transaction.maxFeePerErg;
-
-        _chargeContractForTx(txCost);
+            _chargeContractForTx(txCost);
+        } else {
+            revert("Unsupported paymaster flow");
+        }
     }
 
     function satisfy(address addressToCheck) external payable returns (bool) {

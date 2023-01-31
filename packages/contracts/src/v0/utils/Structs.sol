@@ -26,7 +26,7 @@ struct ApprovalBasedFlow {
     address l2FeeToken;
     uint256 l2FeeAmount;
     bool useOracleQuotes;
-    string priceFeed;
+    address priceFeed;
 }
 
 struct RebateHandler {
@@ -36,4 +36,10 @@ struct RebateHandler {
     uint8 rebatePercentage;
     uint256 maxRebateAmount; // set to uint256 max if not checked. advisable not to.
     uint128 maxNumberOfRebates; // set uint256 max if its unlimited rebates.
+}
+
+//tbd
+struct L1Messenger {
+    address l1Contract;
+    string l1Selector;
 }
