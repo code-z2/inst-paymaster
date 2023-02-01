@@ -28,9 +28,9 @@
   @apply col-start-11 font-bold w-[76px] h-[26px] mt-4;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 474px) {
   .allpaymasters {
-    @apply h-[366px] max-w-[330px] px-4 ml-5 mt-24 grid grid-cols-12 border gap-2 rounded-lg 
+    @apply h-[366px]  px-4 ml-5 max-w-[340px] mt-24 grid grid-cols-12 border gap-2 rounded-lg 
         border-opacity-10 border-slate-200 grid-rows-4 overflow-scroll break-words;
   }
 
@@ -61,9 +61,9 @@
   }
 }
 
-@media (min-width: 401px) and (max-width: 639px) {
+@media (min-width: 475px) and (max-width: 640px) {
   .allpaymasters {
-    @apply h-[366px] max-w-[390px] px-2 ml-5 mt-24 grid grid-cols-12 border gap-2 rounded-lg 
+    @apply h-[366px] max-w-[450px] px-2 ml-5 mt-24 grid grid-cols-12 border gap-2 rounded-lg 
         border-opacity-10 border-slate-200 grid-rows-4  overflow-scroll break-words;
   }
   #paymaster_heading {

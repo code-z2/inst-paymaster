@@ -1,7 +1,7 @@
 # Paymaster
 
 This is a description of the components , stylesheets and
-pages that makes up paymaster project.
+pages that makes up paymaster .
 
 ## Components
 
@@ -22,7 +22,7 @@ The components in this directory are:
 
 ## Active paymaster
 
-- **activeNav**: This is the navbar of the active paymaster's page.
+- **activeNav**: This is the navbar for the active paymaster's list page.
   `activepaymaster/activeNav`
   - styling: open `styles/navbar.css` to view the navbar styling.
     **All the navbars in the project are styled from**

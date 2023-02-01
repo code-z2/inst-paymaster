@@ -41,7 +41,7 @@
   }
 }
 
-@media (min-width: 475px) and (max-width: 1100px) {
+@media (min-width: 475px) and (max-width: 1024px) {
   .fifth_section {
     @apply h-screen mx-auto grid grid-cols-12 grid-rows-[repeat(4,_2fr)] gap-2 px-2 my-auto;
   }

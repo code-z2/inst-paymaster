@@ -22,13 +22,13 @@
   @apply flex flex-wrap justify-start pt-4 gap-1;
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 474px) {
   .js_client_section {
     @apply invisible;
   }
 }
 
-@media (min-width: 461px) and (max-width: 1107px) {
+@media (min-width: 475px) and (max-width: 1107px) {
   .js_client_section {
     @apply invisible;
   }

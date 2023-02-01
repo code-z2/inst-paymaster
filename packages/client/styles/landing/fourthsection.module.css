@@ -10,7 +10,7 @@
   @apply text-4xl font-bold mb-4;
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 473px) {
   .fourth_section {
     @apply px-3 grid grid-cols-12 grid-rows-2 pt-10;
   }
@@ -24,7 +24,7 @@
   }
 }
 
-@media (min-width: 461px) and (max-width: 1100px) {
+@media (min-width: 474px) and (max-width: 1024px) {
   .fourth_section {
     @apply px-3 grid mx-auto grid-cols-12 grid-rows-4 pt-10 mt-28;
   }

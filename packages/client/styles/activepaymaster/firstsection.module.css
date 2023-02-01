@@ -20,7 +20,7 @@
   @apply inline;
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 474px) {
   .active_first_section {
     @apply h-[200px] bg-[#d9d9d9] ml-4 bg-opacity-20 max-w-[340px] mt-24 grid grid-cols-12 grid-rows-4 rounded-lg px-5 break-words;
   }
@@ -44,9 +44,9 @@
   }
 }
 
-@media (min-width: 415px) and (max-width: 639px) {
+@media (min-width: 475px) and (max-width: 639px) {
   .active_first_section {
-    @apply h-[200px] bg-[#d9d9d9]  bg-opacity-20 max-w-[412px]  mt-24 grid grid-cols-12 grid-rows-4 rounded-lg px-5 break-words;
+    @apply h-[200px] bg-[#d9d9d9]  bg-opacity-20 max-w-[450px]  mt-24 grid grid-cols-12 grid-rows-4 rounded-lg px-5 break-words;
   }
 
   .active_first_section .active_text {
