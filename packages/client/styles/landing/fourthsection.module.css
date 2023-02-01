@@ -1,0 +1,40 @@
+/****************************** fourth section components container   *************************/
+.fourth_section {
+  @apply px-5;
+}
+.partners_logos {
+  @apply w-[500px] my-0 mx-auto pt-4 gap-10 flex justify-center flex-wrap align-middle;
+}
+
+.fourth_section > h4 {
+  @apply text-4xl font-bold mb-4;
+}
+
+@media screen and (max-width: 460px) {
+  .fourth_section {
+    @apply px-3 grid grid-cols-12 grid-rows-2 pt-10;
+  }
+
+  .fourth_section > h4 {
+    @apply text-2xl col-start-3 items-center col-end-11 font-bold mb-10 row-start-1;
+  }
+
+  .partners_logos {
+    @apply w-[300px] my-0 col-start-2 mt-20 mx-auto pt-4 row-start-1 gap-10 flex justify-center flex-wrap align-middle;
+  }
+}
+
+@media (min-width: 461px) and (max-width: 1100px) {
+  .fourth_section {
+    @apply px-3 grid mx-auto grid-cols-12 grid-rows-4 pt-10 mt-28;
+  }
+
+  .fourth_section > h4 {
+    @apply text-3xl col-start-3 col-end-10 font-medium mb-10 row-start-3;
+  }
+
+  .partners_logos {
+    @apply w-[300px] my-0 col-start-3 col-end-10 mt-20 mx-auto pt-4 row-start-3 gap-10 
+        flex justify-center flex-wrap align-middle;
+  }
+}

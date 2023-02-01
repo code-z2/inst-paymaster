@@ -1,0 +1,101 @@
+/*************************************** All paymasters section *********************/
+.allpaymasters {
+  @apply h-[166px] mt-24 grid grid-cols-12 border gap-2 px-5 rounded-lg 
+    border-opacity-10 border-slate-200 grid-rows-2  overflow-hidden;
+}
+
+.allpaymasters p {
+  @apply col-start-2 col-end-6 mt-4;
+}
+
+.allpaymasters .active_logo {
+  @apply col-start-1 ml-4 mt-4;
+}
+
+.allpaymasters .requirements {
+  @apply col-start-7 col-end-10  my-1;
+}
+
+.allpaymasters .requirements img {
+  @apply ml-3 inline;
+}
+
+.allpaymasters .requirements ul li img {
+  @apply mr-2 inline;
+}
+
+.allpaymasters .usebtn {
+  @apply col-start-11 font-bold w-[76px] h-[26px] mt-4;
+}
+
+@media (max-width: 400px) {
+  .allpaymasters {
+    @apply h-[366px] max-w-[330px] px-4 ml-5 mt-24 grid grid-cols-12 border gap-2 rounded-lg 
+        border-opacity-10 border-slate-200 grid-rows-4 overflow-scroll break-words;
+  }
+
+  #paymaster_heading {
+    @apply ml-8;
+  }
+
+  .allpaymasters p {
+    @apply col-start-4 col-end-12 row-start-1 row-end-2 mt-4;
+  }
+  .allpaymasters .active_logo {
+    @apply col-start-1 col-end-4 mt-4;
+  }
+  .allpaymasters .requirements {
+    @apply row-start-3 col-start-3 col-end-10 my-2;
+  }
+
+  .allpaymasters .requirements img {
+    @apply ml-3 inline;
+  }
+
+  .allpaymasters .requirements ul li img {
+    @apply mr-2 inline;
+  }
+
+  .allpaymasters .usebtn {
+    @apply row-start-1 col-start-11 font-bold w-[76px] h-[26px] mt-4;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 639px) {
+  .allpaymasters {
+    @apply h-[366px] max-w-[390px] px-2 ml-5 mt-24 grid grid-cols-12 border gap-2 rounded-lg 
+        border-opacity-10 border-slate-200 grid-rows-4  overflow-scroll break-words;
+  }
+  #paymaster_heading {
+    @apply ml-8;
+  }
+  .allpaymasters p {
+    @apply col-start-4 col-end-12 row-start-1 row-end-2 mt-4;
+  }
+  .allpaymasters .active_logo {
+    @apply col-start-1 col-end-4 mt-4;
+  }
+  .allpaymasters .requirements {
+    @apply row-start-3 col-start-3 col-end-10 my-2;
+  }
+
+  .active-paymaster-nav .list-ul select {
+    @apply w-10;
+  }
+
+  .active-paymaster-nav .list-ul {
+    @apply col-start-[-1] w-full grid grid-cols-[1fr_2fr] px-1 content-center text-sm gap-2 font-normal;
+  }
+
+  .allpaymasters .requirements img {
+    @apply ml-3 inline;
+  }
+
+  .allpaymasters .requirements ul li img {
+    @apply mr-2 inline;
+  }
+
+  .allpaymasters .usebtn {
+    @apply row-start-1 col-start-11 font-bold w-[76px] h-[26px] mt-4;
+  }
+}

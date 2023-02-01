@@ -1,0 +1,64 @@
+/******************************************* fifth section components container ******************/
+.fifth_section {
+  @apply grid grid-cols-12 grid-rows-3 gap-4 mx-0 my-auto;
+}
+
+.fifth_section .get_started {
+  @apply col-start-7 col-end-10 row-start-2 row-end-3 font-light mt-4 z-20;
+}
+
+.get_started > button {
+  @apply bg-backgroundTheme;
+}
+
+.fifth_section > div > h5 {
+  @apply text-xl font-normal;
+}
+
+.fifth_section .get_started_image {
+  @apply col-start-3 col-end-11 row-start-2 row-end-4 z-0;
+}
+
+@media screen and (max-width: 474px) {
+  .fifth_section {
+    @apply h-screen grid grid-cols-12 grid-rows-[repeat(2,_2fr)] gap-2 px-2 my-auto;
+  }
+
+  .fifth_section .get_started {
+    @apply col-start-3 col-end-9 row-start-1  px-3 row-end-2 mt-6 z-20;
+  }
+
+  .fifth_section > div > h5 {
+    @apply text-2xl font-normal;
+  }
+
+  .fifth_section .get_started_image {
+    @apply col-start-1  col-end-11 row-start-1 px-2 mt-3 row-end-4;
+  }
+
+  .fifth_section .get_started_image img {
+    @apply max-w-none w-[300px] h-80;
+  }
+}
+
+@media (min-width: 475px) and (max-width: 1100px) {
+  .fifth_section {
+    @apply h-screen mx-auto grid grid-cols-12 grid-rows-[repeat(4,_2fr)] gap-2 px-2 my-auto;
+  }
+
+  .fifth_section .get_started {
+    @apply col-start-3 col-end-8 row-start-3 px-3 row-end-3 mt-6 z-20;
+  }
+
+  .fifth_section > div > h5 {
+    @apply text-2xl font-normal;
+  }
+
+  .fifth_section .get_started_image {
+    @apply col-start-3 col-end-12 row-start-3 row-end-4;
+  }
+
+  .fifth_section .get_started_image img {
+    @apply max-w-none w-4/5 h-80;
+  }
+}

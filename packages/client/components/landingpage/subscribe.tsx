@@ -1,9 +1,10 @@
 import { Image } from "../";
+import styles from "../../styles/landing/subscribe.module.css"
 
 function Subscribe() {
   return (
-    <section className="subscribe_section">
-      <div className="subscribe_logo pl-2">
+    <section className={styles.subscribe_section}>
+      <div className={styles.subscribe_logo}>
         <Image
           src="/assets/pm-images/logo.png"
           alt="paymaster logo"
@@ -15,7 +16,7 @@ function Subscribe() {
       </div>
       <p className=" mb-1"></p>
       <form>
-        <label htmlFor="subscribe">Subscribe to our news letter</label>
+        <label htmlFor={styles.subscribe}>Subscribe to our news letter</label>
         <br />
         <input
           type="email"

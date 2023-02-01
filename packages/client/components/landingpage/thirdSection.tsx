@@ -1,10 +1,10 @@
-import React from "react";
 import { Image } from "../";
+import styles from "../../styles/landing/thirdsection.module.css"
 
 function ThirdSection() {
   return (
-    <section className="third_section">
-      <div className="third_section_first_content">
+    <section className={styles.third_section}>
+      <div className={styles.third_section_first_content}>
         <span>
           <Image
             src="/assets/pm-icons/component_exchange.svg"
@@ -26,7 +26,7 @@ function ThirdSection() {
           protocols without incurring gas costs or unnecessary onboarding cost.
         </p>
       </div>
-      <div className="third_section_second_content">
+      <div className={styles.third_section_second_content}>
         <span>
           <Image
             src="/assets/pm-icons/search.svg"
@@ -45,7 +45,7 @@ function ThirdSection() {
           protocols with Paymaster support . Get more value when using dapps.
         </p>
       </div>
-      <div className="third_section_third_content">
+      <div className={styles.third_section_third_content}>
         <span>
           <Image
             src="/assets/pm-icons/ads_click.svg"
@@ -66,7 +66,7 @@ function ThirdSection() {
           your users.
         </p>
       </div>
-      <div className="third_section_img">
+      <div className={styles.third_section_img}>
         <Image
           src="/assets/pm-images/flower_img.png"
           alt="paymaster flower image"
@@ -77,9 +77,9 @@ function ThirdSection() {
           priority
         />
       </div>
-      <div className="flower_image_blur"></div>
-      <div className="overlap_flower">
-        <div className="code_snapshot">
+      <div className={styles.flower_image_blur}></div>
+      <div className={styles.overlap_flower}>
+        <div className={styles.code_snapshot}>
           <Image
             src="/assets/pm-images/code_img.png"
             alt="paymaster code snapshot"
@@ -91,7 +91,7 @@ function ThirdSection() {
           />
         </div>
 
-        <div className="build_paymaster">
+        <div className={styles.build_paymaster}>
           <h2>Build Paymasters</h2>
           <p className="text-slate-400 my-6">
             Integrate our typescript SDK to form paymasters compatible zk
@@ -104,7 +104,7 @@ function ThirdSection() {
             Explore SDK
           </button>
         </div>
-        <div className="build_blur"></div>
+        <div className={styles.build_blur}></div>
       </div>
     </section>
   );

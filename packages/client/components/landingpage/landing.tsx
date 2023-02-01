@@ -13,9 +13,11 @@ const LandingPage = () => {
   // public landing page
   return (
     <div className="container scaleto100 mx-auto min-h-(65vh)">
-      <Paynav />
-      <FirstSection />
-      <Footer />
+      <div className="grid-container">
+        <Paynav />
+        <FirstSection />
+        <Footer />
+      </div>
     </div>
   );
 };
@@ -23,16 +25,18 @@ const LandingPage = () => {
 export const SecureLandingPage = () => {
   // Coming soon private landing page
   return (
-    <div className="container scaleto100  mx-auto  min-h-(65vh)">
-      <Paynav />
-      <FirstSection />
-      <SecondSection />
-      <ThirdSection />
-      <JsClientSection />
-      <FourthSection />
-      <FifthSection />
-      <Subscribe />
-      <Footer />
+    <div className="container scaleto100 mx-auto  min-h-(65vh)">
+  
+        <Paynav />
+        <FirstSection />
+        <SecondSection />
+        <ThirdSection />
+        <JsClientSection />
+        <FourthSection />
+        <FifthSection />
+        <Subscribe />
+        <Footer />
+     
     </div>
   );
 };

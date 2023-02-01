@@ -1,9 +1,10 @@
 import { Image } from "../";
+import styles from "../../styles/landing/secondsection.module.css"
 
 function SecondSection() {
   return (
-    <section className="second_section ">
-      <div className="chain_section pl-2">
+    <section className={styles.second_section}>
+      <div className={styles.chain_section}>
         <h2>On-Chain Rewards Middleware</h2>
         <p className="text-slate-400 my-6">
           Loyalty programs are a way we know to give back to our most loyal
@@ -14,7 +15,7 @@ function SecondSection() {
           paymasters, you can integrate chargebacks as a middleware.
         </p>
       </div>
-      <div className="chain_image">
+      <div className={styles.chain_image}>
         <Image
           src="/assets/pm-images/chain_section4.png"
           alt="paymaster onchain image"
@@ -25,7 +26,7 @@ function SecondSection() {
           priority
         />
       </div>
-      <div className="img_blur"></div>
+      <div className={styles.img_blur}></div>
     </section>
   );
 }

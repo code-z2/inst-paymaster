@@ -1,7 +1,7 @@
 /* landing navbar   */
 
 .paynav {
-  @apply grid grid-cols-12  content-center  h-32;
+  @apply grid grid-cols-12  content-center px-1 h-32;
 }
 
 .paylogo {
@@ -10,10 +10,6 @@
 
 .paynav .list-ul {
   @apply col-start-[-1] w-full grid grid-cols-[1fr_2fr] px-1 content-center text-lg gap-10 font-medium;
-}
-
-.paynav .list-ul .list-li {
-  @apply inline   w-full;
 }
 
 .paynav ul li:nth-child(1) {
@@ -26,9 +22,32 @@
 /* active paymaster page navbar   */
 
 .active-paymaster-nav {
-  @apply grid grid-cols-12  content-center  h-32;
+  @apply paynav;
 }
 
 .active-paymaster-nav .list-ul {
   @apply col-start-[-1] w-full grid grid-cols-[1fr_2fr] px-1 content-center text-xs sm:text-sm  gap-10 font-light sm:font-normal;
+}
+
+@media screen and (max-width: 474px) {
+  .paylogo {
+    @apply col-start-1 content-center;
+  }
+
+  .paynav .list-ul {
+    @apply text-sm gap-2 font-normal;
+  }
+
+  .paylogo img {
+    @apply max-w-none;
+  }
+
+  .active-paymaster-nav .list-ul {
+    @apply text-sm font-normal col-start-[7] gap-6;
+  }
+
+  .active-paymaster-nav ul li:nth-child(1),
+  select {
+    @apply w-10;
+  }
 }

@@ -5,11 +5,7 @@
 @tailwind utilities;
 
 @import "./navbar.css";
-@import "./landing/sections.css";
-@import "./landing/responsive.css";
-
-@import "./activepaymaster/sections.css";
-@import "./activepaymaster/mobile.css";
+@import "./footer.css";
 
 * {
   @apply p-0 m-0 box-border outline-0;
@@ -24,6 +20,24 @@ body {
   background: theme(colors[backgroundTheme]);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: theme(fontFamily[monserrat]), sans-serif;
+}
+
 a {
   @apply no-underline;
+}
+
+/*************scaling 100 to 125***********************/
+
+@media (min-width: 1100px) and (-webkit-min-device-pixel-ratio: 1.25) {
+  .scaleto100 {
+    @apply px-20;
+  }
 }

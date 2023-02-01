@@ -1,0 +1,33 @@
+.subscribe_section {
+  @apply grid grid-cols-12 grid-rows-4 px-5 gap-2;
+}
+
+.subscribe_logo {
+  @apply col-start-1 row-start-4 row-end-4 col-end-4;
+}
+
+/* .subscribe_section p {
+    @apply col-start-7 row-start-3 bg-red-500 col-end-[12];
+  } */
+
+.subscribe_section form {
+  @apply col-start-[-1] row-start-4 row-end-4;
+}
+.subscribe_section input {
+  @apply w-64  bottom-0 h-11 bg-black rounded-md text-sm;
+}
+.subscribe_section button {
+  @apply h-11;
+}
+
+@media screen and (max-width: 460px) {
+  .subscribe_section {
+    display: none;
+  }
+}
+
+@media (min-width: 461px) and (max-width: 1107px) {
+  .subscribe_section {
+    display: none;
+  }
+}

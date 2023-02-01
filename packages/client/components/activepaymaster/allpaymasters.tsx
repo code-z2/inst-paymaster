@@ -1,10 +1,13 @@
 import { Image } from "..";
+import styles from "../../styles/activepaymaster/allpaymasters.module.css";
+
+// default export allpaymasters below
 
 const Singlelist = () => {
   return (
     <div className="container ">
-      <div className="allpaymasters">
-        <div className="active-logo">
+      <div className={styles.allpaymasters}>
+        <div className={styles.active_logo}>
           <Image
             src="/assets/pm-icons/zeta.png"
             alt="paymaster active logo"
@@ -23,7 +26,7 @@ const Singlelist = () => {
             velit a faucibus urna volutpat nam. Est curabitur viverra.
           </span>
         </p>
-        <div className="requirements ">
+        <div className={styles.requirements}>
           <p className=" text-[#E170FF] text-sm  font-semibold">
             Requirements
             <Image
@@ -71,7 +74,7 @@ const Singlelist = () => {
             </li>
           </ul>
         </div>
-        <div className="usebtn">
+        <div className={styles.usebtn}>
           <button className="bg-[#9B2ACD] bg-opacity-20 w-[76px] h-[26px]  rounded-md">
             Use
           </button>
@@ -83,8 +86,11 @@ const Singlelist = () => {
 
 function AllPaymasters() {
   return (
-    <div className="relative allpaymasters-container  py-9 ">
-      <h5 className="absolute top-[100px] text-lg mb-2 font-semibold">
+    <div className="relative  py-9 ">
+      <h5
+        id={styles.paymaster_heading}
+        className="absolute top-[100px] text-lg mb-2 font-semibold"
+      >
         All paymasters
       </h5>
       <Singlelist />

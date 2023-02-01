@@ -1,10 +1,11 @@
 import React from "react";
 import { Image } from "../";
+import styles from "../../styles/landing/jsclientsection.module.css"
 
 function jsClientSection() {
   return (
-    <div className="js_client_section">
-      <div className="clients_content ">
+    <div className={styles.js_client_section}>
+      <div className={styles.clients_content }>
         <div className="px-5">
           <h5 className="">JS Client Library</h5>
           <p className="text-slate-400 text-sm flex justify-start">
@@ -72,9 +73,9 @@ function jsClientSection() {
           </p>
         </div>
       </div>
-      <div className="prog-langs px-5">
+      <div className={`${styles.prog_langs} px-5`}>
         <h5 className="pl-1">Supported Languages</h5>
-        <div className="sub-prog-langs w-full mt-3">
+        <div className={`${styles.sub_prog_langs} w-full mt-3`}>
           <div>
             <a className="p-2 bg-jsClientDark rounded-md w-36 mx-3"> Nodejs</a>
           </div>

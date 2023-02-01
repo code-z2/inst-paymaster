@@ -1,0 +1,38 @@
+/********************************** footer ***********************/
+
+.bottom {
+  @apply grid grid-cols-12 grid-rows-4 break-words px-4 overflow-hidden;
+}
+
+.bottom hr {
+  @apply border border-jsClientDark col-start-1 col-end-13 row-start-2 row-end-2;
+}
+
+.bottom > p {
+  @apply overflow-hidden col-start-1 col-end-5 row-start-3 row-end-4;
+}
+.bottom ul {
+  @apply grid col-start-7 col-end-13 row-start-3 row-end-4 mb-5 grid-cols-[1fr_1fr_1fr_2fr_1fr_1fr] gap-1 list-none;
+}
+
+.bottom ul > li {
+  @apply inline;
+}
+
+@media screen and (max-width: 460px) {
+  .bottom > p {
+    @apply overflow-hidden col-start-3 col-end-12 row-start-[-1] mb-2 row-end-[-1];
+  }
+  .bottom ul {
+    @apply flex flex-col col-start-5 col-end-8 mb-2 list-none justify-between align-middle my-0 mx-auto;
+  }
+}
+
+@media (min-width: 461px) and (max-width: 1107px) {
+  .bottom > p {
+    @apply overflow-hidden col-start-4 col-end-12 row-start-[-1] mb-2 row-end-[-1];
+  }
+  .bottom ul {
+    @apply flex flex-col col-start-5 col-end-8 mb-2 list-none justify-between align-middle my-0 mx-auto;
+  }
+}

@@ -1,11 +1,12 @@
 import { Image } from "../";
+import styles from "../../styles/landing/fourthsection.module.css"
 
 function FourthSection() {
   return (
-    <section className="fourth_section">
+    <section className={styles.fourth_section}>
       <h4 className="text-center">Our Partners</h4>
-      <div className="partners_logos">
-        <span className="zksynk">
+      <div className={styles.partners_logos}>
+        <span className={styles.zksynk}>
           <Image
             src="/assets/pm-logos/zkSynk.png"
             alt="zkSynk image"
@@ -15,7 +16,7 @@ function FourthSection() {
             priority
           />
         </span>
-        <span className="starknet">
+        <span className={styles.starknet}>
           <Image
             src="/assets/pm-logos/StarkNet.png"
             alt="StarkNet image"
@@ -25,7 +26,7 @@ function FourthSection() {
             priority
           />
         </span>
-        <span className="bravos">
+        <span className={styles.bravos}>
           <Image
             src="/assets/pm-logos/Braavos.png"
             alt="Bravos image"
@@ -35,7 +36,7 @@ function FourthSection() {
             priority
           />
         </span>
-        <span className="argent">
+        <span className={styles.argent}>
           <Image
             src="/assets/pm-logos/Argent.png"
             alt="Argent image"
@@ -45,7 +46,7 @@ function FourthSection() {
             priority
           />
         </span>
-        <span className="chainlink">
+        <span className={styles.chainlink}>
           <Image
             src="/assets/pm-logos/ChainLink.png"
             alt="ChainLink image"
@@ -55,7 +56,7 @@ function FourthSection() {
             priority
           />
         </span>
-        <span className="outlier">
+        <span className={styles.outlier}>
           <Image
             src="/assets/pm-logos/Outlier.png"
             alt="Outlier image"
@@ -65,7 +66,7 @@ function FourthSection() {
             priority
           />
         </span>
-        <span className="dao">
+        <span className={styles.dao}>
           <Image
             src="/assets/pm-logos/developer_dao.png"
             alt="developer_dao image"
