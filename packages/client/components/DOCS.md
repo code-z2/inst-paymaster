@@ -20,7 +20,7 @@ Adopted Css grid method [Multi-grid-one-page-layout](https://medium.com/@nikkipa
 
 The components in this directory are:
 
-## Active paymaster directory
+## Active paymaster
 
 - **activeNav**: This is the navbar of the active paymaster's page.
   `activepaymaster/activeNav`
@@ -55,7 +55,7 @@ To view the paymasters page navigate to `http://localhost:3000/auth/{auth_id}/ac
 
 - **private**: A HOC for authentication using NEXT_PUBLIC_AUTH_ID environmental variable
 
-## landing page directory
+## landing page
 
 - **firstSection** : This is the hero section of the landing page.
 
