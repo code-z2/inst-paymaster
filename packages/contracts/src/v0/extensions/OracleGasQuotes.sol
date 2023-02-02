@@ -46,7 +46,7 @@ contract PaymasterOracleEnabled is PaymasterERC20, PriceFeedConsumer {
         // this function makes the oracle call and returns the latest price data.
         // calculates the amount to be debited
         // returns the amount to be debited.
-        int256 fee = getDerivedPrice(_flow.priceFeed, int256(txCost));
+        int256 fee = getDerivedPrice(_flow.priceFeed, _quotePriceFeed, int256(txCost));
         return uint256(fee);
     }
 }

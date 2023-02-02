@@ -15,6 +15,7 @@ import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 
 contract PriceFeedConsumer {
     //address private _quote = 0xA39434A63A52E749F02807ae27335515BA4b07F7; // to be replaced
+    address internal _quotePriceFeed; // to be set later
 
     function getDerivedPrice(
         address _base,

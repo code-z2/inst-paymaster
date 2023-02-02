@@ -6,3 +6,4 @@ gas_reports = ["*"]
 optimizer = true
 optimizer_runs = 200
 solc_version = "0.8.13"
+allow_paths = ["../../node_modules/@matterlabs/"]
