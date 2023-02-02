@@ -8,7 +8,7 @@ import "./utils/Structs.sol";
 contract PaymasterERC20 is Base {
     bytes public metadata;
     ApprovalBasedFlow internal _flow;
-    AccessControlSchema internal _schema;
+    AccessControlSchema private _schema;
     AccessControlRules private _rules;
 
     // i know, you cant pass structs to constructor. yeah yeah.
@@ -56,6 +56,7 @@ contract PaymasterERC20 is Base {
                 _flow.l2FeeAmount,
                 _flow.l2FeeToken
             );
+
             if (success) {
                 _chargeContractForTx(txCost);
             } // else the user pays the bootloader;
@@ -95,12 +96,12 @@ contract PaymasterERC20 is Base {
 
     function _handleTokenTransfer(
         address from,
-        address to,
+        address,
         uint256 amount,
         address token
     ) internal returns (bool success) {
         require(_checkAllowance(from, token) >= amount, "not enough allowance");
-        success = IERC20(token).transferFrom(from, to, amount);
+        success = IERC20(token).transferFrom(from, _schema.validationAddress, amount);
     }
 
     function _checkAllowance(address txFrom, address token) internal view returns (uint256) {

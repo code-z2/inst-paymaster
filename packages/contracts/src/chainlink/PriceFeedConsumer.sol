@@ -14,9 +14,13 @@ import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
  */
 
 contract PriceFeedConsumer {
-    address private _quote = 0xA39434A63A52E749F02807ae27335515BA4b07F7; // to be replaced
+    //address private _quote = 0xA39434A63A52E749F02807ae27335515BA4b07F7; // to be replaced
 
-    function getDerivedPrice(address _base, int256 value) public view returns (int256) {
+    function getDerivedPrice(
+        address _base,
+        address _quote,
+        int256 value
+    ) public view returns (int256) {
         (, int256 basePrice, , , ) = AggregatorV3Interface(_base).latestRoundData();
         uint8 baseDecimals = AggregatorV3Interface(_base).decimals();
         int256 decimals = int256(10 ** uint256(baseDecimals));

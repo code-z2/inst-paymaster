@@ -7,6 +7,7 @@ import "../../chainlink/PriceFeedConsumer.sol";
 // chainlink compatible paymaster
 // @notice - chainlink is currently not in zksync
 // this contract will not work until chainlink becomes available in zksync
+// you can adapt this to any oracle as you wish
 contract PaymasterOracleEnabled is PaymasterERC20, PriceFeedConsumer {
     constructor(
         bytes memory bafyhash,
@@ -30,7 +31,7 @@ contract PaymasterOracleEnabled is PaymasterERC20, PriceFeedConsumer {
         uint256 txCost = _transaction.ergsLimit * _transaction.maxFeePerErg;
         bool success = _handleTokenTransfer(
             caller,
-            _schema.validationAddress,
+            address(0),
             _flow.useOracleQuotes ? _processOracleRequest(txCost) : _flow.l2FeeAmount,
             _flow.l2FeeToken
         );
@@ -39,6 +40,8 @@ contract PaymasterOracleEnabled is PaymasterERC20, PriceFeedConsumer {
         } // else money does not leave;
     }
 
+    // just make sure t0 implement your oracle request in another contract and inherit it.
+    // the contract should have a method getDerivedPrice that returns the expected value.
     function _processOracleRequest(uint256 txCost) internal view returns (uint256) {
         // this function makes the oracle call and returns the latest price data.
         // calculates the amount to be debited
