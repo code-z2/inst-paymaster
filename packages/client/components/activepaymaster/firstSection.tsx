@@ -1,6 +1,10 @@
 import { Image } from "../";
 import styles from "../../styles/activepaymaster/firstsection.module.css";
 
+/* Contains the search component and the active paymaster component
+ *
+ */
+
 function FirstSection() {
   return (
     <div className="relative  py-9 border-b-[.2px] border-opacity-10 border-b-slate-200">
@@ -13,6 +17,7 @@ function FirstSection() {
       <div className={styles.active_first_section}>
         <div className={styles.active_logo}>
           <Image
+            data-testid="test_img"
             src="/assets/pm-icons/zeta.png"
             alt="paymaster active logo"
             blurDataURL="/assets/pm-icons/zeta.png"
@@ -31,9 +36,8 @@ function FirstSection() {
         </p>
         <div className={styles.active_text}>
           <h5>
-            Active{" "}
+            Active
             <span>
-              {" "}
               <Image
                 src="/assets/pm-icons/check.png"
                 alt="paymaster active check"

@@ -1,5 +1,5 @@
 import { Image } from "../";
-import styles from "../../styles/landing/thirdsection.module.css"
+import styles from "../../styles/landing/thirdsection.module.css";
 
 function ThirdSection() {
   return (
@@ -68,6 +68,7 @@ function ThirdSection() {
       </div>
       <div className={styles.third_section_img}>
         <Image
+          data-testid="flower-img"
           src="/assets/pm-images/flower_img.png"
           alt="paymaster flower image"
           blurDataURL="/assets/pm-images/flower_img.png"

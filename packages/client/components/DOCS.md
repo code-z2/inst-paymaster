@@ -1,24 +1,31 @@
 # Paymaster
 
-This is a description of the components , stylesheets and
-pages that makes up paymaster .
+This is a guide to help you find your way around the paymaster client.
+
+## Tests
+
+After installing the packages with `yarn install`, you can run the test script with the cmd `yarn run test`.
 
 ## Components
 
 This project makes use of tailwindcss and css modules.
 
-Each component is styled using a local stylesheet. This makes it easy to identify where to make changes for any section or component in the page.
+Each component is styled using a local stylesheet. This makes it easy to identify where to make changes for any section in the page. For now, the local stylesheet makes use of tailwind's `@apply` keyword.
 
-The navbar/footer component and other global variables are styled using a global stylesheet.
+The stylesheet can be easily converted to **Vanilla CSS** by running the cmd
 
-Components bear similar names to it's stylesheet modules
-for easy identification.
+`npx tailwindcss -i styles/landing/examplefile.module.css -o exampleoutput.css`
 
-E.g `landingpage/firstSection` styling can be seen in `styles/landing/firstsection.module.css`
+Vanilla css is recommended. This is because it is more maintainable and
+there is no need for upgrades compared to libaries.
 
-Adopted Css grid method [Multi-grid-one-page-layout](https://medium.com/@nikkipantony/multi-grid-one-page-layout-css-grid-6efefd537404);
+Components bear similar names to it's css modules for easy identification.
 
-The components in this directory are:
+E.g `landingpage/firstSection` component can be seen in `styles/landing/firstsection.module.css`
+
+Adopted layout method [Multi-grid-one-page-layout](https://medium.com/@nikkipantony/multi-grid-one-page-layout-css-grid-6efefd537404);
+
+The components directory have these sub folders:
 
 ## Active paymaster
 
@@ -34,24 +41,24 @@ The components in this directory are:
     }
 
 .active-paymaster-nav .list-ul {
-@apply col-start-[-1] w-full grid grid-cols-[1fr_2fr] px-1 content-center text-xs sm:text-sm gap-10 font-light sm:font-normal;
+@apply col-start-[-1] w-full grid grid-cols-[1fr_2fr] px-1 content-center text-xs sm:text-sm gap-10 font-light md:font-normal;
 }
 
 ```
 
-    The`active-paymaster-nav ` class is reusing the same styling with the navbar in the landing page .
+    The`active-paymaster-nav ` class is reusing the same styles with the navbar in the landing page .
 
 To view the paymasters page navigate to `http://localhost:3000/auth/{auth_id}/activepaymaster`
 
 - **allpaymasters** : This is the paymasters list component.
-  `activepaymaster/allpaymasters` styling for this component and the media queries is found at `styles/activepaymaster/allpaymasters.module.css`
+  `activepaymaster/allpaymasters` It is styled from `styles/activepaymaster/allpaymasters.module.css`
 
 - **firstSection** : It is the first part i.e first section of the active paymasters page
 
 - **paymastersListPage** : This is where all the components in the active paymaster directory are assembled together and then exported to the active paymasters route.
-  `activepaymaster/paymastersListPage` is exported to `/auth/[private]/activepaymaster`
+  `activepaymaster/paymastersListPage` is exported to `pages/auth/[private]/activepaymaster`
 
-## Auth directory
+## Auth
 
 - **private**: A HOC for authentication using NEXT_PUBLIC_AUTH_ID environmental variable
 

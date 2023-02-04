@@ -1,5 +1,8 @@
 import { Image } from "..";
-import styles from "../../styles/landing/firstsection.module.css"
+import styles from "../../styles/landing/firstsection.module.css";
+
+/* Hero section
+ */
 
 function FirstSection() {
   return (
@@ -14,6 +17,7 @@ function FirstSection() {
       </div>
       <div className={styles.heading_image}>
         <Image
+          data-testid="planet_img"
           src="/assets/pm-images/header_image.png"
           alt="paymaster-planet-logo"
           blurDataURL="/assets/pm-images/header_image.png"

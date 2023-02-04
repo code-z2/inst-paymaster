@@ -4,6 +4,9 @@ import AllPaymasters from "./allpaymasters";
 import Loadmore from "./loadmore";
 import { Footer } from "..";
 
+/*  components are stacked and then exported
+ *   to page route pages/{auth_id}/activepaymaster
+ */
 const ActivePaymaster = () => {
   return (
     <div className="container scaleto100 px-1 mx-auto  min-h-(65vh)">

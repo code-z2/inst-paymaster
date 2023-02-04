@@ -15,12 +15,12 @@ function Paynav() {
       </a>
 
       <ul className="list-ul">
-        <li>
+        <li data-testid="list-items">
           <a href="#" className="mx-1 py-1">
             Docs
           </a>
         </li>
-        <li>
+        <li data-testid="list-items">
           <button
             className="px-1 m-0 py-1  lg:w-40 hover:bg-purple-600 
         border-solid border-2 border-slate-400 rounded-md"

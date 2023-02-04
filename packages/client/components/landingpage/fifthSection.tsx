@@ -1,11 +1,15 @@
 import { Image } from "..";
-import styles from "../../styles/landing/fifthsection.module.css"
+import styles from "../../styles/landing/fifthsection.module.css";
 
+/* Get started image component
+ * An array of image sizes can be also be 
+   incuded in the image component for responsiveness
+ */
 function FifthSection() {
   return (
     <section className={styles.fifth_section}>
       <div className={styles.get_started}>
-        <h5>Get Started, Explore And Create Paymasters </h5>
+        <h5>Get Started, Explore And Create Paymasters</h5>
         <button
           className="px-3 py-1
        mt-6 rounded-md"

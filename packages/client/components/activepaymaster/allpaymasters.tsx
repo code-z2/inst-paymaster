@@ -1,7 +1,10 @@
 import { Image } from "..";
 import styles from "../../styles/activepaymaster/allpaymasters.module.css";
 
-// default export allpaymasters below
+/* Two components are exported from this file
+ *  default export is allpaymasters component at the bottom 
+    single list component represents each list item
+*/
 
 const Singlelist = () => {
   return (
@@ -9,6 +12,7 @@ const Singlelist = () => {
       <div className={styles.allpaymasters}>
         <div className={styles.active_logo}>
           <Image
+            data-testid="activeimg"
             src="/assets/pm-icons/zeta.png"
             alt="paymaster active logo"
             blurDataURL="/assets/pm-icons/zeta.png"

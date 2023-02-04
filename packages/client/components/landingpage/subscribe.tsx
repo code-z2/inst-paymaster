@@ -1,5 +1,5 @@
 import { Image } from "../";
-import styles from "../../styles/landing/subscribe.module.css"
+import styles from "../../styles/landing/subscribe.module.css";
 
 function Subscribe() {
   return (
@@ -16,7 +16,7 @@ function Subscribe() {
       </div>
       <p className=" mb-1"></p>
       <form>
-        <label htmlFor={styles.subscribe}>Subscribe to our news letter</label>
+        <label htmlFor="subscribe">Subscribe to our news letter</label>
         <br />
         <input
           type="email"
@@ -26,7 +26,10 @@ function Subscribe() {
           className="pl-2"
         />
 
-        <button className="px-3 py-1  hover:bg-purple-900 bg-purple-600 m-2 rounded-md">
+        <button
+          name="subscribe"
+          className="px-3 py-1  hover:bg-purple-900 bg-purple-600 m-2 rounded-md"
+        >
           Subscribe
         </button>
       </form>

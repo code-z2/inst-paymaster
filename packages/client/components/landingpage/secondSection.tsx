@@ -1,5 +1,5 @@
 import { Image } from "../";
-import styles from "../../styles/landing/secondsection.module.css"
+import styles from "../../styles/landing/secondsection.module.css";
 
 function SecondSection() {
   return (
@@ -17,6 +17,7 @@ function SecondSection() {
       </div>
       <div className={styles.chain_image}>
         <Image
+          data-testid="chain_img"
           src="/assets/pm-images/chain_section4.png"
           alt="paymaster onchain image"
           blurDataURL="/assets/pm-images/chain_section4.png"

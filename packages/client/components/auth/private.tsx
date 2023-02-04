@@ -2,6 +2,10 @@ import React from "react";
 import { NextPage, NextComponentType, NextPageContext } from "next";
 import LandingPage from "../landingpage/landing";
 
+/* HOC for authentication using private id
+ * @params PrivateComponent
+ */
+
 function Private(PrivateComponent: NextPage) {
   const Protected: NextPage = (props: any) => {
     const { authId } = props;

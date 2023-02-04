@@ -1,29 +1,29 @@
 function Footer() {
   return (
-    <div className="bottom pl-2">
+    <footer className="bottom pl-2">
       <hr className="" />
       <p>&copy; 2023 Paymasters. All rights reserved. </p>
       <ul>
-        <li>
+        <li data-testid="footer-list-item">
           <a href="#">Discord</a>{" "}
         </li>
-        <li>
+        <li data-testid="footer-list-item">
           <a href="#">Telegram </a>
         </li>
-        <li>
+        <li data-testid="footer-list-item">
           <a href="#">Twitter </a>
         </li>
-        <li>
+        <li data-testid="footer-list-item">
           <a href="#">Github</a>{" "}
         </li>
-        <li>
+        <li data-testid="footer-list-item">
           <a href="#">Contact</a>{" "}
         </li>
-        <li>
+        <li data-testid="footer-list-item">
           <a href="#">Privacy</a>{" "}
         </li>
       </ul>
-    </div>
+    </footer>
   );
 }
 

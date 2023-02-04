@@ -12,6 +12,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Learn More
 
-To learn more about the project. Checkout `components/components.md ` directory
+To learn more about the project. Checkout `components/docs.md ` directory
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
