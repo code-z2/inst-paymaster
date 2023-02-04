@@ -108,3 +108,18 @@ To view the paymasters page navigate to `http://localhost:3000/auth/{auth_id}/ac
 
 
 ```
+
+package.json Scripts setup
+
+```
+
+   "dev": "env-cmd -f .env.development next dev",
+    "build": "env-cmd -f .env.qa next build",
+    "build-test": "env-cmd -f .env.qa next build",
+    "start": "next start",
+    "test": "jest --watch --detectOpenHandles",
+    "update-snap": "jest updateSnapshot",
+    "coverage": "jest --coverage",
+    "lint": "next lint"
+
+```
