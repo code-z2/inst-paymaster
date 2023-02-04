@@ -17,10 +17,14 @@ contract PriceFeedConsumer {
     //address private _quote = 0xA39434A63A52E749F02807ae27335515BA4b07F7; // to be replaced
     address internal _quotePriceFeed; // to be set later
 
+    /**
+     * @param amount: This is the value of the quote asset being converted to the base asset
+     *
+     */
     function getDerivedPrice(
         address _base,
         address _quote,
-        int256 value
+        int256 amount
     ) public view returns (int256) {
         (, int256 basePrice, , , ) = AggregatorV3Interface(_base).latestRoundData();
         uint8 baseDecimals = AggregatorV3Interface(_base).decimals();
@@ -46,9 +50,25 @@ contract PriceFeedConsumer {
         // value = 5eth
         // how do i get 5eth worth of link?
 
-        int256 expectedValue = (scalePrice(value, quoteDecimals, baseDecimals) * decimals) /
-            quotePrice;
-        return expectedValue / (basePrice * decimals) / quotePrice;
+        // Solution:
+        // To solve this issue, first convert amount to value in dollars:
+        //      if 1 ETH = $100  (quotePrice)
+        //      5 ETH = $100 * 5 => $500 (quoteValue)
+
+        // Then to find out how much link is worth $500 (5ETH),
+        // simply divide quoteValue by the value of basePrice:
+        //      baseValue = quoteValue / basePrice => ($500 / $5) => 100
+
+        // Therefore 100 LINK would be equal to 5 ETH
+
+        uint256 quoteValue = quotePrice * amount;
+        uint256 baseValue = quoteValue / basePrice;
+        return baseValue;
+
+        // Simon: Temporary comment
+        // int256 expectedValue = (scalePrice(amount, quoteDecimals, baseDecimals) * decimals) /
+        //     quotePrice;
+        // return expectedValue / (basePrice * decimals) / quotePrice;
     }
 
     function scalePrice(
