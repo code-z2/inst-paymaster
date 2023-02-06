@@ -20,35 +20,18 @@ contract PriceFeedConsumer {
     function getDerivedPrice(
         address _base,
         address _quote,
-        int256 value
+        int256 amount
     ) public view returns (int256) {
         (, int256 basePrice, , , ) = AggregatorV3Interface(_base).latestRoundData();
         uint8 baseDecimals = AggregatorV3Interface(_base).decimals();
-        int256 decimals = int256(10 ** uint256(baseDecimals));
 
         (, int256 quotePrice, , , ) = AggregatorV3Interface(_quote).latestRoundData();
         uint8 quoteDecimals = AggregatorV3Interface(_quote).decimals();
         quotePrice = scalePrice(quotePrice, quoteDecimals, baseDecimals);
-        // todo this is confusing. need to make the maths accurate.
-        // explanation
-        // i get the price of the token and place it basePrice
-        // the decimal of the token is baseDecimals
-        // i get the quote and place it in quotePrice
-        // the decimals in quote decimals
 
-        // there can be an issue where the decimals of the quote token is not the same with the base token
-        // so i scale quote token to match the decimal of the base token
-
-        // issue
-        // i want to get the base token equivalent of value
-        // e.g basePrice (link) 5$
-        // quotePrice (eth) 100$
-        // value = 5eth
-        // how do i get 5eth worth of link?
-
-        int256 expectedValue = (scalePrice(value, quoteDecimals, baseDecimals) * decimals) /
-            quotePrice;
-        return expectedValue / (basePrice * decimals) / quotePrice;
+        // since amount is bignumber, it automatically converts the expected value to bigint.
+        int256 scaledValue = scalePrice(amount, quoteDecimals, baseDecimals);
+        return (scaledValue * quotePrice) / basePrice;
     }
 
     function scalePrice(
