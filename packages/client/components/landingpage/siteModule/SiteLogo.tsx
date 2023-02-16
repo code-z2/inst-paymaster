@@ -4,8 +4,8 @@ import logoIMG from "../../../public/assets/pm-logos/paymaster-logo.svg";
 const SiteLogo = () => {
   return (
     <div className="site-logo">
-      <Image src={logoIMG} width={24} height={24} alt="Paymaster Logo" />
-      <span className="logo-text">Paymaster</span>
+      <Image src={logoIMG} width={28} height={28} alt="Paymaster Logo" />
+      <span className="logo-text">Paymasters</span>
     </div>
   );
 };
