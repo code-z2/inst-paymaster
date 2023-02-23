@@ -6,7 +6,7 @@ function Hero() {
     <section className="hero-section site-section">
       <div className="wrapper w-image">
         <div className="hero-content section-content">
-          <h1 className="font-semibold text-5xl leading-normal">
+          <h1 className="font-semibold text-5xl lg:leading-normal">
             The only paymasters access infrastructure you will need
           </h1>
           <p>
