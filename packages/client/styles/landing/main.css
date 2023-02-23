@@ -1,3 +1,9 @@
+/*
+Main.css is converted to Vanillacss in landingpage.css.
+The landingpage.css is then used as the stylesheet
+npx tailwind -i styles/landing/main.css -o styles/landing/landingpage.css   
+*/
+
 .cta {
   @apply p-2 px-6 bg-paymasters-purple font-medium text-paymasters-purple-50 rounded-md;
 }
@@ -30,11 +36,12 @@
   @apply w-full p-3 px-4 bg-paymasters-dark text-white bg-black/30 border border-paymasters-dark-50 rounded-md;
   border-style: solid;
   border-image: linear-gradient(
-    234.49deg,
-    rgba(255, 255, 255, 0) -0.82%,
-    rgba(255, 255, 255, 0.2) 39.83%,
-    rgba(255, 255, 255, 0) 93.51%
-  ) 1;
+      234.49deg,
+      rgba(255, 255, 255, 0) -0.82%,
+      rgba(255, 255, 255, 0.2) 39.83%,
+      rgba(255, 255, 255, 0) 93.51%
+    )
+    1;
 }
 
 .form-group {
@@ -46,14 +53,13 @@
 }
 
 .site-header {
-  @apply sticky top-0 w-full p-8 px-4 z-50 ;
+  @apply sticky top-0 w-full p-8 px-4 z-50;
 }
 
 .site-header > .wrapper {
   @apply flex items-center justify-between gap-4 w-full m-auto max-w-7xl;
   /* @apply  flex items-center justify-between gap-4 p-4  w-full m-auto max-w-lg lg:max-w-[82rem] rounded-lg; */
   /* @apply backdrop-blur-md bg-white/[0.012] border-2 border-white/10 ; */
-
 }
 
 .site-logo {
@@ -274,7 +280,7 @@
   @apply pb-4;
 }
 
-.site-footer > .wrapper > section{
+.site-footer > .wrapper > section {
   @apply py-8;
 }
 

@@ -1,0 +1,382 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Middleware Section  Should render the middleware components  1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <section
+        class="rebates-middleware-section site-section"
+      >
+        <div
+          class="wrapper w-image"
+        >
+          <div
+            class="section-content"
+          >
+            <h2
+              class="font-semibold text-5xl"
+            >
+              Rebates Middleware
+            </h2>
+            <p>
+              Loyalty programs are a way we know to give back to our most loyal users and with account abstraction, it is possible to create a standalone incentive system.
+            </p>
+            <p>
+              Your users can earn a fraction of their transaction value each time they make a transaction.
+            </p>
+            <p>
+              However building this system distinctively may incur additional miscellaneous. With paymasters, you can integrate chargebacks as a middleware.
+            </p>
+          </div>
+          <div
+            class="section-img-cont"
+          >
+            <img
+              alt="Rebates Illustration"
+              data-nimg="1"
+              decoding="async"
+              height="40"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+              style="color: transparent;"
+              width="40"
+            />
+          </div>
+        </div>
+      </section>
+      <section
+        class="features-section site-section"
+      >
+        <div
+          class="wrapper"
+        >
+          <div
+            class="features-grid"
+          >
+            <article
+              class="feature-item "
+            >
+              <img
+                alt="Search Icon"
+                data-nimg="1"
+                decoding="async"
+                height="40"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+                style="color: transparent;"
+                width="40"
+              />
+              <h3
+                class="font-semibold text-xl"
+              >
+                More visible than macro
+              </h3>
+              <p
+                class="text-sm"
+              >
+                Explore a wide range of Paymasters, find protocols with Paymaster support . Get more value when using dapps.
+              </p>
+            </article>
+            <article
+              class="feature-item "
+            >
+              <img
+                alt="Search Icon"
+                data-nimg="1"
+                decoding="async"
+                height="40"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+                style="color: transparent;"
+                width="40"
+              />
+              <h3
+                class="font-semibold text-xl"
+              >
+                Much more than transactions
+                 
+              </h3>
+              <p
+                class="text-sm"
+              >
+                An aggregation of paymasters for users to have access to Ethereum protocols without incurring gas costs or unnecessary onboarding cost.
+              </p>
+            </article>
+            <article
+              class="feature-item "
+            >
+              <img
+                alt="Search Icon"
+                data-nimg="1"
+                decoding="async"
+                height="40"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+                style="color: transparent;"
+                width="40"
+              />
+              <h3
+                class="font-semibold text-xl"
+              >
+                UX more superior than superior
+              </h3>
+              <p
+                class="text-sm"
+              >
+                Create custom paymasters that does what you want or targets a group or community without complexity. Craft innovative transaction flows for your users.
+              </p>
+            </article>
+          </div>
+          <div
+            class="features-img-cont"
+          >
+            <img
+              alt="Abstract Sphere"
+              data-nimg="1"
+              decoding="async"
+              height="300"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+              style="color: transparent;"
+              width="300"
+            />
+            <div
+              class="circles"
+            >
+              <img
+                alt="Circles"
+                data-nimg="1"
+                decoding="async"
+                height="300"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+                style="color: transparent;"
+                width="300"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <section
+      class="rebates-middleware-section site-section"
+    >
+      <div
+        class="wrapper w-image"
+      >
+        <div
+          class="section-content"
+        >
+          <h2
+            class="font-semibold text-5xl"
+          >
+            Rebates Middleware
+          </h2>
+          <p>
+            Loyalty programs are a way we know to give back to our most loyal users and with account abstraction, it is possible to create a standalone incentive system.
+          </p>
+          <p>
+            Your users can earn a fraction of their transaction value each time they make a transaction.
+          </p>
+          <p>
+            However building this system distinctively may incur additional miscellaneous. With paymasters, you can integrate chargebacks as a middleware.
+          </p>
+        </div>
+        <div
+          class="section-img-cont"
+        >
+          <img
+            alt="Rebates Illustration"
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
+          />
+        </div>
+      </div>
+    </section>
+    <section
+      class="features-section site-section"
+    >
+      <div
+        class="wrapper"
+      >
+        <div
+          class="features-grid"
+        >
+          <article
+            class="feature-item "
+          >
+            <img
+              alt="Search Icon"
+              data-nimg="1"
+              decoding="async"
+              height="40"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+              style="color: transparent;"
+              width="40"
+            />
+            <h3
+              class="font-semibold text-xl"
+            >
+              More visible than macro
+            </h3>
+            <p
+              class="text-sm"
+            >
+              Explore a wide range of Paymasters, find protocols with Paymaster support . Get more value when using dapps.
+            </p>
+          </article>
+          <article
+            class="feature-item "
+          >
+            <img
+              alt="Search Icon"
+              data-nimg="1"
+              decoding="async"
+              height="40"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+              style="color: transparent;"
+              width="40"
+            />
+            <h3
+              class="font-semibold text-xl"
+            >
+              Much more than transactions
+               
+            </h3>
+            <p
+              class="text-sm"
+            >
+              An aggregation of paymasters for users to have access to Ethereum protocols without incurring gas costs or unnecessary onboarding cost.
+            </p>
+          </article>
+          <article
+            class="feature-item "
+          >
+            <img
+              alt="Search Icon"
+              data-nimg="1"
+              decoding="async"
+              height="40"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+              style="color: transparent;"
+              width="40"
+            />
+            <h3
+              class="font-semibold text-xl"
+            >
+              UX more superior than superior
+            </h3>
+            <p
+              class="text-sm"
+            >
+              Create custom paymasters that does what you want or targets a group or community without complexity. Craft innovative transaction flows for your users.
+            </p>
+          </article>
+        </div>
+        <div
+          class="features-img-cont"
+        >
+          <img
+            alt="Abstract Sphere"
+            data-nimg="1"
+            decoding="async"
+            height="300"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+            style="color: transparent;"
+            width="300"
+          />
+          <div
+            class="circles"
+          >
+            <img
+              alt="Circles"
+              data-nimg="1"
+              decoding="async"
+              height="300"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+              style="color: transparent;"
+              width="300"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

@@ -1,13 +1,18 @@
 import { NextPage } from "next";
 import { Auth } from "../../components";
-import { SecureLandingPage } from "../../components";
+import { LandingPage } from "../../components";
+import { LandingPageLayout } from "../../components";
 
 interface ID {
   authId?: string;
 }
 
 const PrivateRoute: NextPage<ID> = ({ authId }) => {
-  return <SecureLandingPage />;
+  return (
+    <LandingPageLayout>
+      <LandingPage />
+    </LandingPageLayout>
+  );
 };
 
 PrivateRoute.getInitialProps = async ({ query }) => {

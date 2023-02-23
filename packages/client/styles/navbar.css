@@ -1,4 +1,4 @@
-/* landing navbar   */
+/*  navbar   */
 
 .paynav {
   @apply grid grid-cols-12  content-center px-1 h-32;

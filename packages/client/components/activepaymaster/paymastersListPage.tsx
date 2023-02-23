@@ -2,7 +2,7 @@ import ActiveNav from "./activeNav";
 import Firstsection from "./firstSection";
 import AllPaymasters from "./allpaymasters";
 import Loadmore from "./loadmore";
-import { Footer } from "..";
+//import { Footer } from "..";
 
 /*  components are stacked and then exported
  *   to page route pages/{auth_id}/activepaymaster
@@ -17,7 +17,7 @@ const ActivePaymaster = () => {
         <AllPaymasters />
         <Loadmore />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

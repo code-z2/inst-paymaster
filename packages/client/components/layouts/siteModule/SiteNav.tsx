@@ -20,7 +20,7 @@ const SiteNav = () => {
             </li>
             <div className="nav-item">
               <Link href="/">
-                <button className="cta">Launch App</button>
+                <button className="cta">Coming soon</button>
               </Link>
             </div>
           </ul>

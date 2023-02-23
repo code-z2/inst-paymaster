@@ -1,6 +1,5 @@
 import "../styles/globals.css";
-// import Layout from "../components/layout";
-import DefaultLayout from "../layouts/Default";
+//import DefaultLayout from "../components/layouts/Default";
 
 import type { ReactElement, ReactNode } from "react";
 import type { NextPage } from "next";

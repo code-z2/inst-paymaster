@@ -1,0 +1,986 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Build paymasters Section  should render the build components  1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="section-group"
+      >
+        <section
+          class="build-section site-section"
+        >
+          <div
+            class="wrapper"
+          >
+            <header
+              class="section-header py-32 w-image inverse"
+            >
+              <div
+                class="section-content"
+              >
+                <h2
+                  class="font-semibold text-5xl"
+                >
+                  Build paymasters
+                </h2>
+                <p>
+                  Integrate our typescript SDK to form paymasters compatible zk transaction objects in your dapps.
+                </p>
+                <a
+                  href="/dev"
+                >
+                  <button
+                    class="cta"
+                  >
+                    Explore SDK
+                  </button>
+                </a>
+              </div>
+              <div
+                class="section-img-cont"
+              >
+                <img
+                  alt="paymaster codeblock"
+                  class="p-16"
+                  data-nimg="1"
+                  decoding="async"
+                  height="300"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+                  srcset="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+                  style="color: transparent;"
+                  width="300"
+                />
+              </div>
+            </header>
+            <ul
+              class="options"
+            >
+              <li
+                class="option"
+              >
+                <article
+                  class="option-item"
+                >
+                  <h3
+                    class="font-semibold text-xl"
+                  >
+                    JS Client Library
+                  </h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur. Sit lectus ac et turpis eu ultricies odio praesent in.
+                  </p>
+                  <button
+                    class="cta none"
+                  >
+                    <img
+                      alt="npm icon"
+                      class="icon !w-8 !h-8"
+                      data-nimg="1"
+                      decoding="async"
+                      height="32"
+                      loading="lazy"
+                      src="/_next/image?url=%2Fimg.jpg&w=64&q=75"
+                      srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=64&q=75 2x"
+                      style="color: transparent;"
+                      width="32"
+                    />
+                    <span
+                      class="text text-paymasters-purple"
+                    >
+                      JS Docs
+                    </span>
+                  </button>
+                </article>
+              </li>
+              <li
+                class="option"
+              >
+                <article
+                  class="option-item"
+                >
+                  <h3
+                    class="font-semibold text-xl"
+                  >
+                    HTTP API
+                  </h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur. Sit lectus ac et turpis eu ultricies odio praesent in.
+                  </p>
+                  <button
+                    class="cta none"
+                  >
+                    <img
+                      alt="npm icon"
+                      class="icon !w-8 !h-8"
+                      data-nimg="1"
+                      decoding="async"
+                      height="32"
+                      loading="lazy"
+                      src="/_next/image?url=%2Fimg.jpg&w=64&q=75"
+                      srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=64&q=75 2x"
+                      style="color: transparent;"
+                      width="32"
+                    />
+                    <span
+                      class="text text-paymasters-purple"
+                    >
+                      HTTP Docs
+                    </span>
+                  </button>
+                </article>
+              </li>
+              <li
+                class="option"
+              >
+                <article
+                  class="option-item"
+                >
+                  <h3
+                    class="font-semibold text-xl"
+                  >
+                    Web App
+                  </h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur. Sit lectus ac et turpis eu ultricies odio praesent in.
+                  </p>
+                  <button
+                    class="cta none"
+                  >
+                    <img
+                      alt="npm icon"
+                      class="icon !w-8 !h-8"
+                      data-nimg="1"
+                      decoding="async"
+                      height="32"
+                      loading="lazy"
+                      src="/_next/image?url=%2Fimg.jpg&w=64&q=75"
+                      srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=64&q=75 2x"
+                      style="color: transparent;"
+                      width="32"
+                    />
+                    <span
+                      class="text text-paymasters-purple"
+                    >
+                      Make your first upload
+                    </span>
+                  </button>
+                </article>
+              </li>
+            </ul>
+            <section
+              class="supported-languages"
+            >
+              <h3
+                class="font-semibold text-xl"
+              >
+                Supported Languages
+              </h3>
+              <ul
+                class="supported-languages-list"
+              >
+                <li
+                  class="item"
+                >
+                  <button
+                    class="cta"
+                  >
+                    Nodejs
+                  </button>
+                </li>
+                <li
+                  class="item"
+                >
+                  <button
+                    class="cta"
+                  >
+                    Solidity
+                  </button>
+                </li>
+                <li
+                  class="item"
+                >
+                  <button
+                    class="cta"
+                  >
+                    JavaScript
+                  </button>
+                </li>
+                <li
+                  class="item"
+                >
+                  <button
+                    class="cta"
+                  >
+                    TypeScript
+                  </button>
+                </li>
+                <li
+                  class="item"
+                >
+                  <button
+                    class="cta"
+                  >
+                    Cairo
+                  </button>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </section>
+      </div>
+      <section
+        class="site-section partners-section"
+      >
+        <div
+          class="wrapper"
+        >
+          <header
+            class="section-header"
+          >
+            <h2
+              class="font-semibold text-5xl text-center"
+            >
+              Our Partners
+            </h2>
+          </header>
+          <ul
+            class="partners-list"
+          >
+            <li
+              class="partner-item"
+            >
+              <div
+                class="img-cont flex items-center justify-center w-12 h-w-12"
+              >
+                <img
+                  alt="zkSynk"
+                  data-nimg="1"
+                  decoding="async"
+                  height="64"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fimg.jpg&w=128&q=75"
+                  srcset="/_next/image?url=%2Fimg.jpg&w=64&q=75 1x, /_next/image?url=%2Fimg.jpg&w=128&q=75 2x"
+                  style="color: transparent;"
+                  width="64"
+                />
+              </div>
+              <h3
+                class="font-medium text-lg"
+              >
+                zkSynk
+              </h3>
+            </li>
+            <li
+              class="partner-item"
+            >
+              <div
+                class="img-cont flex items-center justify-center w-12 h-w-12"
+              >
+                <img
+                  alt="StrakNet"
+                  data-nimg="1"
+                  decoding="async"
+                  height="64"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fimg.jpg&w=128&q=75"
+                  srcset="/_next/image?url=%2Fimg.jpg&w=64&q=75 1x, /_next/image?url=%2Fimg.jpg&w=128&q=75 2x"
+                  style="color: transparent;"
+                  width="64"
+                />
+              </div>
+              <h3
+                class="font-medium text-lg"
+              >
+                StrakNet
+              </h3>
+            </li>
+            <li
+              class="partner-item"
+            >
+              <div
+                class="img-cont flex items-center justify-center w-12 h-w-12"
+              >
+                <img
+                  alt="Braavos"
+                  data-nimg="1"
+                  decoding="async"
+                  height="64"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fimg.jpg&w=128&q=75"
+                  srcset="/_next/image?url=%2Fimg.jpg&w=64&q=75 1x, /_next/image?url=%2Fimg.jpg&w=128&q=75 2x"
+                  style="color: transparent;"
+                  width="64"
+                />
+              </div>
+              <h3
+                class="font-medium text-lg"
+              >
+                Braavos
+              </h3>
+            </li>
+            <li
+              class="partner-item"
+            >
+              <div
+                class="img-cont flex items-center justify-center w-12 h-w-12"
+              >
+                <img
+                  alt="Argrent"
+                  data-nimg="1"
+                  decoding="async"
+                  height="64"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fimg.jpg&w=128&q=75"
+                  srcset="/_next/image?url=%2Fimg.jpg&w=64&q=75 1x, /_next/image?url=%2Fimg.jpg&w=128&q=75 2x"
+                  style="color: transparent;"
+                  width="64"
+                />
+              </div>
+              <h3
+                class="font-medium text-lg"
+              >
+                Argrent
+              </h3>
+            </li>
+            <li
+              class="partner-item"
+            >
+              <div
+                class="img-cont flex items-center justify-center w-12 h-w-12"
+              >
+                <img
+                  alt="Chainlink"
+                  data-nimg="1"
+                  decoding="async"
+                  height="64"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fimg.jpg&w=128&q=75"
+                  srcset="/_next/image?url=%2Fimg.jpg&w=64&q=75 1x, /_next/image?url=%2Fimg.jpg&w=128&q=75 2x"
+                  style="color: transparent;"
+                  width="64"
+                />
+              </div>
+              <h3
+                class="font-medium text-lg"
+              >
+                Chainlink
+              </h3>
+            </li>
+            <li
+              class="partner-item"
+            >
+              <div
+                class="img-cont flex items-center justify-center w-12 h-w-12"
+              >
+                <img
+                  alt="Outlier VC"
+                  data-nimg="1"
+                  decoding="async"
+                  height="64"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fimg.jpg&w=128&q=75"
+                  srcset="/_next/image?url=%2Fimg.jpg&w=64&q=75 1x, /_next/image?url=%2Fimg.jpg&w=128&q=75 2x"
+                  style="color: transparent;"
+                  width="64"
+                />
+              </div>
+              <h3
+                class="font-medium text-lg"
+              >
+                Outlier VC
+              </h3>
+            </li>
+            <li
+              class="partner-item"
+            >
+              <div
+                class="img-cont flex items-center justify-center w-12 h-w-12"
+              >
+                <img
+                  alt="Developer Dao"
+                  data-nimg="1"
+                  decoding="async"
+                  height="64"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fimg.jpg&w=128&q=75"
+                  srcset="/_next/image?url=%2Fimg.jpg&w=64&q=75 1x, /_next/image?url=%2Fimg.jpg&w=128&q=75 2x"
+                  style="color: transparent;"
+                  width="64"
+                />
+              </div>
+              <h3
+                class="font-medium text-lg"
+              >
+                Developer Dao
+              </h3>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section
+        class="cta-section site-section"
+      >
+        <div
+          class="wrapper"
+        >
+          <header
+            class="section-header py-32 w-image inverse"
+          >
+            <div
+              class="section-content"
+            >
+              <h2
+                class="font-semibold text-4xl"
+              >
+                Get started, explore and create Paymasters
+              </h2>
+              <a
+                href="/dev"
+              >
+                <button
+                  class="cta dark"
+                >
+                  Launch App
+                </button>
+              </a>
+            </div>
+            <div
+              class="section-img-cont"
+            >
+              <img
+                alt="paymaster logo"
+                class="p-16"
+                data-nimg="1"
+                decoding="async"
+                height="300"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+                style="color: transparent;"
+                width="300"
+              />
+            </div>
+          </header>
+        </div>
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="section-group"
+    >
+      <section
+        class="build-section site-section"
+      >
+        <div
+          class="wrapper"
+        >
+          <header
+            class="section-header py-32 w-image inverse"
+          >
+            <div
+              class="section-content"
+            >
+              <h2
+                class="font-semibold text-5xl"
+              >
+                Build paymasters
+              </h2>
+              <p>
+                Integrate our typescript SDK to form paymasters compatible zk transaction objects in your dapps.
+              </p>
+              <a
+                href="/dev"
+              >
+                <button
+                  class="cta"
+                >
+                  Explore SDK
+                </button>
+              </a>
+            </div>
+            <div
+              class="section-img-cont"
+            >
+              <img
+                alt="paymaster codeblock"
+                class="p-16"
+                data-nimg="1"
+                decoding="async"
+                height="300"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+                style="color: transparent;"
+                width="300"
+              />
+            </div>
+          </header>
+          <ul
+            class="options"
+          >
+            <li
+              class="option"
+            >
+              <article
+                class="option-item"
+              >
+                <h3
+                  class="font-semibold text-xl"
+                >
+                  JS Client Library
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur. Sit lectus ac et turpis eu ultricies odio praesent in.
+                </p>
+                <button
+                  class="cta none"
+                >
+                  <img
+                    alt="npm icon"
+                    class="icon !w-8 !h-8"
+                    data-nimg="1"
+                    decoding="async"
+                    height="32"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fimg.jpg&w=64&q=75"
+                    srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=64&q=75 2x"
+                    style="color: transparent;"
+                    width="32"
+                  />
+                  <span
+                    class="text text-paymasters-purple"
+                  >
+                    JS Docs
+                  </span>
+                </button>
+              </article>
+            </li>
+            <li
+              class="option"
+            >
+              <article
+                class="option-item"
+              >
+                <h3
+                  class="font-semibold text-xl"
+                >
+                  HTTP API
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur. Sit lectus ac et turpis eu ultricies odio praesent in.
+                </p>
+                <button
+                  class="cta none"
+                >
+                  <img
+                    alt="npm icon"
+                    class="icon !w-8 !h-8"
+                    data-nimg="1"
+                    decoding="async"
+                    height="32"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fimg.jpg&w=64&q=75"
+                    srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=64&q=75 2x"
+                    style="color: transparent;"
+                    width="32"
+                  />
+                  <span
+                    class="text text-paymasters-purple"
+                  >
+                    HTTP Docs
+                  </span>
+                </button>
+              </article>
+            </li>
+            <li
+              class="option"
+            >
+              <article
+                class="option-item"
+              >
+                <h3
+                  class="font-semibold text-xl"
+                >
+                  Web App
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur. Sit lectus ac et turpis eu ultricies odio praesent in.
+                </p>
+                <button
+                  class="cta none"
+                >
+                  <img
+                    alt="npm icon"
+                    class="icon !w-8 !h-8"
+                    data-nimg="1"
+                    decoding="async"
+                    height="32"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fimg.jpg&w=64&q=75"
+                    srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=64&q=75 2x"
+                    style="color: transparent;"
+                    width="32"
+                  />
+                  <span
+                    class="text text-paymasters-purple"
+                  >
+                    Make your first upload
+                  </span>
+                </button>
+              </article>
+            </li>
+          </ul>
+          <section
+            class="supported-languages"
+          >
+            <h3
+              class="font-semibold text-xl"
+            >
+              Supported Languages
+            </h3>
+            <ul
+              class="supported-languages-list"
+            >
+              <li
+                class="item"
+              >
+                <button
+                  class="cta"
+                >
+                  Nodejs
+                </button>
+              </li>
+              <li
+                class="item"
+              >
+                <button
+                  class="cta"
+                >
+                  Solidity
+                </button>
+              </li>
+              <li
+                class="item"
+              >
+                <button
+                  class="cta"
+                >
+                  JavaScript
+                </button>
+              </li>
+              <li
+                class="item"
+              >
+                <button
+                  class="cta"
+                >
+                  TypeScript
+                </button>
+              </li>
+              <li
+                class="item"
+              >
+                <button
+                  class="cta"
+                >
+                  Cairo
+                </button>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </section>
+    </div>
+    <section
+      class="site-section partners-section"
+    >
+      <div
+        class="wrapper"
+      >
+        <header
+          class="section-header"
+        >
+          <h2
+            class="font-semibold text-5xl text-center"
+          >
+            Our Partners
+          </h2>
+        </header>
+        <ul
+          class="partners-list"
+        >
+          <li
+            class="partner-item"
+          >
+            <div
+              class="img-cont flex items-center justify-center w-12 h-w-12"
+            >
+              <img
+                alt="zkSynk"
+                data-nimg="1"
+                decoding="async"
+                height="64"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=128&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=64&q=75 1x, /_next/image?url=%2Fimg.jpg&w=128&q=75 2x"
+                style="color: transparent;"
+                width="64"
+              />
+            </div>
+            <h3
+              class="font-medium text-lg"
+            >
+              zkSynk
+            </h3>
+          </li>
+          <li
+            class="partner-item"
+          >
+            <div
+              class="img-cont flex items-center justify-center w-12 h-w-12"
+            >
+              <img
+                alt="StrakNet"
+                data-nimg="1"
+                decoding="async"
+                height="64"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=128&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=64&q=75 1x, /_next/image?url=%2Fimg.jpg&w=128&q=75 2x"
+                style="color: transparent;"
+                width="64"
+              />
+            </div>
+            <h3
+              class="font-medium text-lg"
+            >
+              StrakNet
+            </h3>
+          </li>
+          <li
+            class="partner-item"
+          >
+            <div
+              class="img-cont flex items-center justify-center w-12 h-w-12"
+            >
+              <img
+                alt="Braavos"
+                data-nimg="1"
+                decoding="async"
+                height="64"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=128&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=64&q=75 1x, /_next/image?url=%2Fimg.jpg&w=128&q=75 2x"
+                style="color: transparent;"
+                width="64"
+              />
+            </div>
+            <h3
+              class="font-medium text-lg"
+            >
+              Braavos
+            </h3>
+          </li>
+          <li
+            class="partner-item"
+          >
+            <div
+              class="img-cont flex items-center justify-center w-12 h-w-12"
+            >
+              <img
+                alt="Argrent"
+                data-nimg="1"
+                decoding="async"
+                height="64"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=128&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=64&q=75 1x, /_next/image?url=%2Fimg.jpg&w=128&q=75 2x"
+                style="color: transparent;"
+                width="64"
+              />
+            </div>
+            <h3
+              class="font-medium text-lg"
+            >
+              Argrent
+            </h3>
+          </li>
+          <li
+            class="partner-item"
+          >
+            <div
+              class="img-cont flex items-center justify-center w-12 h-w-12"
+            >
+              <img
+                alt="Chainlink"
+                data-nimg="1"
+                decoding="async"
+                height="64"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=128&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=64&q=75 1x, /_next/image?url=%2Fimg.jpg&w=128&q=75 2x"
+                style="color: transparent;"
+                width="64"
+              />
+            </div>
+            <h3
+              class="font-medium text-lg"
+            >
+              Chainlink
+            </h3>
+          </li>
+          <li
+            class="partner-item"
+          >
+            <div
+              class="img-cont flex items-center justify-center w-12 h-w-12"
+            >
+              <img
+                alt="Outlier VC"
+                data-nimg="1"
+                decoding="async"
+                height="64"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=128&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=64&q=75 1x, /_next/image?url=%2Fimg.jpg&w=128&q=75 2x"
+                style="color: transparent;"
+                width="64"
+              />
+            </div>
+            <h3
+              class="font-medium text-lg"
+            >
+              Outlier VC
+            </h3>
+          </li>
+          <li
+            class="partner-item"
+          >
+            <div
+              class="img-cont flex items-center justify-center w-12 h-w-12"
+            >
+              <img
+                alt="Developer Dao"
+                data-nimg="1"
+                decoding="async"
+                height="64"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=128&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=64&q=75 1x, /_next/image?url=%2Fimg.jpg&w=128&q=75 2x"
+                style="color: transparent;"
+                width="64"
+              />
+            </div>
+            <h3
+              class="font-medium text-lg"
+            >
+              Developer Dao
+            </h3>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section
+      class="cta-section site-section"
+    >
+      <div
+        class="wrapper"
+      >
+        <header
+          class="section-header py-32 w-image inverse"
+        >
+          <div
+            class="section-content"
+          >
+            <h2
+              class="font-semibold text-4xl"
+            >
+              Get started, explore and create Paymasters
+            </h2>
+            <a
+              href="/dev"
+            >
+              <button
+                class="cta dark"
+              >
+                Launch App
+              </button>
+            </a>
+          </div>
+          <div
+            class="section-img-cont"
+          >
+            <img
+              alt="paymaster logo"
+              class="p-16"
+              data-nimg="1"
+              decoding="async"
+              height="300"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+              style="color: transparent;"
+              width="300"
+            />
+          </div>
+        </header>
+      </div>
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

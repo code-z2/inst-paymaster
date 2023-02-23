@@ -1,6 +1,7 @@
 import Head from "next/head";
-import { Landingpage } from "../components";
+import { LandingPageLayout, UnSecureLandingPage } from "../components";
 
+// Landing page without auth
 export default function Home() {
   return (
     <>
@@ -37,7 +38,9 @@ export default function Home() {
         />
         <link rel="manifest" href="/site.webmanifest"></link>
       </Head>
-      <Landingpage />
+      <LandingPageLayout>
+        <UnSecureLandingPage />
+      </LandingPageLayout>
     </>
   );
 }
